@@ -1,0 +1,15 @@
+/*
+ * "源真ゴシック(GenShinGothic)" is licensed under the SIL Open Font License 1.1.
+ * http://jikasei.me/font/genshin/（自家製フォント工房）
+ */
+
+@font-face {
+    font-family: 'GenShinGothic-w';
+    src: local('GenShinGothic-Heavy'),url('../fonts/GenShinGothic-Heavy.woff2') format('woff2'),url('../fonts/GenShinGothic-Heavy.woff') format('woff'),url('../fonts/GenShinGothic-Heavy.ttf') format('truetype'),url('../fonts/GenShinGothic-Heavy.otf') format('opentype');
+    font-weight: 900;
+}
+
+/*
+html,body {
+    font-family: Roboto, 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
+*/

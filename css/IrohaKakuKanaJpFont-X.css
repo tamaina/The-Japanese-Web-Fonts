@@ -1,0 +1,35 @@
+/*
+ * "いろは角クラシック(irohakakuC)" is licensed under the SIL Open Font License 1.1.
+ * http://modi.jpn.org/font_irohakakuc.php（MODI工場）
+ */
+
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: local('irohakakuC-ExtraLight'),url('../fonts/irohakakuC-ExtraLight.woff2') format('woff2'),url('../fonts/irohakakuC-ExtraLight.woff') format('woff'),url('../fonts/irohakakuC-ExtraLight.ttf') format('truetype'),url('../fonts/irohakakuC-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: local('irohakakuC-Light'),url('../fonts/irohakakuC-Light.woff2') format('woff2'),url('../fonts/irohakakuC-Light.woff') format('woff'),url('../fonts/irohakakuC-Light.ttf') format('truetype'),url('../fonts/irohakakuC-Light.otf') format('opentype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: local('irohakakuC-Regular'),url('../fonts/irohakakuC-Regular.woff2') format('woff2'),url('../fonts/irohakakuC-Regular.woff') format('woff'),url('../fonts/irohakakuC-Regular.ttf') format('truetype'),url('../fonts/irohakakuC-Regular.otf') format('opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: local('irohakakuC-Medium'),url('../fonts/irohakakuC-Medium.woff2') format('woff2'),url('../fonts/irohakakuC-Medium.woff') format('woff'),url('../fonts/irohakakuC-Medium.ttf') format('truetype'),url('../fonts/irohakakuC-Medium.otf') format('opentype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: local('irohakakuC-Bold'),url('../fonts/irohakakuC-Bold.woff2') format('woff2'),url('../fonts/irohakakuC-Bold.woff') format('woff'),url('../fonts/irohakakuC-Bold.ttf') format('truetype'),url('../fonts/irohakakuC-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+/*
+html,body {
+    font-family: "irohakakuC-w", "Roboto", 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'GenShinGothic-w', sans-serif;
+*/

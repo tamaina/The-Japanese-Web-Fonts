@@ -1,0 +1,25 @@
+/*
+ * "源真ゴシック(GenShinGothic)" is licensed under the SIL Open Font License 1.1.
+ * http://jikasei.me/font/genshin/（自家製フォント工房）
+ */
+
+@font-face {
+    font-family: 'GenShinGothic-w';
+    src: local('GenShinGothic-ExtraLight'),url('../fonts/GenShinGothic-ExtraLight.woff2') format('woff2'),url('../fonts/GenShinGothic-ExtraLight.woff') format('woff'),url('../fonts/GenShinGothic-ExtraLight.ttf') format('truetype'),url('../fonts/GenShinGothic-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'GenShinGothic-w';
+    src: local('GenShinGothic-Regular'),url('../fonts/GenShinGothic-Regular.woff2') format('woff2'),url('../fonts/GenShinGothic-Regular.woff') format('woff'),url('../fonts/GenShinGothic-Regular.ttf') format('truetype'),url('../fonts/GenShinGothic-Regular.otf') format('opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'GenShinGothic-w';
+    src: local('GenShinGothic-Bold'),url('../fonts/GenShinGothic-Bold.woff2') format('woff2'),url('../fonts/GenShinGothic-Bold.woff') format('woff'),url('../fonts/GenShinGothic-Bold.ttf') format('truetype'),url('../fonts/GenShinGothic-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+/*
+html,body {
+    font-family: Roboto, 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
+*/
