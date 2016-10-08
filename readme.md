@@ -136,3 +136,7 @@ IROHAとNASUについては後述しています。
 # ライセンス License
 
 付属のファイル「License」を御覧ください。
+
+- NasuフォントはApache License 2.0
+- その他のフォントはSIL OPEN FONT LICENSE Version 1.1
+- CSSとかはWTFPL
