@@ -23,7 +23,9 @@ Source Han Sans / Noto Sans CJK JP / 源ノ角ゴシック と呼ばれるもの
 ### head内に加えてください
 ### Add this tag into head.
 
-    <link rel="stylesheet" href="css/GenJpFont-A.css" />
+    <link rel="stylesheet" href="css/GenJpFont-[Type].css" />
+    <!-- [Type]には後述するアルファベットが入ります。
+         Type Aなら GenJpFont-A.css と書かれることになります。 -->
 
 ### cssを設定します
 ### Set css like this
