@@ -20,16 +20,16 @@ Source Han Sans / Noto Sans CJK JP / 源ノ角ゴシック と呼ばれるもの
 
 ## ソース例
 
-### head内に加えてください
-### Add this tag into head.
+### head内に加えてください Add this tag into head.
 
     <link rel="stylesheet" href="css/GenJpFont-[Type].css" />
     <!-- [Type]には後述するアルファベットが入ります。
          Type Aなら GenJpFont-A.css と書かれることになります。 -->
 
-### cssを設定します
-### Set css like this
+### cssを設定します Set css like this
+
 　※欧文フォントをRobotoに設定しています。このコードをそのまま転用する場合は、別途RobotoをWebフォントとして読み込んでください。
+
 　※読み込み軽量化の範囲を広げるため、源ノ角ゴシックではないウェイト多めのフォントも読み込んでいます。気に入らなければ削除してください。
 
     TAG,.class,#id {
