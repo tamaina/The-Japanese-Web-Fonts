@@ -8,9 +8,7 @@
 
 ### head内に加えてください Add this tag into head.
 
-^^^html
-<link rel="stylesheet" type="text/css" href="css/GenJpFont-X.css" />
-^^^
+    <link rel="stylesheet" type="text/css" href="css/GenJpFont-X.css" />
 
 ### cssを設定します Set css like this
 
@@ -22,12 +20,10 @@
   - 欧文フォントをRobotoに設定しています。このコードをそのまま転用する場合は、別途RobotoをWebフォントとして読み込んでください。このホームページで設定されているものとは違います。
   - 読み込み軽量化の範囲を広げるため、源ノ角ゴシックではないウェイト多めのフォントも読み込んでいます。気に入らなければ削除してください。
 
-^^^css
-TAG,.class,#id {
-    font-family: 'Roboto', 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
-    font-weight: 400; /*任意のウェイトを指定します。私は400が好きですが、世界標準は500らしいです。*/
-}
-^^^
+    TAG,.class,#id {
+        font-family: 'Roboto', 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
+        font-weight: 400; /*任意のウェイトを指定します。私は400が好きですが、世界標準は500らしいです。*/
+    }
 
 ### 【高速化】その他のフォントの設定方法
 
