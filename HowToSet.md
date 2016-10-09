@@ -1,6 +1,6 @@
 # The Japanese Web Fonts 技術書
 
-以下は、源真ゴシック Type X を設定する場合の解説を行います。M+フォントもだいたい同じ要領でできます。
+以下は、源真ゴシックを設定する場合の解説を行います。M+フォントもだいたい同じ要領でできます。
 
 ~~ぶっちゃけここまで適当に話を進めても分かる人にだけWebフォントを扱ってほしい~~
 
@@ -8,6 +8,7 @@
 
 ### head内に加えてください Add this tag into head.
 
+    <link rel="stylesheet" type="text/css" href="css/GenJpFont-A-X.css" />
     <link rel="stylesheet" type="text/css" href="css/GenJpFont-X.css" />
 
 ### cssを設定します Set css like this
