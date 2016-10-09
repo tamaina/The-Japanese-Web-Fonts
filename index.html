@@ -11,9 +11,37 @@
     <title>MDwiki</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="fragment" content="!">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="icon.png" />
     <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="The Japanese Web Fonts 日本語Webフォント" />
+    <meta name="twitter:site" content="The Japanese Web Fonts 日本語Webフォント" />
+    <meta name="twitter:description" content="源ノ角ゴシックベースとM+フォントベースの日本語Webフォントを公開しています。派生フォントをアドオンとして提供中。" />
+    <meta name="twitter:image" content="https://tamaina.github.io/The-Japanese-Web-Fonts/icon.png" />
+    <meta name="description" content="源ノ角ゴシックベースとM+フォントベースの日本語Webフォントを公開しています。派生フォントをアドオンとして提供中。" />
+    <meta name="title" content="The Japanese Web Fonts 日本語Webフォント" />
+    <meta property="og:type" content="summary"/>
+    <meta property="og:title" content="The Japanese Web Fonts 日本語Webフォント"/>
+    <meta property="og:description" content="源ノ角ゴシックベースとM+フォントベースの日本語Webフォントを公開しています。派生フォントをアドオンとして提供中。" />
+    <meta property="og:image" content="https://tamaina.github.io/The-Japanese-Web-Fonts/icon.png" />
+    <meta property="og:url" content="https://tamaina.github.io/The-Japanese-Web-Fonts/" />
+    <meta property="og:site_name" content="The Japanese Web Fonts 日本語Webフォント"/>
     <style type="text/css">
+    .loading{
+    background-color: #DDDDDD;
+    display:block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    }
+    .preloader-wrapper{
+    position: absolute;
+    top: calc( 50% - 24px );
+    left: calc( 50% - 24px );
+    }
     /* hide the main content while we assemble everything */
     .md-hidden-load { display: none; }
 
@@ -219,13 +247,19 @@ h1{
 }
 
 </style>
+<script>
+$(window).load(function(){ 
+$(".loading").fadeOut("slow");
+});
+</script>
 </head>
 <body>
     <noscript>
         This website requires Javascript to be enabled. Please turn on Javascript
         and reload the page.
     </noscript>
-
+<div class="loading">
+</div>
     <div id="md-all">
     </div>
 </body>

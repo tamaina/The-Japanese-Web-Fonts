@@ -1,4 +1,4 @@
-# THE Japanese Web Fonts
+# THE Japanese Web Fonts 日本語Webフォント
 
 ## 概要 About
 
