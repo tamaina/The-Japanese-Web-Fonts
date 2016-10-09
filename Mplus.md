@@ -1,0 +1,39 @@
+# 【基本フォント】Mgen+
+
+M+フォントベースのフォントです。
+
+- M+は第2水準漢字が未完成なので、源ノ角ゴシックで補完しています。
+- M+は種類が多いです。
+  - このフォントでは、以下の7種類
+
+- http://jikasei.me/font/mgenplus/
+- href="MgenP-X.css"
+- font-family:
+  1. 記号部分［共通］
+      -  "mgenplus-S-w"
+  2. 英語部分
+      1. "mgenplus-c-w"
+      2. "mgenplus-p-w"
+      3. "mgenplus-m-w"
+  3. 日本語部分
+      1. "mgenplus-1-w"
+      2. "mgenplus-2-w"
+  - 記号部分、日本語部分、英語部分を併せて使ってはじめてフォントが完成します。
+    - 英語・日本語部分の種類の違いは、上の方のURLで解説してくださってるのでそちらで御覧ください。
+    - 英語部分は源真ゴシックに挿げ替えが可能です。
+- 形式 Extensions
+  - ttf,otf,woff2,woff
+
+## ウェイト Weights
+
+|Number|GenShin    |M+       |
+|-----:|:----------|:--------|
+|100   |ExtraLight |Thin     |
+|200   |Light      |Light    |
+|300   |Normal     |(Light)  |
+|400   |Regular    |Regular  |
+|500   |Medium     |Medium   |
+|600   |(Bold)     |(Bold)   |
+|700   |Bold       |Bold     |
+|800   |Heavy      |**Heavy**|
+|900   |           |**Black**|

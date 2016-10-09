@@ -1,0 +1,224 @@
+/*
+ * "Mgen+" is licensed under the SIL Open Font License 1.1.
+ * http://jikasei.me/font/mgenplus/（自家製フォント工房）
+ */
+
+
+@font-face {
+    font-family: 'mgenplus-S-w';
+    src: local('mgenplus-S-Thin'),url('../fonts/mgenplus-S-Thin.woff2') format('woff2'),url('../fonts/mgenplus-S-Thin.woff') format('woff'),url('../fonts/mgenplus-S-Thin.ttf') format('truetype'),url('../fonts/mgenplus-S-Thin.eot') format('embedded-opentype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'mgenplus-S-w';
+    src: local('mgenplus-S-Light'),url('../fonts/mgenplus-S-Light.woff2') format('woff2'),url('../fonts/mgenplus-S-Light.woff') format('woff'),url('../fonts/mgenplus-S-Light.ttf') format('truetype'),url('../fonts/mgenplus-S-Light.eot') format('embedded-opentype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'mgenplus-S-w';
+    src: local('mgenplus-S-Regular'),url('../fonts/mgenplus-S-Regular.woff2') format('woff2'),url('../fonts/mgenplus-S-Regular.woff') format('woff'),url('../fonts/mgenplus-S-Regular.ttf') format('truetype'),url('../fonts/mgenplus-S-Regular.eot') format('embedded-opentype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'mgenplus-S-w';
+    src: local('mgenplus-S-Medium'),url('../fonts/mgenplus-S-Medium.woff2') format('woff2'),url('../fonts/mgenplus-S-Medium.woff') format('woff'),url('../fonts/mgenplus-S-Medium.ttf') format('truetype'),url('../fonts/mgenplus-S-Medium.eot') format('embedded-opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'mgenplus-S-w';
+    src: local('mgenplus-S-Bold'),url('../fonts/mgenplus-S-Bold.woff2') format('woff2'),url('../fonts/mgenplus-S-Bold.woff') format('woff'),url('../fonts/mgenplus-S-Bold.ttf') format('truetype'),url('../fonts/mgenplus-S-Bold.eot') format('embedded-opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'mgenplus-S-w';
+    src: local('mgenplus-S-Heavy'),url('../fonts/mgenplus-S-Heavy.woff2') format('woff2'),url('../fonts/mgenplus-S-Heavy.woff') format('woff'),url('../fonts/mgenplus-S-Heavy.ttf') format('truetype'),url('../fonts/mgenplus-S-Heavy.eot') format('embedded-opentype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'mgenplus-S-w';
+    src: local('mgenplus-S-Black'),url('../fonts/mgenplus-S-Black.woff2') format('woff2'),url('../fonts/mgenplus-S-Black.woff') format('woff'),url('../fonts/mgenplus-S-Black.ttf') format('truetype'),url('../fonts/mgenplus-S-Black.eot') format('embedded-opentype');
+    font-weight: 900;
+}
+
+
+@font-face {
+    font-family: 'mgenplus-p-w';
+    src: local('mgenplus-p-Thin'),url('../fonts/mgenplus-p-Thin.woff2') format('woff2'),url('../fonts/mgenplus-p-Thin.woff') format('woff'),url('../fonts/mgenplus-p-Thin.ttf') format('truetype'),url('../fonts/mgenplus-p-Thin.eot') format('embedded-opentype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'mgenplus-p-w';
+    src: local('mgenplus-p-Light'),url('../fonts/mgenplus-p-Light.woff2') format('woff2'),url('../fonts/mgenplus-p-Light.woff') format('woff'),url('../fonts/mgenplus-p-Light.ttf') format('truetype'),url('../fonts/mgenplus-p-Light.eot') format('embedded-opentype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'mgenplus-p-w';
+    src: local('mgenplus-p-Regular'),url('../fonts/mgenplus-p-Regular.woff2') format('woff2'),url('../fonts/mgenplus-p-Regular.woff') format('woff'),url('../fonts/mgenplus-p-Regular.ttf') format('truetype'),url('../fonts/mgenplus-p-Regular.eot') format('embedded-opentype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'mgenplus-p-w';
+    src: local('mgenplus-p-Medium'),url('../fonts/mgenplus-p-Medium.woff2') format('woff2'),url('../fonts/mgenplus-p-Medium.woff') format('woff'),url('../fonts/mgenplus-p-Medium.ttf') format('truetype'),url('../fonts/mgenplus-p-Medium.eot') format('embedded-opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'mgenplus-p-w';
+    src: local('mgenplus-p-Bold'),url('../fonts/mgenplus-p-Bold.woff2') format('woff2'),url('../fonts/mgenplus-p-Bold.woff') format('woff'),url('../fonts/mgenplus-p-Bold.ttf') format('truetype'),url('../fonts/mgenplus-p-Bold.eot') format('embedded-opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'mgenplus-p-w';
+    src: local('mgenplus-p-Heavy'),url('../fonts/mgenplus-p-Heavy.woff2') format('woff2'),url('../fonts/mgenplus-p-Heavy.woff') format('woff'),url('../fonts/mgenplus-p-Heavy.ttf') format('truetype'),url('../fonts/mgenplus-p-Heavy.eot') format('embedded-opentype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'mgenplus-p-w';
+    src: local('mgenplus-p-Black'),url('../fonts/mgenplus-p-Black.woff2') format('woff2'),url('../fonts/mgenplus-p-Black.woff') format('woff'),url('../fonts/mgenplus-p-Black.ttf') format('truetype'),url('../fonts/mgenplus-p-Black.eot') format('embedded-opentype');
+    font-weight: 900;
+}
+
+
+@font-face {
+    font-family: 'mgenplus-c-w';
+    src: local('mgenplus-c-Thin'),url('../fonts/mgenplus-c-Thin.woff2') format('woff2'),url('../fonts/mgenplus-c-Thin.woff') format('woff'),url('../fonts/mgenplus-c-Thin.ttf') format('truetype'),url('../fonts/mgenplus-c-Thin.eot') format('embedded-opentype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'mgenplus-c-w';
+    src: local('mgenplus-c-Light'),url('../fonts/mgenplus-c-Light.woff2') format('woff2'),url('../fonts/mgenplus-c-Light.woff') format('woff'),url('../fonts/mgenplus-c-Light.ttf') format('truetype'),url('../fonts/mgenplus-c-Light.eot') format('embedded-opentype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'mgenplus-c-w';
+    src: local('mgenplus-c-Regular'),url('../fonts/mgenplus-c-Regular.woff2') format('woff2'),url('../fonts/mgenplus-c-Regular.woff') format('woff'),url('../fonts/mgenplus-c-Regular.ttf') format('truetype'),url('../fonts/mgenplus-c-Regular.eot') format('embedded-opentype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'mgenplus-c-w';
+    src: local('mgenplus-c-Medium'),url('../fonts/mgenplus-c-Medium.woff2') format('woff2'),url('../fonts/mgenplus-c-Medium.woff') format('woff'),url('../fonts/mgenplus-c-Medium.ttf') format('truetype'),url('../fonts/mgenplus-c-Medium.eot') format('embedded-opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'mgenplus-c-w';
+    src: local('mgenplus-c-Bold'),url('../fonts/mgenplus-c-Bold.woff2') format('woff2'),url('../fonts/mgenplus-c-Bold.woff') format('woff'),url('../fonts/mgenplus-c-Bold.ttf') format('truetype'),url('../fonts/mgenplus-c-Bold.eot') format('embedded-opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'mgenplus-c-w';
+    src: local('mgenplus-c-Heavy'),url('../fonts/mgenplus-c-Heavy.woff2') format('woff2'),url('../fonts/mgenplus-c-Heavy.woff') format('woff'),url('../fonts/mgenplus-c-Heavy.ttf') format('truetype'),url('../fonts/mgenplus-c-Heavy.eot') format('embedded-opentype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'mgenplus-c-w';
+    src: local('mgenplus-c-Black'),url('../fonts/mgenplus-c-Black.woff2') format('woff2'),url('../fonts/mgenplus-c-Black.woff') format('woff'),url('../fonts/mgenplus-c-Black.ttf') format('truetype'),url('../fonts/mgenplus-c-Black.eot') format('embedded-opentype');
+    font-weight: 900;
+}
+
+
+@font-face {
+    font-family: 'mgenplus-m-w';
+    src: local('mgenplus-m-Thin'),url('../fonts/mgenplus-m-Thin.woff2') format('woff2'),url('../fonts/mgenplus-m-Thin.woff') format('woff'),url('../fonts/mgenplus-m-Thin.ttf') format('truetype'),url('../fonts/mgenplus-m-Thin.eot') format('embedded-opentype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'mgenplus-m-w';
+    src: local('mgenplus-m-Light'),url('../fonts/mgenplus-m-Light.woff2') format('woff2'),url('../fonts/mgenplus-m-Light.woff') format('woff'),url('../fonts/mgenplus-m-Light.ttf') format('truetype'),url('../fonts/mgenplus-m-Light.eot') format('embedded-opentype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'mgenplus-m-w';
+    src: local('mgenplus-m-Regular'),url('../fonts/mgenplus-m-Regular.woff2') format('woff2'),url('../fonts/mgenplus-m-Regular.woff') format('woff'),url('../fonts/mgenplus-m-Regular.ttf') format('truetype'),url('../fonts/mgenplus-m-Regular.eot') format('embedded-opentype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'mgenplus-m-w';
+    src: local('mgenplus-m-Medium'),url('../fonts/mgenplus-m-Medium.woff2') format('woff2'),url('../fonts/mgenplus-m-Medium.woff') format('woff'),url('../fonts/mgenplus-m-Medium.ttf') format('truetype'),url('../fonts/mgenplus-m-Medium.eot') format('embedded-opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'mgenplus-m-w';
+    src: local('mgenplus-m-Bold'),url('../fonts/mgenplus-m-Bold.woff2') format('woff2'),url('../fonts/mgenplus-m-Bold.woff') format('woff'),url('../fonts/mgenplus-m-Bold.ttf') format('truetype'),url('../fonts/mgenplus-m-Bold.eot') format('embedded-opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'mgenplus-m-w';
+    src: local('mgenplus-m-Heavy'),url('../fonts/mgenplus-m-Heavy.woff2') format('woff2'),url('../fonts/mgenplus-m-Heavy.woff') format('woff'),url('../fonts/mgenplus-m-Heavy.ttf') format('truetype'),url('../fonts/mgenplus-m-Heavy.eot') format('embedded-opentype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'mgenplus-m-w';
+    src: local('mgenplus-m-Black'),url('../fonts/mgenplus-m-Black.woff2') format('woff2'),url('../fonts/mgenplus-m-Black.woff') format('woff'),url('../fonts/mgenplus-m-Black.ttf') format('truetype'),url('../fonts/mgenplus-m-Black.eot') format('embedded-opentype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'mgenplus-1-w';
+    src: local('mgenplus-1-Thin'),url('../fonts/mgenplus-1-Thin.woff2') format('woff2'),url('../fonts/mgenplus-1-Thin.woff') format('woff'),url('../fonts/mgenplus-1-Thin.ttf') format('truetype'),url('../fonts/mgenplus-1-Thin.eot') format('embedded-opentype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'mgenplus-1-w';
+    src: local('mgenplus-1-Light'),url('../fonts/mgenplus-1-Light.woff2') format('woff2'),url('../fonts/mgenplus-1-Light.woff') format('woff'),url('../fonts/mgenplus-1-Light.ttf') format('truetype'),url('../fonts/mgenplus-1-Light.eot') format('embedded-opentype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'mgenplus-1-w';
+    src: local('mgenplus-1-Regular'),url('../fonts/mgenplus-1-Regular.woff2') format('woff2'),url('../fonts/mgenplus-1-Regular.woff') format('woff'),url('../fonts/mgenplus-1-Regular.ttf') format('truetype'),url('../fonts/mgenplus-1-Regular.eot') format('embedded-opentype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'mgenplus-1-w';
+    src: local('mgenplus-1-Medium'),url('../fonts/mgenplus-1-Medium.woff2') format('woff2'),url('../fonts/mgenplus-1-Medium.woff') format('woff'),url('../fonts/mgenplus-1-Medium.ttf') format('truetype'),url('../fonts/mgenplus-1-Medium.eot') format('embedded-opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'mgenplus-1-w';
+    src: local('mgenplus-1-Bold'),url('../fonts/mgenplus-1-Bold.woff2') format('woff2'),url('../fonts/mgenplus-1-Bold.woff') format('woff'),url('../fonts/mgenplus-1-Bold.ttf') format('truetype'),url('../fonts/mgenplus-1-Bold.eot') format('embedded-opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'mgenplus-1-w';
+    src: local('mgenplus-1-Heavy'),url('../fonts/mgenplus-1-Heavy.woff2') format('woff2'),url('../fonts/mgenplus-1-Heavy.woff') format('woff'),url('../fonts/mgenplus-1-Heavy.ttf') format('truetype'),url('../fonts/mgenplus-1-Heavy.eot') format('embedded-opentype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'mgenplus-1-w';
+    src: local('mgenplus-1-Black'),url('../fonts/mgenplus-1-Black.woff2') format('woff2'),url('../fonts/mgenplus-1-Black.woff') format('woff'),url('../fonts/mgenplus-1-Black.ttf') format('truetype'),url('../fonts/mgenplus-1-Black.eot') format('embedded-opentype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'mgenplus-2-w';
+    src: local('mgenplus-2-Thin'),url('../fonts/mgenplus-2-Thin.woff2') format('woff2'),url('../fonts/mgenplus-2-Thin.woff') format('woff'),url('../fonts/mgenplus-2-Thin.ttf') format('truetype'),url('../fonts/mgenplus-2-Thin.eot') format('embedded-opentype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'mgenplus-2-w';
+    src: local('mgenplus-2-Light'),url('../fonts/mgenplus-2-Light.woff2') format('woff2'),url('../fonts/mgenplus-2-Light.woff') format('woff'),url('../fonts/mgenplus-2-Light.ttf') format('truetype'),url('../fonts/mgenplus-2-Light.eot') format('embedded-opentype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'mgenplus-2-w';
+    src: local('mgenplus-2-Regular'),url('../fonts/mgenplus-2-Regular.woff2') format('woff2'),url('../fonts/mgenplus-2-Regular.woff') format('woff'),url('../fonts/mgenplus-2-Regular.ttf') format('truetype'),url('../fonts/mgenplus-2-Regular.eot') format('embedded-opentype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'mgenplus-2-w';
+    src: local('mgenplus-2-Medium'),url('../fonts/mgenplus-2-Medium.woff2') format('woff2'),url('../fonts/mgenplus-2-Medium.woff') format('woff'),url('../fonts/mgenplus-2-Medium.ttf') format('truetype'),url('../fonts/mgenplus-2-Medium.eot') format('embedded-opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'mgenplus-2-w';
+    src: local('mgenplus-2-Bold'),url('../fonts/mgenplus-2-Bold.woff2') format('woff2'),url('../fonts/mgenplus-2-Bold.woff') format('woff'),url('../fonts/mgenplus-2-Bold.ttf') format('truetype'),url('../fonts/mgenplus-2-Bold.eot') format('embedded-opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'mgenplus-2-w';
+    src: local('mgenplus-2-Heavy'),url('../fonts/mgenplus-2-Heavy.woff2') format('woff2'),url('../fonts/mgenplus-2-Heavy.woff') format('woff'),url('../fonts/mgenplus-2-Heavy.ttf') format('truetype'),url('../fonts/mgenplus-2-Heavy.eot') format('embedded-opentype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'mgenplus-2-w';
+    src: local('mgenplus-2-Black'),url('../fonts/mgenplus-2-Black.woff2') format('woff2'),url('../fonts/mgenplus-2-Black.woff') format('woff'),url('../fonts/mgenplus-2-Black.ttf') format('truetype'),url('../fonts/mgenplus-2-Black.eot') format('embedded-opentype');
+    font-weight: 900;
+}

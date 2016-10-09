@@ -5,41 +5,72 @@
 
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: local('GenShinGothic-ExtraLight'),url('../fonts/GenShinGothic-ExtraLight.woff2') format('woff2'),url('../fonts/GenShinGothic-ExtraLight.woff') format('woff'),url('../fonts/GenShinGothic-ExtraLight.ttf') format('truetype'),url('../fonts/GenShinGothic-ExtraLight.otf') format('opentype');
+    src: local('GenShinGothic-ExtraLight'),url('../fonts/GenShinGothic-ExtraLight.woff2') format('woff2'),url('../fonts/GenShinGothic-ExtraLight.woff') format('woff'),url('../fonts/GenShinGothic-ExtraLight.ttf') format('truetype'),url('../fonts/GenShinGothic-ExtraLight.eot') format('embedded-opentype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'GenShinGothic-w';
+    src: local('GenShinGothic-Light'),url('../fonts/GenShinGothic-Light.woff2') format('woff2'),url('../fonts/GenShinGothic-Light.woff') format('woff'),url('../fonts/GenShinGothic-Light.ttf') format('truetype'),url('../fonts/GenShinGothic-Light.eot') format('embedded-opentype');
     font-weight: 200;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: local('GenShinGothic-Light'),url('../fonts/GenShinGothic-Light.woff2') format('woff2'),url('../fonts/GenShinGothic-Light.woff') format('woff'),url('../fonts/GenShinGothic-Light.ttf') format('truetype'),url('../fonts/GenShinGothic-Light.otf') format('opentype');
+    src: local('GenShinGothic-Normal'),url('../fonts/GenShinGothic-Normal.woff2') format('woff2'),url('../fonts/GenShinGothic-Normal.woff') format('woff'),url('../fonts/GenShinGothic-Normal.ttf') format('truetype'),url('../fonts/GenShinGothic-Normal.eot') format('embedded-opentype');
     font-weight: 300;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: local('GenShinGothic-Normal'),url('../fonts/GenShinGothic-Normal.woff2') format('woff2'),url('../fonts/GenShinGothic-Normal.woff') format('woff'),url('../fonts/GenShinGothic-Normal.ttf') format('truetype'),url('../fonts/GenShinGothic-Normal.otf') format('opentype');
+    src: local('GenShinGothic-Regular'),url('../fonts/GenShinGothic-Regular.woff2') format('woff2'),url('../fonts/GenShinGothic-Regular.woff') format('woff'),url('../fonts/GenShinGothic-Regular.ttf') format('truetype'),url('../fonts/GenShinGothic-Regular.eot') format('embedded-opentype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: local('GenShinGothic-Regular'),url('../fonts/GenShinGothic-Regular.woff2') format('woff2'),url('../fonts/GenShinGothic-Regular.woff') format('woff'),url('../fonts/GenShinGothic-Regular.ttf') format('truetype'),url('../fonts/GenShinGothic-Regular.otf') format('opentype');
+    src: local('GenShinGothic-Medium'),url('../fonts/GenShinGothic-Medium.woff2') format('woff2'),url('../fonts/GenShinGothic-Medium.woff') format('woff'),url('../fonts/GenShinGothic-Medium.ttf') format('truetype'),url('../fonts/GenShinGothic-Medium.eot') format('embedded-opentype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: local('GenShinGothic-Medium'),url('../fonts/GenShinGothic-Medium.woff2') format('woff2'),url('../fonts/GenShinGothic-Medium.woff') format('woff'),url('../fonts/GenShinGothic-Medium.ttf') format('truetype'),url('../fonts/GenShinGothic-Medium.otf') format('opentype');
-    font-weight: 600;
-}
-@font-face {
-    font-family: 'GenShinGothic-w';
-    src: local('GenShinGothic-Bold'),url('../fonts/GenShinGothic-Bold.woff2') format('woff2'),url('../fonts/GenShinGothic-Bold.woff') format('woff'),url('../fonts/GenShinGothic-Bold.ttf') format('truetype'),url('../fonts/GenShinGothic-Bold.otf') format('opentype');
+    src: local('GenShinGothic-Bold'),url('../fonts/GenShinGothic-Bold.woff2') format('woff2'),url('../fonts/GenShinGothic-Bold.woff') format('woff'),url('../fonts/GenShinGothic-Bold.ttf') format('truetype'),url('../fonts/GenShinGothic-Bold.eot') format('embedded-opentype');
     font-weight: 700;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: local('GenShinGothic-Heavy'),url('../fonts/GenShinGothic-Heavy.woff2') format('woff2'),url('../fonts/GenShinGothic-Heavy.woff') format('woff'),url('../fonts/GenShinGothic-Heavy.ttf') format('truetype'),url('../fonts/GenShinGothic-Heavy.otf') format('opentype');
-    font-weight: 900;
+    src: local('GenShinGothic-Heavy'),url('../fonts/GenShinGothic-Heavy.woff2') format('woff2'),url('../fonts/GenShinGothic-Heavy.woff') format('woff'),url('../fonts/GenShinGothic-Heavy.ttf') format('truetype'),url('../fonts/GenShinGothic-Heavy.eot') format('embedded-opentype');
+    font-weight: 800;
 }
 
-/*
-html,body {
-    font-family: Roboto, 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
-*/
+@font-face {
+    font-family: 'GenShinGothic-A-w';
+    src: local('GenShinGothic-A-ExtraLight'),url('../fonts/GenShinGothic-A-ExtraLight.woff2') format('woff2'),url('../fonts/GenShinGothic-A-ExtraLight.woff') format('woff'),url('../fonts/GenShinGothic-A-ExtraLight.ttf') format('truetype'),url('../fonts/GenShinGothic-A-ExtraLight.eot') format(embedded-'opentype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'GenShinGothic-A-w';
+    src: local('GenShinGothic-A-Light'),url('../fonts/GenShinGothic-A-Light.woff2') format('woff2'),url('../fonts/GenShinGothic-A-Light.woff') format('woff'),url('../fonts/GenShinGothic-A-Light.ttf') format('truetype'),url('../fonts/GenShinGothic-A-Light.eot') format('embedded-opentype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'GenShinGothic-A-w';
+    src: local('GenShinGothic-A-Normal'),url('../fonts/GenShinGothic-A-Normal.woff2') format('woff2'),url('../fonts/GenShinGothic-A-Normal.woff') format('woff'),url('../fonts/GenShinGothic-A-Normal.ttf') format('truetype'),url('../fonts/GenShinGothic-A-Normal.eot') format('embedded-opentype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'GenShinGothic-A-w';
+    src: local('GenShinGothic-A-Regular'),url('../fonts/GenShinGothic-A-Regular.woff2') format('woff2'),url('../fonts/GenShinGothic-A-Regular.woff') format('woff'),url('../fonts/GenShinGothic-A-Regular.ttf') format('truetype'),url('../fonts/GenShinGothic-A-Regular.eot') format('embedded-opentype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'GenShinGothic-A-w';
+    src: local('GenShinGothic-A-Medium'),url('../fonts/GenShinGothic-A-Medium.woff2') format('woff2'),url('../fonts/GenShinGothic-A-Medium.woff') format('woff'),url('../fonts/GenShinGothic-A-Medium.ttf') format('truetype'),url('../fonts/GenShinGothic-A-Medium.eot') format('embedded-opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'GenShinGothic-A-w';
+    src: local('GenShinGothic-A-Bold'),url('../fonts/GenShinGothic-A-Bold.woff2') format('woff2'),url('../fonts/GenShinGothic-A-Bold.woff') format('woff'),url('../fonts/GenShinGothic-A-Bold.ttf') format('truetype'),url('../fonts/GenShinGothic-A-Bold.eot') format('embedded-opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'GenShinGothic-A-w';
+    src: local('GenShinGothic-A-Heavy'),url('../fonts/GenShinGothic-A-Heavy.woff2') format('woff2'),url('../fonts/GenShinGothic-A-Heavy.woff') format('woff'),url('../fonts/GenShinGothic-A-Heavy.ttf') format('truetype'),url('../fonts/GenShinGothic-A-Heavy.eot') format('embedded-opentype');
+    font-weight: 800;
+}
