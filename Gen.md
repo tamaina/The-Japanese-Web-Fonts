@@ -15,7 +15,9 @@
 - 形式 Extensions
   - ttf,otf,woff2,woff
 
-## ウェイト Weights
+## ウェイト
+
+Weights
 
 |Number|GenShin    |M+       |IROHA|NASU |
 |-----:|:----------|:--------|:---:|:---:|

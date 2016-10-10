@@ -24,16 +24,18 @@ M+フォントベースのフォントです。
 - 形式 Extensions
   - ttf,otf,woff2,woff
 
-## ウェイト Weights
+## ウェイト
+
+Weights
 
 |Number|GenShin    |M+       |
 |-----:|:----------|:--------|
 |100   |ExtraLight |Thin     |
 |200   |Light      |Light    |
-|300   |Normal     |(Light)  |
+|300   |Normal     |-        |
 |400   |Regular    |Regular  |
 |500   |Medium     |Medium   |
-|600   |(Bold)     |(Bold)   |
+|600   |-          |-        |
 |700   |Bold       |Bold     |
 |800   |Heavy      |**Heavy**|
-|900   |           |**Black**|
+|900   |-          |**Black**|

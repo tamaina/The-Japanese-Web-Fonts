@@ -1,4 +1,4 @@
-# The Japanese Web Fonts 技術書
+# The Japanese Web Fonts 使い方
 
 以下は、源真ゴシックを設定する場合の解説を行います。M+フォントもだいたい同じ要領でできます。
 
@@ -8,9 +8,12 @@
 
 **cdnとかはない**ので、自分でダウンロードして自分のサーバーにアップしてください。
 
-~~誰かcdnjs辺りに登録してくれないかな~~
+- [rawgit](https://rawgit.com/)というサービスがありますが、永続性が保証できないのでお勧めしません。
+- ~~誰かcdnjs辺りに登録してくれないかな~~
 
-https://github.com/tamaina/The-Japanese-Web-Fonts/releases
+ダウンロード : https://github.com/tamaina/The-Japanese-Web-Fonts/releases
+
+**Source code (zip)**がリンクです。
 
 - アップロードするのは、cssフォルダとfontフォルダだけでいいです。
 - 不必要なフォントとcssは除いていただいて結構です。
@@ -19,10 +22,9 @@ https://github.com/tamaina/The-Japanese-Web-Fonts/releases
 
 ### head内に加えてください Add this tag into head.
 
-    <link rel="stylesheet" type="text/css" href="css/GenJpFont-A-X.css" />
     <link rel="stylesheet" type="text/css" href="css/GenJpFont-X.css" />
 
-### cssを設定します Set css like this
+### cssを設定します
 
 - **ある程度把握しておきたいcssの知識として**
   - フォントは前から順に読み込まれます。
@@ -44,4 +46,12 @@ https://github.com/tamaina/The-Japanese-Web-Fonts/releases
 - リンク先のcssの内容をhtmlに直打ちする。
 - link rel="preload"を使う。
   - 詳しくは[gist](https://gist.github.com/tamaina/73ccf1f807bb4531c069da43112bd61c)を参考にしてください
-- あったら教えてください
+- ほかにあったら教えてください
+
+## 興味がある人だけ聞いて(ry
+
+- 【基本フォント】の「英語部分」は、【Roboto】が収録しているグリフを踏襲してサブセット化しています。
+  - Robotoのようなフォントを導入する際は、【基本フォント】の「英語部分」を指定しなくて結構です。
+- woff2もあります。
+  - 武蔵システムさんありがとう。
+- どこまで互換性があるかは知りませんが、IE4互換はしたつもりです。

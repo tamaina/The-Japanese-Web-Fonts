@@ -1,0 +1,107 @@
+/*
+ * "Nasu" is licensed under the Apache License, Version 2.0
+ * http://itouhiro.hatenablog.com/entry/20140917/font
+ */
+
+@font-face {
+    font-family: 'Nasu-w';
+    src: url('../fonts/Nasu-Regular-20141215.eot');
+    src: url('../fonts/Nasu-Regular-20141215.eot?#iefix') format('embedded-opentype'),url('../fonts/Nasu-Regular-20141215.woff2') format('woff2'),url('../fonts/Nasu-Regular-20141215.woff') format('woff'),url('../fonts/Nasu-Regular-20141215.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Nasu-w';
+    src: url('../fonts/Nasu-Bold-20141215.eot');
+    src: url('../fonts/Nasu-Bold-20141215.eot?#iefix') format('embedded-opentype'),url('../fonts/Nasu-Bold-20141215.woff2') format('woff2'),url('../fonts/Nasu-Bold-20141215.woff') format('woff'),url('../fonts/Nasu-Bold-20141215.ttf') format('truetype');
+    font-weight: 700;
+}
+
+/*
+ * "いろは角クラシック(irohakakuC)" is licensed under the SIL Open Font License 1.1.
+ * http://modi.jpn.org/font_irohakakuc.php（MODI工場）
+ */
+
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: url('../fonts/irohakakuC-ExtraLight.eot');
+    src: url('../fonts/irohakakuC-ExtraLight.eot') format('embedded-opentype'),url('../fonts/irohakakuC-ExtraLight.woff2') format('woff2'),url('../fonts/irohakakuC-ExtraLight.woff') format('woff'),url('../fonts/irohakakuC-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: url('../fonts/irohakakuC-Light.eot');
+    src: url('../fonts/irohakakuC-Light.eot') format('embedded-opentype'),url('../fonts/irohakakuC-Light.woff2') format('woff2'),url('../fonts/irohakakuC-Light.woff') format('woff'),url('../fonts/irohakakuC-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: url('../fonts/irohakakuC-Regular.eot');
+    src: url('../fonts/irohakakuC-Regular.eot') format('embedded-opentype'),url('../fonts/irohakakuC-Regular.woff2') format('woff2'),url('../fonts/irohakakuC-Regular.woff') format('woff'),url('../fonts/irohakakuC-Regular.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: url('../fonts/irohakakuC-Medium.eot');
+    src: url('../fonts/irohakakuC-Medium.eot') format('embedded-opentype'),url('../fonts/irohakakuC-Medium.woff2') format('woff2'),url('../fonts/irohakakuC-Medium.woff') format('woff'),url('../fonts/irohakakuC-Medium.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: url('../fonts/irohakakuC-Bold.eot');
+    src: url('../fonts/irohakakuC-Bold.eot') format('embedded-opentype'),url('../fonts/irohakakuC-Bold.woff2') format('woff2'),url('../fonts/irohakakuC-Bold.woff') format('woff'),url('../fonts/irohakakuC-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+/*
+ * "GenEi" Fonts is licensed under the SIL Open Font License 1.1 and more Licenses.
+ * http://okoneya.jp/font/（おこねや）
+ */
+
+@font-face {
+    font-family: 'GenEiAntiqueN-w';
+    src: url('../fonts/GenEiAntiqueN-Medium.eot');
+    src: url('../fonts/GenEiAntiqueN-Medium.eot?#iefix') format('embedded-opentype'),url('../fonts/GenEiAntiqueN-Medium.woff2') format('woff2'),url('../fonts/GenEiAntiqueN-Medium.woff') format('woff'),url('../fonts/GenEiAntiqueN-Medium.ttf') format('truetype'),url('../fonts/GenEiAntiqueN-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'GenEiAntiqueN-w';
+    src: url('../fonts/GenEiAntiqueN-Bold.eot');
+    src: url('../fonts/GenEiAntiqueN-Bold.eot?#iefix') format('embedded-opentype'),url('../fonts/GenEiAntiqueN-Bold.woff2') format('woff2'),url('../fonts/GenEiAntiqueN-Bold.woff') format('woff'),url('../fonts/GenEiAntiqueN-Bold.otf') format('truetype'),url('../fonts/GenEiAntiqueN-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'GenEiLateGo-w';
+    src: url('../fonts/GenEiLateGo.eot');
+    src: url('../fonts/GenEiLateGo.eot?#iefix') format('embedded-opentype'),url('../fonts/GenEiLateGo.woff2') format('woff2'),url('../fonts/GenEiLateGo.woff') format('woff'),url('../fonts/GenEiLateGo.ttf') format('truetype'),url('../fonts/GenEiLateGo.otf') format('opentype');
+    font-weight: 500;
+}
+
+/*
+ * "コーポレート・ロゴ(Corporate Logo)" is licensed under the SIL Open Font License 1.1.
+ * http://logotype.jp/corporate-logo-font-dl.html（おこねや）
+ */
+
+@font-face {
+    font-family: 'CorporateLogo-w';
+    src: url('../fonts/logotypejp_mp_m_1.1.eot');
+    src: url('../fonts/logotypejp_mp_m_1.1.eot?#iefix') format('embedded-opentype'),url('../fonts/logotypejp_mp_m_1.1.woff2') format('woff2'),url('../fonts/logotypejp_mp_m_1.1.woff') format('woff'),url('../fonts/logotypejp_mp_m_1.1.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'CorporateLogo-w';
+    src: url('../fonts/logotypejp_mp_b_1.1.eot');
+    src: url('../fonts/logotypejp_mp_b_1.1.eot?#iefix') format('embedded-opentype'),url('../fonts/logotypejp_mp_b_1.1.woff2') format('woff2'),url('../fonts/logotypejp_mp_b_1.1.woff') format('woff'),url('../fonts/logotypejp_mp_b_1.1.ttf') format('truetype');
+    font-weight: 700;
+}
+
+/*
+ * "刻ゴシック(KokuGothic)" is licensed under the Apache License, Version 2.0
+ * http://freefonts.jp/font-koku-go.html(フリーフォントの樹)
+ */
+
+@font-face {
+    font-family: 'KokuGothic-w';
+    src: url('../fonts/font_1_kokugl_1.15_rls.eot');
+    src: url('../fonts/font_1_kokugl_1.15_rls.eot?#iefix') format('embedded-opentype'),url('../fonts/font_1_kokugl_1.15_rls.woff2') format('woff2'),url('../fonts/font_1_kokugl_1.15_rls.woff') format('woff'),url('../fonts/font_1_kokugl_1.15_rls.ttf') format('truetype');
+    font-weight: 200;
+}
