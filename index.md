@@ -59,6 +59,7 @@ Weights
 |700   |Bold       |Bold     |
 |800   |Heavy      |**Heavy**|
 |900   |-          |**Black**|
-# ライセンス License
+
+##ライセンス License
 
 付属のファイル「License」を御覧ください。
