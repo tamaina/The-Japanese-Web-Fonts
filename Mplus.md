@@ -15,6 +15,7 @@ M+フォントベースのフォントです。
       1. "mgenplus-c-w"
       2. "mgenplus-p-w"
       3. "mgenplus-m-w"
+      3. "mgenplus-mn-w"
   3. 日本語部分
       1. "mgenplus-1-w"
       2. "mgenplus-2-w"

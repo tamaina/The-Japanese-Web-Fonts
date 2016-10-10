@@ -179,6 +179,50 @@
     font-weight: 900;
 }
 
+
+@font-face {
+    font-family: 'mgenplus-mn-w';
+    src: url('../fonts/mgenplus-mn-thin.eot');
+    src: url('../fonts/mgenplus-mn-thin.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-thin.woff2') format('woff2'),url('../fonts/mgenplus-mn-thin.woff') format('woff'),url('../fonts/mgenplus-mn-thin.ttf') format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'mgenplus-mn-w';
+    src: url('../fonts/mgenplus-mn-light.eot');
+    src: url('../fonts/mgenplus-mn-light.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-light.woff2') format('woff2'),url('../fonts/mgenplus-mn-light.woff') format('woff'),url('../fonts/mgenplus-mn-light.ttf') format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'mgenplus-mn-w';
+    src: url('../fonts/mgenplus-mn-regular.eot');
+    src: url('../fonts/mgenplus-mn-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-regular.woff2') format('woff2'),url('../fonts/mgenplus-mn-regular.woff') format('woff'),url('../fonts/mgenplus-mn-regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'mgenplus-mn-w';
+    src: url('../fonts/mgenplus-mn-medium.eot');
+    src: url('../fonts/mgenplus-mn-medium.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-medium.woff2') format('woff2'),url('../fonts/mgenplus-mn-medium.woff') format('woff'),url('../fonts/mgenplus-mn-medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'mgenplus-mn-w';
+    src: url('../fonts/mgenplus-mn-bold.eot');
+    src: url('../fonts/mgenplus-mn-bold.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-bold.woff2') format('woff2'),url('../fonts/mgenplus-mn-bold.woff') format('woff'),url('../fonts/mgenplus-mn-bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'mgenplus-mn-w';
+    src: url('../fonts/mgenplus-mn-heavy.eot');
+    src: url('../fonts/mgenplus-mn-heavy.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-heavy.woff2') format('woff2'),url('../fonts/mgenplus-mn-heavy.woff') format('woff'),url('../fonts/mgenplus-mn-heavy.ttf') format('truetype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'mgenplus-mn-w';
+    src: url('../fonts/mgenplus-mn-black.eot');
+    src: url('../fonts/mgenplus-mn-black.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-black.woff2') format('woff2'),url('../fonts/mgenplus-mn-black.woff') format('woff'),url('../fonts/mgenplus-mn-black.ttf') format('truetype');
+    font-weight: 900;
+}
+
 @font-face {
     font-family: 'mgenplus-1-w';
     src: url('../fonts/mgenplus-1-thin.eot');
