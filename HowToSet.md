@@ -6,12 +6,13 @@
 
 ## 導入
 
-**cdnとかはない**ので、自分でダウンロードして自分のサーバーにアップしてください。
+~~**cdnとかはない**ので、自分でダウンロードして自分のサーバーにアップしてください。~~
 
-- [rawgit](https://rawgit.com/)というサービスがありますが、永続性が保証できないのでお勧めしません。
-- ~~誰かcdnjs辺りに登録してくれないかな~~
+zipで100MBあるのでcdnを使いましょう。申請中です。
 
-ダウンロード : https://github.com/tamaina/The-Japanese-Web-Fonts/releases
+- 暫定的にrawgitを使用しています。
+
+ダウンロードは : https://github.com/tamaina/The-Japanese-Web-Fonts/releases
 
 **Source code (zip)**がリンクです。
 
@@ -20,9 +21,13 @@
 
 ## フォントの設定方法
 
-### head内に加えてください Add this tag into head.
+### head内に加えてください
 
-    <link rel="stylesheet" type="text/css" href="css/GenJpFont-X.css" />
+Add these tags into `<head> ~ </head>`.
+
+    <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/JPWF-Addons.css"/> <!-- JpWF Addons -->
+    <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/GenJpFont-X.css"/> <!-- JpWF GenShin -->
+    <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/MgenP-X.css"/> <!-- JpWF Mgen+ -->
 
 ### cssを設定します
 
@@ -44,7 +49,7 @@
 ### 【高速化】その他のフォントの設定方法
 
 - リンク先のcssの内容をhtmlに直打ちする。
-- link rel="preload"を使う。
+- `link rel="preload"`を使う。
   - 詳しくは[gist](https://gist.github.com/tamaina/73ccf1f807bb4531c069da43112bd61c)を参考にしてください
 - ほかにあったら教えてください
 

@@ -1,4 +1,6 @@
-# アドオン Add-ons
+# アドオン
+
+Add-ons
 
 源ノ角ゴシックやM+フォントの普及によって、多くのデザイナーによって作られた派生フォントが出ています。
 
@@ -34,7 +36,7 @@ Weights
 ウェイトが5種類ある、行書の面影が残る、ゴシック体です。
 
 - http://modi.jpn.org/font_irohakakuc.php
-- font-family:"irohakakuC-w";
+- `font-family:"irohakakuC-w";`
 - Weights: 100,200,400,500,700
 
 ### コーポレート・ロゴ
@@ -42,7 +44,7 @@ Weights
 フォントを言葉で表すのは難しいので説明できません。
 
 - http://logotype.jp/corporate-logo-font-dl.html
-- font-family:"CorporateLogo-w"
+- `font-family:"CorporateLogo-w";`
 - Weights: 500,700
 
 ### 刻ゴシック
@@ -50,7 +52,7 @@ Weights
 さわやか系。
 
 - http://freefonts.jp/font-koku-go.html
-- font-family:"KokuGothic-w";
+- `font-family:"KokuGothic-w";`
 - Weight : 200
 
 ### 源暎フォント
@@ -62,9 +64,9 @@ Weights
 Linux Bioliumをカスタムした英数字も用意されています。
 
 - http://okoneya.jp/font/
-- font-family:
-  - 源暎アンチック "GenEiAntiqueN-w"
-  - 源暎ラテゴ "GenEiLateGo"
+- `font-family:`
+  - 源暎アンチック `"GenEiAntiqueN-w"`
+  - 源暎ラテゴ `"GenEiLateGo"`
 - Weights: 500,700
 
 ## 源真ゴシック拡張
@@ -76,5 +78,5 @@ Linux Bioliumをカスタムした英数字も用意されています。
 改良版です。機械的な印象があります。
 
 - http://itouhiro.hatenablog.com/entry/20140917/font
-- font-family:"Nasu-w";
+- `font-family:"Nasu-w";`
 - font-weight: 400,700

@@ -41,7 +41,7 @@
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: url('../fonts/GenShinGothic-Heavy.eot')
+    src: url('../fonts/GenShinGothic-Heavy.eot');
     src: url('../fonts/GenShinGothic-Heavy.eot?#iefix') format('embedded-opentype'),url('../fonts/GenShinGothic-Heavy.woff2') format('woff2'),url('../fonts/GenShinGothic-Heavy.woff') format('woff'),url('../fonts/GenShinGothic-Heavy.ttf') format('truetype');
     font-weight: 800;
 }

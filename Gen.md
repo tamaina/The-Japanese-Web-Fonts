@@ -4,7 +4,7 @@
 
 
 - http://jikasei.me/font/genshin/
-- href="GenJpFont-X.css"
+- `href="GenJpFont-X.css"`
 - font-family:
   - 英語部分
     - "GenShinGothic-A-w"
