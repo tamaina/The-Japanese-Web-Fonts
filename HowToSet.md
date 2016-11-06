@@ -23,10 +23,11 @@ githubのダウンロードが爆速になったため、その心配はなく�
 
 Add these tags into `<head> ~ </head>`.
 
+   ~~~
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/JPWF-Addons.css"/> <!-- JpWF Addons -->
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/GenJpFont-X.css"/> <!-- JpWF GenShin -->
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/MgenP-X.css"/> <!-- JpWF Mgen+ -->
-
+   ~~~
 ### cssを設定します
 
 - **ある程度把握しておきたいcssの知識として**
@@ -37,10 +38,12 @@ Add these tags into `<head> ~ </head>`.
 - 以下のコードは、設定の例です。
   - デモなので、欧文部分をM+ c、日本語などその他の部分をNoto Sansにしています。
 
-    TAG,.class,#id {
-    font-family: 'mgenplus-c-w', 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
-    font-weight: 400; /*任意のウェイトを指定します。私は400が好きですが、世界標準は500らしいです。*/
-    }
+   ~~~
+     TAG,.class,#id {
+     font-family: 'mgenplus-c-w', 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
+     font-weight: 400; /*任意のウェイトを指定します。私は400が好きですが、世界標準は500らしいです。*/
+     }
+   ~~~
 
 ### 【高速化】その他のフォントの設定方法
 
