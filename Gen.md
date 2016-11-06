@@ -1,7 +1,6 @@
-# 【基本フォント】源真ゴシック
+# 【基本フォント】Noto Sans CJK / 源ノ角ゴシック (源真ゴシック)
 
-源ノ角ゴシックベースのフォントです。
-
+源真ゴシックは、源ノ角ゴシックベースのフォントです。
 
 - http://jikasei.me/font/genshin/
 - `href="GenJpFont-X.css"`
