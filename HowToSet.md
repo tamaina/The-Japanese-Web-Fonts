@@ -45,7 +45,7 @@ Add these tags into `<head> ~ </head>`.
      }
    ~~~
 
-|Number|GenShin    |M+       |IROHA|
+|Number|Noto Sans  |M+       |IROHA|
 |-----:|:----------|:--------|:---:|
 |100   |ExtraLight |Thin     |○   |
 |200   |Light      |Light    |○   |

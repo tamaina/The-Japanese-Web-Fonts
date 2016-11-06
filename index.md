@@ -1,5 +1,9 @@
 # THE Japanese Web Fonts - 日本語Webフォント
 
+**https://googlefonts.github.io/japanese/**
+
+↑を試してみてなんか違うと思ったらこれを使ってみてください。
+
 ## 概要
 
 About
@@ -48,7 +52,7 @@ https://github.com/tamaina/The-Japanese-Web-Fonts/releases
 
 Weights
 
-|Number|GenShin    |M+       |IROHA|
+|Number|Noto Sans  |M+       |IROHA|
 |-----:|:----------|:--------|:---:|
 |100   |ExtraLight |Thin     |○   |
 |200   |Light      |Light    |○   |
@@ -68,5 +72,6 @@ License
 
 ## 裏話
 
-- ぶっちゃけて言うと、Google Web FontsからNoto Sans CJK Jpのラインナップが消え去ったので、自分で作ってみました。
+- ぶっちゃけて言うと、Google Web FontsからNoto Sans CJK Jpのラインナップが消え去ったと思い込んでいたので、自分で作ってしまいました。
+  - 第2水準漢字対応は、やたらと難しい漢字を使う案件が多かったためです。
 - M+フォントを分離できたのも、個人的にけっこう良いかなと思ってます。
