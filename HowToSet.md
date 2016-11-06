@@ -41,9 +41,21 @@ Add these tags into `<head> ~ </head>`.
    ~~~
      TAG,.class,#id {
      font-family: 'mgenplus-c-w', 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
-     font-weight: 400; /*任意のウェイトを指定します。私は400が好きですが、世界標準は500らしいです。*/
+     font-weight: 400; /*ウェイトについては以下の表を参照。*/
      }
    ~~~
+
+|Number|GenShin    |M+       |IROHA|
+|-----:|:----------|:--------|:---:|
+|100   |ExtraLight |Thin     |○   |
+|200   |Light      |Light    |○   |
+|300   |Normal     |-        |     |
+|400   |Regular    |Regular  |○   |
+|500   |Medium     |Medium   |○   |
+|600   |-          |-        |     |
+|700   |Bold       |Bold     |○   |
+|800   |Heavy      |**Heavy**|     |
+|900   |-          |**Black**|     |
 
 ### 【高速化】その他のフォントの設定方法
 

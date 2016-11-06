@@ -48,17 +48,17 @@ https://github.com/tamaina/The-Japanese-Web-Fonts/releases
 
 Weights
 
-|Number|Noto Sans  |M+       |
-|-----:|:----------|:--------|
-|100   |ExtraLight |Thin     |
-|200   |Light      |Light    |
-|300   |Normal     |-        |
-|400   |Regular    |Regular  |
-|500   |Medium     |Medium   |
-|600   |-          |-        |
-|700   |Bold       |Bold     |
-|800   |Heavy      |**Heavy**|
-|900   |-          |**Black**|
+|Number|GenShin    |M+       |IROHA|
+|-----:|:----------|:--------|:---:|
+|100   |ExtraLight |Thin     |○   |
+|200   |Light      |Light    |○   |
+|300   |Normal     |-        |     |
+|400   |Regular    |Regular  |○   |
+|500   |Medium     |Medium   |○   |
+|600   |-          |-        |     |
+|700   |Bold       |Bold     |○   |
+|800   |Heavy      |**Heavy**|     |
+|900   |-          |**Black**|     |
 
 ## ライセンス
 
