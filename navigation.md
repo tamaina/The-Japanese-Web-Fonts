@@ -1,6 +1,6 @@
 # The Japanese Web Fonts
 
 [使い方](HowToSet.md)
-[源真ゴシック](Gen.md)
-[Mgen+](Mplus.md)
+[Noto Sans 源ノ角ゴシック](Gen.md)
+[M+](Mplus.md)
 [アドオン](Addons.md)

@@ -15,21 +15,21 @@ Add-ons
 
 Weights
 
-|Number|GenShin    |M+       |IROHA|NASU |Antique|
-|-----:|:----------|:--------|:---:|:---:|:-----:|
-|100   |ExtraLight |Thin     |○   |     |       |
-|200   |Light      |Light    |○   |     |       |
-|300   |Normal     |-        |     |     |       |
-|400   |Regular    |Regular  |○   |○   |       |
-|500   |Medium     |Medium   |○   |     |○     |
-|600   |-          |-        |     |     |       |
-|700   |Bold       |Bold     |○   |○   |○     |
-|800   |Heavy      |**Heavy**|     |     |       |
-|900   |-          |**Black**|     |     |       |
+|Number|GenShin    |M+       |IROHA|
+|-----:|:----------|:--------|:---:|
+|100   |ExtraLight |Thin     |○   |
+|200   |Light      |Light    |○   |
+|300   |Normal     |-        |     |
+|400   |Regular    |Regular  |○   |
+|500   |Medium     |Medium   |○   |
+|600   |-          |-        |     |
+|700   |Bold       |Bold     |○   |
+|800   |Heavy      |**Heavy**|     |
+|900   |-          |**Black**|     |
 
 ## かな(英数)フォント
 
-かなや英数が収録されています。源真ゴシック、Mgen+両方でお使いいただけます。
+かなや英数が収録されています。Noto Sans ・ 源ノ角ゴシック、M+ 両方でお使いいただけます。
 
 ### いろは角クラシック
 
@@ -69,13 +69,30 @@ Linux Bioliumをカスタムした英数字も用意されています。
   - 源暎ラテゴ `"GenEiLateGo"`
 - Weights: 500,700
 
+### やさしさゴシック
+
+- http://www.fontna.com/category/gallery/
+- `font-family:"YasashisaGothic-w"`
+- Weights: 400,700
+  - やさしさゴシックボールドを同一フォントとして扱います。
+
+### ロゴたいぷゴシック
+
+- http://www.fontna.com/category/gallery/
+- `font-family:"LogoTypeGothic-w"`
+- Weight: 400 or 500
+
+### ラノベPOP
+
+- http://www.fontna.com/category/gallery/
+- `font-family:"LiNovePOP-w"`
+- Weight: 800
+
 ## 源真ゴシック拡張
 
 源真ゴシック専用です。
 
 ### Nasu
-
-改良版です。機械的な印象があります。
 
 - http://itouhiro.hatenablog.com/entry/20140917/font
 - `font-family:"Nasu-w";`

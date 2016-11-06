@@ -96,7 +96,7 @@
 
 /*
  * "刻ゴシック(KokuGothic)" is licensed under the Apache License, Version 2.0
- * http://freefonts.jp/font-koku-go.html(フリーフォントの樹)
+ * http://freefonts.jp/font-koku-go.html (フリーフォントの樹)
  */
 
 @font-face {
@@ -104,4 +104,47 @@
     src: url('../fonts/font_1_kokugl_1.15_rls.eot');
     src: url('../fonts/font_1_kokugl_1.15_rls.eot?#iefix') format('embedded-opentype'),url('../fonts/font_1_kokugl_1.15_rls.woff2') format('woff2'),url('../fonts/font_1_kokugl_1.15_rls.woff') format('woff'),url('../fonts/font_1_kokugl_1.15_rls.ttf') format('truetype');
     font-weight: 200;
+}
+
+
+/*
+ * "やさしさゴシック(YasashisaGothic)" ( M+ Font License )
+ * http://www.fontna.com/category/gallery/ (フリーフォントの樹)
+ */
+
+@font-face {
+    font-family: 'YasashisaGothic-w';
+    src: url('../fonts/YasashisaGothic.eot');
+    src: url('../fonts/YasashisaGothic.eot?#iefix') format('embedded-opentype'),url('../fonts/YasashisaGothic.woff2') format('woff2'),url('../fonts/YasashisaGothic.woff') format('woff'),url('../fonts/YasashisaGothic.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'YasashisaGothic-w';
+    src: url('../fonts/YasashisaGothicBold.eot');
+    src: url('../fonts/YasashisaGothicBold.eot?#iefix') format('embedded-opentype'),url('../fonts/YasashisaGothicBold.woff2') format('woff2'),url('../fonts/YasashisaGothicBold.woff') format('woff'),url('../fonts/YasashisaGothicBold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+/*
+ * "ロゴたいぷゴシック(LogoTypeGothic)" ( M+ Font License )
+ * http://www.fontna.com/category/gallery/ (フリーフォントの樹)
+ */
+
+@font-face {
+    font-family: 'LogoTypeGothic-w';
+    src: url('../fonts/LogoTypeGothic.eot');
+    src: url('../fonts/LogoTypeGothic.eot?#iefix') format('embedded-opentype'),url('../fonts/LogoTypeGothic.woff2') format('woff2'),url('../fonts/LogoTypeGothic.woff') format('woff'),url('../fonts/LogoTypeGothic.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/*
+ * "ラノベPOP(LiNovePOP,Light Novel POP)" ( M+ Font License )
+ * http://www.fontna.com/category/gallery/ (フリーフォントの樹)
+ */
+
+@font-face {
+    font-family: 'LiNovePOP-w';
+    src: url('../fonts/LiNovePOP.eot');
+    src: url('../fonts/LiNovePOP.eot?#iefix') format('embedded-opentype'),url('../fonts/LiNovePOP.woff2') format('woff2'),url('../fonts/LiNovePOP.woff') format('woff'),url('../fonts/LiNovePOP.ttf') format('truetype');
+    font-weight: 800;
 }
