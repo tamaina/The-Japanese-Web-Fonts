@@ -12,8 +12,6 @@
 <link rel="preload" as="style" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/GenJpFont-X.css" />
 <link rel="preload" as="style" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/MgenP-X.css" />
 <script type="text/javascript">
-$('link[as = "style"]').attr('rel','stylesheet');
-
 function EasyDisplay(Vals){
 
 console.log(Vals);
@@ -22,6 +20,7 @@ console.log(Vals);
 
 
 $(function(){
+ $('[as = "style"]').attr('rel','stylesheet');
  setTimeout( '$(".loading").fadeOut("slow");' , 10000);
  EasyDisplay($('#order').serializeArray());
  $('#order').change(EasyDisplay($('#order').serializeArray()));
@@ -47,9 +46,10 @@ $(window).load(function(){
 <div class="loading">
 </div>
 <main>
+<div id="main">
 <h1>The Japanese Web Fonts デモページ</h1>
 <form id="order">
-<fieldset class="form-group">
+<fieldset class="form-group form-inline">
 <legend>Font Family</legend>
 <p>
 <select name="family-e" class="form-control">
@@ -119,6 +119,7 @@ $(window).load(function(){
 <p>日本語Webフォントのデモページです。
 <br>The Japanese Web Fonts 日本語Webフォントは「痒いところに手が届く」を目標にサブセット化したWebフォント用フォントセットです。基本になるフォントは、2大フリーゴシックである、「Noto Sans CJK JP」「源ノ角ゴシック」と「M+」の2種類があります。これらの基本フォントは、欧文と日本語と記号に細分化されており、自由に選ぶことが出来ます。これは特にM+フォントに対して軽量化をはかることができました。また、自家製フォント工房様が改造した「源真ゴシック」
 </p>
+</div>
 </main>
 </body>
 </html>
