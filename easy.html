@@ -12,13 +12,35 @@
 <link rel="preload" as="style" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/GenJpFont-X.css" />
 <link rel="preload" as="style" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/MgenP-X.css" />
 <script type="text/javascript">
+debug = true;
 function EasyDisplay(target){
-
+if( debug == true ){
 console.table($('#order').serializeArray());
 console.dir(target);
-
 }
 
+var order = $('#order').serializeArray(), BodyCSS = "", SelectorCSS = "", DisplayCSS = "", AddonVal = "", JandSVal = "" ;
+
+if( order['family-a'] == "" ){
+    AddonVal = "";
+} else {
+    AddonVal = '"' + order['family-a'] + '", ';
+}
+
+if( order['family-j'] == "mgenplus-1-w" || order['family-j'] == "mgenplus-2-w" ){
+    JandSVal = '"' + order['family-j'] + '", "mgenplus-S-w"';
+} else {
+    JandSVal = '"' + order['family-j'] + '", "GenShinGothic-S-w"';
+}
+
+BodyCSS = 'font-family:"' + order['family-e'] + '", ' + AddonVal + JandSVal + '; background-color:' + order['color-b'] + '; color:' + order['color-f'] + ';' ;
+SelectorCSS = 'font-size:' + order['number'] + order['size-c'] + '; font-weight:' + order['weight'] + ';';
+DisplayCSS = 'font-family:"' + order['family-e'] + '", ' + AddonVal + JandSVal + ';\nbackground-color:' + order['color-b'] + ';\ncolor:' + order['color-f'] + ';\nfont-size:' + order['number'] + order['size-c'] + ';\nfont-weight:' + order['weight'] + ';';
+
+$('body').attr('style',BodyCSS);
+$('#disp').attr('style',SelectorCSS);
+$('#code').val(DisplayCSS);
+}
 
 $(function(){
  $("[as = 'style']").attr('rel','stylesheet');
@@ -55,17 +77,18 @@ $(window).on('load', function(e){
 <fieldset class="form-group form-inline">
 <legend>Font Family</legend>
 <p>
+<label>欧文
 <select name="family-e" class="form-control">
-    <option selected value="">欧文</option>
     <option value="GenShinGothic-A-w">Noto Sans CJK / 源ノ角ゴシック</option>
     <option value="mgenplus-c-w">M+ c</option>
     <option value="mgenplus-p-w">M+ p</option>
     <option value="mgenplus-m-w">M+ m</option>
     <option value="mgenplus-mn-w">M+ mn</option>
 </select>
+</label>
 
+<label>アドオン
 <select name="family-a" class="form-control">
-    <option selected value="">アドオン</option>
     <option value="">なし</option>
     <option value="irohakakuC-w">いろは角クラシック</option>
     <option value="KokuGothic-w">刻ゴシック</option>
@@ -76,13 +99,15 @@ $(window).on('load', function(e){
     <option value="CorporateLogo-w">コーポレート・ロゴ</option>
     <option value="LiNovePOP-w">ラノベPOP</option>
 </select>
+</label>
 
+<label>日本語・記号
 <select name="family-j" class="form-control">
-    <option selected value="">日本語・記号</option>
     <option value="GenShinGothic-w">Noto Sans CJK / 源ノ角ゴシック</option>
     <option value="mgenplus-1-w">M+ 1</option>
     <option value="mgenplus-2-w">M+ 2</option>
 </select>
+</label>
 </p>
 </fieldset>
 <fieldset class="form-group form-inline">
@@ -118,8 +143,12 @@ $(window).on('load', function(e){
 <label>Letters<input type="color" name="color-f" value="#ffffff" class="form-control" /></label>
 </p>
 </fieldset>
+<fieldset class="form-group form-horizontal">
+<legend>Copy This Code</legend>
+<textarea readonly class="form-control" id="code" name="code" />
+</fieldset>
 </form>
-<p>日本語Webフォントのデモページです。
+<p id="disp">日本語Webフォントのデモページです。
 <br>The Japanese Web Fonts 日本語Webフォントは「痒いところに手が届く」を目標にサブセット化したWebフォント用フォントセットです。基本になるフォントは、2大フリーゴシックである、「Noto Sans CJK JP」「源ノ角ゴシック」と「M+」の2種類があります。これらの基本フォントは、欧文と日本語と記号に細分化されており、自由に選ぶことが出来ます。これは特にM+フォントに対して軽量化をはかることができました。また、自家製フォント工房様が改造した「源真ゴシック」
 </p>
 </div>
