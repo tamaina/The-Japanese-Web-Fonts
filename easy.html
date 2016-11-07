@@ -22,12 +22,12 @@ console.log(Vals);
 $(function(){
  $('[as = "style"]').attr('rel','stylesheet');
  setTimeout( '$(".loading").fadeOut("slow");' , 10000);
- EasyDisplay($('#order').serializeArray());
- $('#order').change(EasyDisplay($('#order').serializeArray()));
 });
 $(window).load(function(){
  $(".loading").fadeOut("fast");
+ EasyDisplay($('#order').serializeArray());
 });
+ $('#order').change(EasyDisplay($('#order').serializeArray()));
 </script>
 <style>
 .loading{
@@ -53,7 +53,7 @@ $(window).load(function(){
 <legend>Font Family</legend>
 <p>
 <select name="family-e" class="form-control">
-    <option selected value="GenShinGothic-A-w">欧文</option>
+    <option selected>欧文</option>
     <option value="GenShinGothic-A-w">Noto Sans CJK / 源ノ角ゴシック</option>
     <option value="mgenplus-c-w">M+ c</option>
     <option value="mgenplus-p-w">M+ p</option>
@@ -75,7 +75,7 @@ $(window).load(function(){
 </select>
 
 <select name="family-j" class="form-control">
-    <option selected value="GenShinGothic-w">日本語・記号</option>
+    <option selected>日本語・記号</option>
     <option value="GenShinGothic-w">Noto Sans CJK / 源ノ角ゴシック</option>
     <option value="mgenplus-1-w">M+ 1</option>
     <option value="mgenplus-2-w">M+ 2</option>
