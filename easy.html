@@ -20,15 +20,15 @@ console.log($('#order').serializeArray());
 
 
 $(function(){
- $('[as = "style"]').attr('rel','stylesheet');
+ $("[as = 'style']").attr('rel','stylesheet');
  setTimeout( '$(".loading").fadeOut("slow");' , 10000);
 });
 $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
  EasyDisplay();
 });
- $('input').change(function(){EasyDisplay();});
- $('select').change(function(){EasyDisplay();});
+ $("input").change(function(){EasyDisplay();});
+ $("select").change(function(){EasyDisplay();});
 </script>
 <style>
 .loading{
