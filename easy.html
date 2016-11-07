@@ -6,13 +6,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.4/jquery.minicolors.min.css" />
 <link rel="preload" as="style" href="https://rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/JPWF-Addons.css" />
 <link rel="preload" as="style" href="https://rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/GenJpFont-X.css" />
 <link rel="preload" as="style" href="https://rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/MgenP-X.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.4/jquery.minicolors.min.js"></script>
 <script type="text/javascript">
-debug = true;
+$.minicolors = {
+    defaults: {
+        animationSpeed: 50,
+        animationEasing: 'swing',
+        change: null,
+        changeDelay: 0,
+        control: 'hue',
+        dataUris: true,
+        defaultValue: '',
+        format: 'hex',
+        hide: null,
+        hideSpeed: 100,
+        inline: false,
+        keywords: '',
+        letterCase: 'lowercase',
+        opacity: true,
+        position: 'bottom left',
+        show: null,
+        showSpeed: 100,
+        theme: 'default',
+        swatches: []
+    }
+};
+debug = false;
 function EasyDisplay(target){
 if( debug == true ){
 console.table($('#orderform').serializeArray());
@@ -51,6 +76,7 @@ $(function(){
 });
 $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
+ $('input.colorpick').minicolors(settings);
  EasyDisplay();
  $("#orderform").change(function(e){
   EasyDisplay($(e.target));
@@ -140,10 +166,10 @@ $(window).on('load', function(e){
 <fieldset class="form-group form-horizontal">
 <legend>Color</legend>
 <p>
-<label>Background<input type="color" name="color-b" value="#1a237e" class="form-control" /></label>
+<label>Background<input type="text" name="color-b" value="#1a237e" class="form-control colorpick" /></label>
 </p>
 <p>
-<label>Letters<input type="color" name="color-f" value="#ffffff" class="form-control" /></label>
+<label>Letters<input type="text" name="color-f" value="#ffffff" class="form-control colorpick" /></label>
 </p>
 </fieldset>
 <fieldset class="form-group form-horizontal">
