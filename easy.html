@@ -15,7 +15,7 @@
 function EasyDisplay(target){
 
 console.table($('#order').serializeArray());
-console.log(target);
+console.dir(target);
 
 }
 
@@ -27,8 +27,8 @@ $(function(){
 $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
  EasyDisplay();
- $("#order").change(function(){
-  EasyDisplay($(this.target));
+ $("#order").change(function(e){
+  EasyDisplay($(e.target));
  });
 });
 </script>
