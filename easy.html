@@ -54,6 +54,7 @@ $(function(){
 $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
  $('input.colorpick').minicolors({
+inline: true,
 theme: 'bootstrap'
  });
  EasyDisplay();
@@ -142,13 +143,13 @@ theme: 'bootstrap'
 <span id="weightdisp"></span>
 </p>
 </fieldset>
-<fieldset class="form-group form-horizontal minicolors-theme-bootstrap">
+<fieldset class="form-group form-inline">
 <legend>Color</legend>
 <p>
-<label>Background<input type="text" name="color-b" data-opacity="0.5" value="#1a237e" class="form-control colorpick" /></label>
+<label>Background<input type="text" name="color-b" value="#1a237e" class="form-control colorpick" /></label>
 </p>
 <p>
-<label>Letters<input type="text" name="color-f" data-opacity="0.5" value="#ffffff" class="form-control colorpick" /></label>
+<label>Letters<input type="text" name="color-f" value="#ffffff" class="form-control colorpick" /></label>
 </p>
 </fieldset>
 <fieldset class="form-group form-horizontal">
