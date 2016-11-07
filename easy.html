@@ -17,23 +17,19 @@ function EasyDisplay(target){
 console.table($('#order').serializeArray());
 console.log(target);
 
-return false;
 }
 
 
 $(function(){
  $("[as = 'style']").attr('rel','stylesheet');
  setTimeout( '$(".loading").fadeOut("slow");' , 10000);
- return false;
 });
 $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
  EasyDisplay();
- return false;
 });
-$("#order").change(function(e){
-     EasyDisplay($(e.target));
-     return false;
+$("#order").change(function(){
+     EasyDisplay($(this.target));
 });
 </script>
 <style>
