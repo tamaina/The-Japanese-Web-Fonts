@@ -23,7 +23,7 @@ $(function(){
  $('[as = "style"]').attr('rel','stylesheet');
  setTimeout( '$(".loading").fadeOut("slow");' , 10000);
 });
-$(window).load(function(){
+$(window).on('load', function(e){
  $(".loading").fadeOut("fast");
  EasyDisplay($('#order').serializeArray());
 });
