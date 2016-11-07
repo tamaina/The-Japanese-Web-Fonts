@@ -14,7 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.4/jquery.minicolors.min.js"></script>
 <script type="text/javascript">
-$.minicolors = {
+mcsettings = {
     defaults: {
         animationSpeed: 50,
         animationEasing: 'swing',
@@ -76,7 +76,7 @@ $(function(){
 });
 $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
- $('input.colorpick').minicolors(settings);
+ $('input.colorpick').minicolors(mcsettings);
  EasyDisplay();
  $("#orderform").change(function(e){
   EasyDisplay($(e.target));
