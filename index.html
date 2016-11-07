@@ -248,12 +248,10 @@ var hljs=new function(){function l(o){return o.replace(/&/gm,"&amp;").replace(/<
 <!-- END dist/MDwiki.min.js -->
 
 <script>
-$(function({
-$('.md-body').prepend('<p><a href="easy.html target="_blank">デモページで試してみる</a></p>"');
-$('.md-body a').attr('target','_blank');
-}))
 $(window).on('load', function(){ 
 $(".loading").fadeOut("slow");
+$('.md-body').prepend('<p><a href="easy.html target="_blank">デモページで試してみる</a></p>"');
+$('.md-body a').attr('target','_blank');
 });
 </script>
 </head>
