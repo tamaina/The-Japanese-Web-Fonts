@@ -54,6 +54,7 @@ $(function(){
 $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
  $('input.colorpick').minicolors();
+ $.minicolors.defaults.opacity = true;
  EasyDisplay();
  $("#orderform").change(function(e){
   EasyDisplay($(e.target));
@@ -72,7 +73,7 @@ $(window).on('load', function(e){
     z-index: 999998;
 }
 .colorpick{
-    height: 34px;
+    height: 34px !important;
 }
 </style>
 </head>
