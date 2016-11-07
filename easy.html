@@ -15,27 +15,28 @@
 debug = true;
 function EasyDisplay(target){
 if( debug == true ){
-console.table($('#order').serializeArray());
+console.table($('#orderform').serializeArray());
 console.dir(target);
 }
 
-var order = $('#order').serializeArray(), BodyCSS = "", SelectorCSS = "", DisplayCSS = "", AddonVal = "", JandSVal = "" ;
+var BodyCSS = "", SelectorCSS = "", DisplayCSS = "", AddonVal = "", JandSVal = "" ;
+var orderform = $('#orderform').serializeArray()
 
-if( order['family-a'] == "" ){
+if( orderform['family-a'] == "" ){
     AddonVal = "";
 } else {
-    AddonVal = '"' + order['family-a'] + '", ';
+    AddonVal = '"' + orderform['family-a'] + '", ';
 }
 
-if( order['family-j'] == "mgenplus-1-w" || order['family-j'] == "mgenplus-2-w" ){
-    JandSVal = '"' + order['family-j'] + '", "mgenplus-S-w"';
+if( orderform['family-j'] == "mgenplus-1-w" || orderform['family-j'] == "mgenplus-2-w" ){
+    JandSVal = '"' + orderform['family-j'] + '", "mgenplus-S-w"';
 } else {
-    JandSVal = '"' + order['family-j'] + '", "GenShinGothic-S-w"';
+    JandSVal = '"' + orderform['family-j'] + '", "GenShinGothic-S-w"';
 }
 
-BodyCSS = 'font-family:"' + order['family-e'] + '", ' + AddonVal + JandSVal + '; background-color:' + order['color-b'] + '; color:' + order['color-f'] + ';' ;
-SelectorCSS = 'font-size:' + order['number'] + order['size-c'] + '; font-weight:' + order['weight'] + ';';
-DisplayCSS = 'font-family:"' + order['family-e'] + '", ' + AddonVal + JandSVal + ';\nbackground-color:' + order['color-b'] + ';\ncolor:' + order['color-f'] + ';\nfont-size:' + order['number'] + order['size-c'] + ';\nfont-weight:' + order['weight'] + ';';
+BodyCSS = 'font-family:"' + orderform['family-e'] + '", ' + AddonVal + JandSVal + '; background-color:' + orderform['color-b'] + '; color:' + orderform['color-f'] + ';' ;
+SelectorCSS = 'font-size:' + orderform['number'] + orderform['size-c'] + '; font-weight:' + orderform['weight'] + ';';
+DisplayCSS = 'font-family:"' + orderform['family-e'] + '", ' + AddonVal + JandSVal + ';\nbackground-color:' + orderform['color-b'] + ';\ncolor:' + orderform['color-f'] + ';\nfont-size:' + orderform['number'] + orderform['size-c'] + ';\nfont-weight:' + orderform['weight'] + ';';
 
 $('body').attr('style',BodyCSS);
 $('#disp').attr('style',SelectorCSS);
@@ -49,7 +50,7 @@ $(function(){
 $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
  EasyDisplay();
- $("#order").change(function(e){
+ $("#orderform").change(function(e){
   EasyDisplay($(e.target));
  });
 });
@@ -73,7 +74,7 @@ $(window).on('load', function(e){
 <main>
 <div id="main" class="container">
 <h1>The Japanese Web Fonts デモページ</h1>
-<form id="order">
+<form id="orderform">
 <fieldset class="form-group form-inline">
 <legend>Font Family</legend>
 <p>
@@ -145,7 +146,7 @@ $(window).on('load', function(e){
 </fieldset>
 <fieldset class="form-group form-horizontal">
 <legend>Copy This Code</legend>
-<textarea readonly class="form-control" id="code" name="code" />
+<textarea readonly class="form-control" id="code" name="code"></textarea>
 </fieldset>
 </form>
 <p id="disp">日本語Webフォントのデモページです。
