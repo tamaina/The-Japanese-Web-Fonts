@@ -22,21 +22,21 @@ console.dir(target);
 var BodyCSS = "", SelectorCSS = "", DisplayCSS = "", AddonVal = "", JandSVal = "" ;
 var orderform = $('#orderform').serializeArray()
 
-if( orderform['family-a'] == "" ){
+if( orderform[1].value == "" ){
     AddonVal = "";
 } else {
-    AddonVal = '"' + orderform['family-a'] + '", ';
+    AddonVal = '"' + orderform[1].value + '", ';
 }
 
-if( orderform['family-j'] == "mgenplus-1-w" || orderform['family-j'] == "mgenplus-2-w" ){
-    JandSVal = '"' + orderform['family-j'] + '", "mgenplus-S-w"';
+if( orderform[2].value == "mgenplus-1-w" || orderform[2].value == "mgenplus-2-w" ){
+    JandSVal = '"' + orderform[2].value + '", "mgenplus-S-w"';
 } else {
-    JandSVal = '"' + orderform['family-j'] + '", "GenShinGothic-S-w"';
+    JandSVal = '"' + orderform[2].value + '", "GenShinGothic-S-w"';
 }
 
-BodyCSS = 'font-family:"' + orderform['family-e'] + '", ' + AddonVal + JandSVal + '; background-color:' + orderform['color-b'] + '; color:' + orderform['color-f'] + ';' ;
-SelectorCSS = 'font-size:' + orderform['number'] + orderform['size-c'] + '; font-weight:' + orderform['weight'] + ';';
-DisplayCSS = 'font-family:"' + orderform['family-e'] + '", ' + AddonVal + JandSVal + ';\nbackground-color:' + orderform['color-b'] + ';\ncolor:' + orderform['color-f'] + ';\nfont-size:' + orderform['number'] + orderform['size-c'] + ';\nfont-weight:' + orderform['weight'] + ';';
+BodyCSS = 'font-family:"' + orderform[0].value + '", ' + AddonVal + JandSVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + ';' ;
+SelectorCSS = 'font-size:' + orderform[3].value + orderform[4].value + '; font-weight:' + orderform[5].value + ';';
+DisplayCSS = 'font-family:"' + orderform[0].value + '", ' + AddonVal + JandSVal + ';\nbackground-color:' + orderform[6].value + ';\ncolor:' + orderform[7].value + ';\nfont-size:' + orderform[3].value + orderform[4].value + ';\nfont-weight:' + orderform[5].value + ';';
 
 $('body').attr('style',BodyCSS);
 $('#disp').attr('style',SelectorCSS);
