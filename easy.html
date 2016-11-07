@@ -119,10 +119,10 @@ theme: 'bootstrap'
 </p>
 </fieldset>
 <fieldset class="form-group form-inline">
-<legend>Font Size</legend>
 <p>
+<label>Font Size
 <input type="number" name="number" value="30" class="form-control" />
-
+</label>
 <select name="size-c" class="form-control">
     <option selected value="px">px</option>
     <option value="pt">pt</option>
@@ -133,13 +133,10 @@ theme: 'bootstrap'
     <option value="mm">mm</option>
     <option value="cm">cm</option>
 </select>
-</p>
-</fieldset>
-<fieldset class="form-group form-horizontal">
-<legend>Font Weight</legend>
-<p>
-<input type="range" name="weight" value="400" min="100" max="900" step="100" class="form-control" /><br>
-<span id="weightdisp"></span>
+
+<label>Font Weight : <span id="weightdisp"></span>
+<input type="range" name="weight" value="400" min="100" max="900" step="100" class="form-control" />
+</label>
 </p>
 </fieldset>
 <fieldset class="form-group form-inline">
