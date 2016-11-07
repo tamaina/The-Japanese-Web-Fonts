@@ -39,6 +39,7 @@ SelectorCSS = 'font-size:' + orderform[3].value + orderform[4].value + '; font-w
 DisplayCSS = 'font-family:"' + orderform[0].value + '", ' + AddonVal + JandSVal + ';\nbackground-color:' + orderform[6].value + ';\ncolor:' + orderform[7].value + ';\nfont-size:' + orderform[3].value + orderform[4].value + ';\nfont-weight:' + orderform[5].value + ';';
 
 $('body').attr('style',BodyCSS);
+$('legend').css('color',orderform[7].value)
 $('#disp').attr('style',SelectorCSS);
 $('#code').val(DisplayCSS);
 }
