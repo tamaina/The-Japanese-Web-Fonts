@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="preload" as="style" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/JPWF-Addons.css" />
 <link rel="preload" as="style" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/GenJpFont-X.css" />
 <link rel="preload" as="style" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/MgenP-X.css" />
@@ -60,7 +60,7 @@ $("#order").change(function(e){
 <legend>Font Family</legend>
 <p>
 <select name="family-e" class="form-control">
-    <option selected>欧文</option>
+    <option selected value="">欧文</option>
     <option value="GenShinGothic-A-w">Noto Sans CJK / 源ノ角ゴシック</option>
     <option value="mgenplus-c-w">M+ c</option>
     <option value="mgenplus-p-w">M+ p</option>
@@ -69,8 +69,8 @@ $("#order").change(function(e){
 </select>
 
 <select name="family-a" class="form-control">
-    <option selected>アドオン</option>
-    <option>なし</option>
+    <option selected value="">アドオン</option>
+    <option value="">なし</option>
     <option value="irohakakuC-w">いろは角クラシック</option>
     <option value="KokuGothic-w">刻ゴシック</option>
     <option value="YasashisaGothic-w">やさしさゴシック</option>
@@ -82,7 +82,7 @@ $("#order").change(function(e){
 </select>
 
 <select name="family-j" class="form-control">
-    <option selected>日本語・記号</option>
+    <option selected value="">日本語・記号</option>
     <option value="GenShinGothic-w">Noto Sans CJK / 源ノ角ゴシック</option>
     <option value="mgenplus-1-w">M+ 1</option>
     <option value="mgenplus-2-w">M+ 2</option>
