@@ -53,9 +53,10 @@ $(function(){
 });
 $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
- $('input.colorpick').minicolors();
- $.minicolors.defaults.opacity = true;
- $.minicolors.defaults.theme = 'bootstrap';
+ $('input.colorpick').minicolors({
+opacity: true,
+theme: 'bootstrap'
+ });
  EasyDisplay();
  $("#orderform").change(function(e){
   EasyDisplay($(e.target));
