@@ -12,9 +12,10 @@
 <link rel="preload" as="style" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/GenJpFont-X.css" />
 <link rel="preload" as="style" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/MgenP-X.css" />
 <script type="text/javascript">
-function EasyDisplay(){
+function EasyDisplay(target){
 
 console.log($('#order').serializeArray());
+console.log(target);
 
 return false;
 }
@@ -30,8 +31,8 @@ $(window).on('load', function(e){
  EasyDisplay();
  return false;
 });
-$("form").change(function(){
-     EasyDisplay();
+$("form").change(function(e){
+     EasyDisplay($(e.target));
      return false;
 });
 </script>
