@@ -22,21 +22,21 @@ console.dir(target);
 var BodyCSS = "", SelectorCSS = "", DisplayCSS = "", AddonVal = "", JandSVal = "" ;
 var orderform = $('#orderform').serializeArray()
 
-if( orderform['family-a'] == "" ){
+if( orderform['name'='family-a'] == "" ){
     AddonVal = "";
 } else {
-    AddonVal = '"' + orderform['family-a'] + '", ';
+    AddonVal = '"' + orderform['name'='family-a'] + '", ';
 }
 
-if( orderform['family-j'] == "mgenplus-1-w" || orderform['family-j'] == "mgenplus-2-w" ){
-    JandSVal = '"' + orderform['family-j'] + '", "mgenplus-S-w"';
+if( orderform['name'='family-j'] == "mgenplus-1-w" || orderform['name'='family-j'] == "mgenplus-2-w" ){
+    JandSVal = '"' + orderform['name'='family-j'] + '", "mgenplus-S-w"';
 } else {
-    JandSVal = '"' + orderform['family-j'] + '", "GenShinGothic-S-w"';
+    JandSVal = '"' + orderform['name'='family-j'] + '", "GenShinGothic-S-w"';
 }
 
-BodyCSS = 'font-family:"' + orderform['family-e'] + '", ' + AddonVal + JandSVal + '; background-color:' + orderform['color-b'] + '; color:' + orderform['color-f'] + ';' ;
-SelectorCSS = 'font-size:' + orderform['number'] + orderform['size-c'] + '; font-weight:' + orderform['weight'] + ';';
-DisplayCSS = 'font-family:"' + orderform['family-e'] + '", ' + AddonVal + JandSVal + ';\nbackground-color:' + orderform['color-b'] + ';\ncolor:' + orderform['color-f'] + ';\nfont-size:' + orderform['number'] + orderform['size-c'] + ';\nfont-weight:' + orderform['weight'] + ';';
+BodyCSS = 'font-family:"' + orderform['name'='family-e'] + '", ' + AddonVal + JandSVal + '; background-color:' + orderform['name'='color-b'] + '; color:' + orderform['name'='color-f'] + ';' ;
+SelectorCSS = 'font-size:' + orderform['name'='number'] + orderform['name'='size-c'] + '; font-weight:' + orderform['name'='weight'] + ';';
+DisplayCSS = 'font-family:"' + orderform['name'='family-e'] + '", ' + AddonVal + JandSVal + ';\nbackground-color:' + orderform['name'='color-b'] + ';\ncolor:' + orderform['name'='color-f'] + ';\nfont-size:' + orderform['name'='number'] + orderform['name'='size-c'] + ';\nfont-weight:' + orderform['name'='weight'] + ';';
 
 $('body').attr('style',BodyCSS);
 $('#disp').attr('style',SelectorCSS);
