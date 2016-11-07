@@ -24,7 +24,7 @@ console.log(Vals);
 $(function(){
  setTimeout( '$(".loading").fadeOut("slow");' , 10000);
  EasyDisplay($('#order').serializeArray());
- $('#order').change(EasyDisplay($(this).serializeArray()));
+ $('#order').change(EasyDisplay($('#order').serializeArray()););
 });
 $(window).load(function(){
  $(".loading").fadeOut("fast");
