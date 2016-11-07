@@ -5,12 +5,12 @@
 - http://jikasei.me/font/genshin/
 - `href="GenJpFont-X.css"`
 - font-family:
-  - 英語部分
+  - 欧文部分
     - "GenShinGothic-A-w"
-  - 英語以外
+  - 欧文以外(日本語+記号)
     - "GenShinGothic-w"
-  - 英語部分と英語以外を併せて使ってはじめてフォントが完成します。
-    - 英語部分はMgen+に挿げ替えが可能です。
+  - 欧文部分と欧文以外を併せて使ってはじめてフォントが完成します。
+    - 欧文部分はMgen+に挿げ替えが可能です。
 - 形式 Extensions
   - ttf,otf,woff2,woff
 
