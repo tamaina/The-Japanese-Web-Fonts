@@ -27,7 +27,8 @@ $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
  EasyDisplay();
 });
- $('input,select').change(function(){EasyDisplay();});
+ $('input').change(function(){EasyDisplay();});
+ $('select').change(function(){EasyDisplay();});
 </script>
 <style>
 .loading{
