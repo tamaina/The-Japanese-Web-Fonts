@@ -23,10 +23,12 @@ return false;
 $(function(){
  $("[as = 'style']").attr('rel','stylesheet');
  setTimeout( '$(".loading").fadeOut("slow");' , 10000);
+ return false;
 });
 $(window).on('load', function(e){
  $(".loading").fadeOut("fast");
  EasyDisplay();
+ return false;
 });
  $("form").change(function(){EasyDisplay();});
 </script>
