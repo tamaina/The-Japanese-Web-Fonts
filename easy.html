@@ -5,44 +5,82 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.4/jquery.minicolors.min.css" />
+<link rel="dns-prefetch" href="https://rawgit.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.4/jquery.minicolors.min.css" />
 <link rel="preload" as="style" href="https://rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/JPWF-Addons.css" />
 <link rel="preload" as="style" href="https://rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/GenJpFont-X.css" />
 <link rel="preload" as="style" href="https://rawgit.com/tamaina/The-Japanese-Web-Fonts/master/css/MgenP-X.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" /> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=latin-ext" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton&amp;subset=latin-ext" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bubbler+One&amp;subset=latin-ext" /> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.4/jquery.minicolors.min.js"></script>
 <script type="text/javascript">
-debug = false;
+debug = true;
+$italic = false;
 function EasyDisplay(target){
 if( debug == true ){
 console.table($('#orderform').serializeArray());
 console.dir(target);
 }
 
-var BodyCSS = "", SelectorCSS = "", DisplayCSS = "", AddonVal = "", JandSVal = "" ;
+var BodyCSS = "", SelectorCSS = "", DisplayCSS = "", AddonTF = false, EngTF = false, JandSVal = "", FontFamilyVal = "", theOthers = "" ;
 var orderform = $('#orderform').serializeArray()
 
-if( orderform[0].value == "" ){
-    AddonVal = "";
+if( orderform[1].value == "none" ){
+    AddonTF = false;
 } else {
-    AddonVal = '"' + orderform[0].value + '", ';
+    AddonTF = true;
 }
-
+if( orderform[0].value == "none" ){
+    EngTF = false;
+} else {
+    EngTF = true;
+}
 if( orderform[2].value == "mgenplus-1-w" || orderform[2].value == "mgenplus-2-w" ){
     JandSVal = '"' + orderform[2].value + '", "mgenplus-S-w"';
 } else {
     JandSVal = '"' + orderform[2].value + '", "GenShinGothic-S-w"';
 }
+console.log(orderform[8]);
+if( AddonTF == true && EngTF == true ){
+    FontFamilyVal = '"' + orderform[0].value + '", "' + orderform[1].value + '", ' + JandSVal ;
+} else if( AddonTF == false && EngTF == true ){
+    FontFamilyVal = '"' + orderform[0].value + '", ' + JandSVal ;
+} else if( AddonTF == true && EngTF == false ){
+    FontFamilyVal = '"' + orderform[1].value + '", ' + JandSVal ;
+} else {
+    FontFamilyVal = JandSVal ;
+}
 
-BodyCSS = 'font-family:' + AddonVal + '"' + orderform[1].value + '", ' + JandSVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + ';' ;
-SelectorCSS = 'font-size:' + orderform[3].value + orderform[4].value + '; font-weight:' + orderform[5].value + ';';
-DisplayCSS = 'font-family:' + AddonVal + '"' + orderform[1].value + '", ' + JandSVal + ';\nbackground-color:' + orderform[6].value + ';\ncolor:' + orderform[7].value + ';\nfont-size:' + orderform[3].value + orderform[4].value + ';\nfont-weight:' + orderform[5].value + ';';
+if( $(target).attr('id') == "font-style-italic" ){
+    $italic = !$italic;
+}
+if($italic){
+    theOthers += "\nfont-style: italic;"
+}
+if( orderform[9].value != "normal" ){
+theOthers += '\nline-height:' + orderform[8].value + orderform[9].value + ';';
+    $('[name="line-height-n"]').css("display","inline-block");
+} else {
+    $('[name="line-height-n"]').css("display","none");
+}
+
+BodyCSS = 'font-family:' + FontFamilyVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + '; ' ;
+SelectorCSS = 'font-size:' + orderform[3].value + orderform[4].value + '; font-weight:' + orderform[5].value + ';' + theOthers;
+DisplayCSS = 'font-family:' + FontFamilyVal + ';\nbackground-color:' + orderform[6].value + ';\ncolor:' + orderform[7].value + ';\nfont-size:' + orderform[3].value + orderform[4].value + ';\nfont-weight:' + orderform[5].value + ';' + theOthers;
 
 $('body').attr('style',BodyCSS);
 $('legend').css('color',orderform[7].value)
-$('#disp').attr('style',SelectorCSS);
+$('.disp').attr('style',SelectorCSS);
 $('#code').val(DisplayCSS);
 $('#weightdisp').html(orderform[5].value);
 }
@@ -58,6 +96,9 @@ theme: 'bootstrap'
  });
  EasyDisplay();
  $("#orderform").change(function(e){
+  EasyDisplay($(e.target));
+ });
+ $("button").on('click',function(e){
   EasyDisplay($(e.target));
  });
 });
@@ -81,13 +122,61 @@ theme: 'bootstrap'
 <main>
 <div id="main" class="container">
 <h1>The Japanese Web Fonts デモページ</h1>
+
+<ul class="nav nav-tabs">
+   <li class="active">
+     <a href="#form-1" class="nav-link thetab" data-toggle="tab">Font Family</a>
+   </li>
+   <li>
+     <a href="#form-2" class="nav-link thetab" data-toggle="tab">Size / Weight</a>
+   </li>
+   <li>
+     <a href="#form-3" class="nav-link thetab" data-toggle="tab">Page Color</a>
+   </li>
+   <li>
+     <a href="#form-4" class="nav-link thetab" data-toggle="tab">the Others</a>
+   </li>
+</ul>
+
 <form id="orderform">
+
+<div class="tab-content">
+ <div id="form-1" class="tab-pane fade in active">
 <fieldset class="form-group form-inline">
 <legend>Font Family</legend>
 <p>
+<label>欧文
+<select name="family-e" class="form-control">
+    <optgroup label="セット内">
+    <option value="GenShinGothic-A-w">Noto Sans CJK / 源ノ角ゴシック</option>
+    <option value="mgenplus-c-w">M+ c</option>
+    <option value="mgenplus-p-w">M+ p</option>
+    <option value="mgenplus-m-w">M+ m</option>
+    <option value="mgenplus-mn-w">M+ mn</option>
+    <option value="LinBiolinum-w">Linux Biolinum</option>
+    </optgroup>
+    <optgroup label="Gootle Fonts">
+    <option>Open Sans</option>
+    <option>Lato</option>
+    <option>Montserrat</option>
+    <option>Roboto</option>
+    <option>Anton</option>
+    <option>Bubbler One</option>
+    <option>Nunito</option>
+    </optgroup>
+    <optgroup label="Windows/Mac標準">
+    <option>Arial</option>
+    <option>Verdana</option>
+    <option>Impact</option>
+    </optgroup>
+    <option value="none">無効</option>
+</select>
+</label>
+
 <label>アドオン
 <select name="family-a" class="form-control">
-    <option value="">なし</option>
+    <option value="none">なし</option>
+    <optgroup label="セット内">
     <option value="irohakakuC-w">いろは角クラシック</option>
     <option value="KokuGothic-w">刻ゴシック</option>
     <option value="YasashisaGothic-w">やさしさゴシック</option>
@@ -96,18 +185,12 @@ theme: 'bootstrap'
     <option value="LogoTypeGothic-w">ロゴたいぷゴシック</option>
     <option value="CorporateLogo-w">コーポレート・ロゴ</option>
     <option value="LiNovePOP-w">ラノベPOP</option>
-</select>
-</label>
-
-<label>欧文
-<select name="family-e" class="form-control">
-    <option value="GenShinGothic-A-w">Noto Sans CJK / 源ノ角ゴシック</option>
-    <option value="mgenplus-c-w">M+ c</option>
-    <option value="mgenplus-p-w">M+ p</option>
-    <option value="mgenplus-m-w">M+ m</option>
-    <option value="mgenplus-mn-w">M+ mn</option>
-</select>
-</label>
+    <option value="JapanSans70-w">JapanSans70</option>
+    <option value="JapanSans80-w">JapanSans80</option>
+    <option value="JapanSans90-w">JapanSans90</option>
+    <option value="JapanSans100-w">JapanSans100</option>
+    </optgroup>
+</select></label>
 
 <label>日本語・記号
 <select name="family-j" class="form-control">
@@ -118,27 +201,39 @@ theme: 'bootstrap'
 </label>
 </p>
 </fieldset>
+ </div>
+
+ <div id="form-2" class="tab-pane">
 <fieldset class="form-group form-inline">
+<legend>Font Size</legend>
 <p>
-<label>Font Size
 <input type="number" name="number" value="30" class="form-control" />
-</label>
 <select name="size-c" class="form-control">
     <option selected value="px">px</option>
     <option value="pt">pt</option>
     <option value="pc">pc</option>
+    <option value="em">em</option>
     <option value="rem">rem</option>
     <option value="vh">vh</option>
     <option value="vw">vw</option>
+    <option value="vmin">vmin</option>
+    <option value="vmax">vmax</option>
     <option value="mm">mm</option>
     <option value="cm">cm</option>
 </select>
-
-<label>Font Weight : <span id="weightdisp"></span>
-<input type="range" name="weight" value="400" min="100" max="900" step="100" class="form-control" />
-</label>
 </p>
 </fieldset>
+
+<fieldset>
+<legend>Font Weight</legend>
+<p>
+<span id="weightdisp"></span>
+<input type="range" name="weight" value="400" min="100" max="900" step="100" class="form-control" /></p>
+</p>
+</fieldset>
+</div>
+
+ <div id="form-3" class="tab-pane">
 <fieldset class="form-group form-inline">
 <legend>Color</legend>
 <p>
@@ -148,14 +243,78 @@ theme: 'bootstrap'
 <label>Letters<input type="text" name="color-f" value="#ffffff" class="form-control colorpick" /></label>
 </p>
 </fieldset>
+ </div>
+ <div id="form-4" class="tab-pane">
+<fieldset class="form-group form-horizontal">
+<legend>Font Style</legend>
+<button type="button" class="btn btn-primary" name="font-style-italic" id="font-style-italic" data-toggle="button" aria-pressed="false" autocomplete="off">
+italic
+</button>
+</fieldset>
+
+<fieldset class="form-group form-inline">
+<legend>Line Height</legend>
+<p>
+<input type="number" name="line-height-n" value="1" class="form-control" />
+<select name="line-height-c" class="form-control">
+    <option selected>normal</option>
+    <option>px</option>
+    <option>pt</option>
+    <option>pc</option>
+    <option>em</option>
+    <option>rem</option>
+    <option>vh</option>
+    <option>vw</option>
+    <option>vmin</option>
+    <option>vmax</option>
+    <option>mm</option>
+    <option>cm</option>
+</select>
+</p>
+</fieldset>
+ </div></div>
 <fieldset class="form-group form-horizontal">
 <legend>Code</legend>
 <textarea readonly class="form-control" id="code" name="code" rows="7"></textarea>
 </fieldset>
 </form>
-<p id="disp">日本語Webフォントのデモページです。<br>
-<br>The Japanese Web Fonts 日本語Webフォントは「痒いところに手が届く」を目標にサブセット化したWebフォント用フォントセットです。基本になるフォントは、2大フリーゴシックである、「Noto Sans CJK JP」「源ノ角ゴシック」と「M+」の2種類があります。多くのウェイト(太さ)・可読性・デザイン性を兼ね備えており、今日では商用/非商用問わず多くの場面で使用されています。このセットでは、そんなゴシック体を、殆どの文字で表示できるようにJIS第2水準漢字まで収録しました。これらのフォントは欧文・日本語・記号に細分化されており、自由に組み合わせることが出来ます。特にM+フォントに対し、軽量化をはかり、そして、選択性を高めることができました。基本フォントは、自家製フォント工房様の「源真ゴシック」「Mgen+」を使用しており、さらに様々な恩恵が得られます。また、多種多様なアドオンフォントも特徴です。このWebフォントセットに収録する際に、必要な文字だけ抜き出し、なるべく小さくしました。このページでは、その選択性の高さを体感することができます。ぜひ、広い画面で弄ってみてください。
+<ul class="nav nav-tabs">
+   <li class="active">
+     <a href="#disp-1" class="nav-link thetab" data-toggle="tab">只の説明</a>
+   </li>
+   <li>
+     <a href="#disp-2" class="nav-link thetab" data-toggle="tab">童祭</a>
+   </li>
+</ul>
+
+<div class="tab-content">
+ <div id="disp-1" class="tab-pane fade in active">
+<p class="disp">日本語Webフォントのデモページです。<br>
+<br>　<b>The Japanese Web Fonts 日本語Webフォント</b>は「痒いところに手が届く」を目標にサブセット化したWebフォント用フォントセットです。基本になるフォントは、2大フリーゴシックである、「Noto Sans CJK JP」「源ノ角ゴシック」と「M+」の2種類があります。多くのウェイト(太さ)・可読性・デザイン性を兼ね備えており、今日では商用/非商用問わず多くの場面で使用されています。このセットでは、そんなゴシック体を、殆どの文字で表示できるようにJIS第2水準漢字まで収録しました。これらのフォントは欧文・日本語・記号に細分化されており、自由に組み合わせることが出来ます。特にM+フォントに対し、軽量化をはかり、そして、選択性を高めることができました。基本フォントは、自家製フォント工房様の「源真ゴシック」「Mgen+」を使用しており、さらに様々な恩恵が得られます。また、多種多様なアドオンフォントも特徴です。このWebフォントセットに収録する際に、必要な文字だけ抜き出し、なるべく小さくしました。このページでは、その選択性の高さを体感することができます。ぜひ、広い画面で弄ってみてください。
+<br>　<b>このページの使い方を説明します。</b>
+<br>　まず、上段タブの説明です。[Font Family] [Size / Weight] [Color][the Others]に分かれています。[Font Family]では、表示するフォントを変えることができます。欧文フォント、アドオンフォント、日本語フォントを適宜切り替えて遊んでみてください。このセットに入っているフォント以外も選択できるようになっています。適宜Google Fonts等にリンクしてください。欧文付きアドオンフォントは、欧文の欄を無効にすることで欧文部分のアドオンフォントが有効になります。<i>!CAUTION! データ通信量を気にしてください。</i>[Size / Weight]では、プレビュー部分のサイズとウェイトを変えることが出来ます。サイズは様々な単位で変えることが出来ます。ウェイトは100から900を指定できます。[Color]では、ページの背景色と文字色を変えることが出来ます。[the Others]は、その他です。[Font Style]内の[italic]を押すと、プレビュー全体に<code>font-style:italic;</code>が適用されます。[Line Height]は、初期値は[normal]です。選択して単位に切り替えると、<code>line-height</code>を自由に変更できます。
+<br>　次に、中段[Code]の説明です。この窓には、cssのコードが表示されます。適宜使ってください。<code>@font-face</code>は出力しないので、自分でコピペしてください。<code>&lt;head&gt;~&lt;/head&gt;</code>内にフォント設定用のCSSをlinkするのを忘れずに。
+<br>　最後に、下段のプレビューの説明です。今見ている[只の説明]は、長文表示のプレビューです。<code>&lt;b&gt;~&lt;/b&gt;</code>及び<code>&lt;i&gt;~&lt;/i&gt;</code>の表示テストも兼ねています。[童祭]は、詞の表示のプレビューです。たぶんそのうち適当に追加されます。
 </p>
+ </div>
+
+ <div id="disp-2" class="tab-pane">
+<p class="disp">
+夢違え、幻の<ruby>朝靄<rt>あさもや</rt></ruby>の世界の記憶を<br>
+<ruby>現<rt>うつ</rt></ruby>し世は、崩れゆく砂の上に<br>
+<ruby>空夢<rt>そらゆめ</rt></ruby>の、古の<ruby>幽玄<rt>ゆうげん</rt></ruby>の世界の歴史を<br>
+<ruby>白日<rt>はくじつ</rt></ruby>は、沈みゆく街に<br>
+<br>
+幻か、砂上の<ruby>楼閣<rt>ろうかく</rt></ruby>なのか<br>
+夜明け迄、この夢、<ruby>胡蝶<rt>こちょう</rt></ruby>の夢<br>
+
+夢違え、幻の<ruby>紅<rt>くれない</rt></ruby>の屋敷の異彩を<br>
+<ruby>現<rt>うつ</rt></ruby>し世は、血の気ない石の上に<br>
+<ruby>空夢<rt>そらゆめ</rt></ruby>の、古の美しき都のお<ruby>伽<rt>とぎ</rt></ruby>を<br>
+白日は、<ruby>穢<rt>けが</rt></ruby>れゆく街に<br>
+　―<ruby>童祭<rt>わらべまつり</rt></ruby> ～ Innocent Treasures　歌詞
+</p>
+ </div></div>
 </div>
 </main>
 </body>

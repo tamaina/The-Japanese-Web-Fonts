@@ -1,6 +1,17 @@
+【基本条項】
+1.たとえフォーマットが変わったり収録文字が変わろうと、元の
+  フォントが持っていたライセンスを受け継いで再配布します。
+2.元のフォントが持っていたフォントは下記に記しますが、
+  一部簡略化して記載していることをご了承ください。
+3.フォントの配布元URLは別途mdファイルに記載しております。
+  - Mplus.md
+  - Gen.md
+  - Addons.md
+
 ///////////////////////////////////////////////////////////////
 
 >>> index.html : mdwiki
+記載事項:再配布者(tamaina)による改変があります。
 
 ///////////////////////////////////////////////////////////////
 https://github.com/Dynalon/mdwiki/blob/master/LICENSE.txt
@@ -10,6 +21,7 @@ https://github.com/Dynalon/mdwiki/blob/master/LICENSE.txt
 
 >>> Nasu font
 >>> Koku Gothic font
+>>> JapanSans font(Addon)
 >>> Some glyphs of GenEi Antique -- You can identify them concerned
     at http://okoneya.jp/font/
 
@@ -44,7 +56,7 @@ THESE FONTS ARE PROVIDED "AS IS" WITHOUT WARRANTY.
 
 ///////////////////////////////////////////////////////////////
 
->>> Other fonts or glyphs
+>>> Other fonts
 
 ///////////////////////////////////////////////////////////////
 -----------------------------------------------------------

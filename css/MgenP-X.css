@@ -6,305 +6,305 @@
 
 @font-face {
     font-family: 'mgenplus-S-w';
-    src: url('../fonts/mgenplus-S-thin.eot');
-    src: url('../fonts/mgenplus-S-thin.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-S-thin.woff2') format('woff2'),url('../fonts/mgenplus-S-thin.woff') format('woff'),url('../fonts/mgenplus-S-thin.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-thin.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-thin.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-thin.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-thin.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-thin.ttf') format('truetype');
     font-weight: 100;
 }
 @font-face {
     font-family: 'mgenplus-S-w';
-    src: url('../fonts/mgenplus-S-light.eot');
-    src: url('../fonts/mgenplus-S-light.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-S-light.woff2') format('woff2'),url('../fonts/mgenplus-S-light.woff') format('woff'),url('../fonts/mgenplus-S-light.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-light.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-light.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-light.ttf') format('truetype');
     font-weight: 200;
 }
 @font-face {
     font-family: 'mgenplus-S-w';
-    src: url('../fonts/mgenplus-S-regular.eot');
-    src: url('../fonts/mgenplus-S-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-S-regular.woff2') format('woff2'),url('../fonts/mgenplus-S-regular.woff') format('woff'),url('../fonts/mgenplus-S-regular.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-regular.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'mgenplus-S-w';
-    src: url('../fonts/mgenplus-S-medium.eot');
-    src: url('../fonts/mgenplus-S-medium.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-S-medium.woff2') format('woff2'),url('../fonts/mgenplus-S-medium.woff') format('woff'),url('../fonts/mgenplus-S-medium.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'mgenplus-S-w';
-    src: url('../fonts/mgenplus-S-bold.eot');
-    src: url('../fonts/mgenplus-S-bold.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-S-bold.woff2') format('woff2'),url('../fonts/mgenplus-S-bold.woff') format('woff'),url('../fonts/mgenplus-S-bold.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-bold.ttf') format('truetype');
     font-weight: 700;
 }
 @font-face {
     font-family: 'mgenplus-S-w';
-    src: url('../fonts/mgenplus-S-heavy.eot');
-    src: url('../fonts/mgenplus-S-heavy.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-S-heavy.woff2') format('woff2'),url('../fonts/mgenplus-S-heavy.woff') format('woff'),url('../fonts/mgenplus-S-heavy.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-heavy.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-heavy.ttf') format('truetype');
     font-weight: 800;
 }
 @font-face {
     font-family: 'mgenplus-S-w';
-    src: url('../fonts/mgenplus-S-black.eot');
-    src: url('../fonts/mgenplus-S-black.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-S-black.woff2') format('woff2'),url('../fonts/mgenplus-S-black.woff') format('woff'),url('../fonts/mgenplus-S-black.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-black.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-black.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-black.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-black.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-S-black.ttf') format('truetype');
     font-weight: 900;
 }
 
 
 @font-face {
     font-family: 'mgenplus-p-w';
-    src: url('../fonts/mgenplus-p-thin.eot');
-    src: url('../fonts/mgenplus-p-thin.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-p-thin.woff2') format('woff2'),url('../fonts/mgenplus-p-thin.woff') format('woff'),url('../fonts/mgenplus-p-thin.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-thin.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-thin.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-thin.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-thin.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-thin.ttf') format('truetype');
     font-weight: 100;
 }
 @font-face {
     font-family: 'mgenplus-p-w';
-    src: url('../fonts/mgenplus-p-light.eot');
-    src: url('../fonts/mgenplus-p-light.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-p-light.woff2') format('woff2'),url('../fonts/mgenplus-p-light.woff') format('woff'),url('../fonts/mgenplus-p-light.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-light.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-light.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-light.ttf') format('truetype');
     font-weight: 200;
 }
 @font-face {
     font-family: 'mgenplus-p-w';
-    src: url('../fonts/mgenplus-p-regular.eot');
-    src: url('../fonts/mgenplus-p-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-p-regular.woff2') format('woff2'),url('../fonts/mgenplus-p-regular.woff') format('woff'),url('../fonts/mgenplus-p-regular.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-regular.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'mgenplus-p-w';
-    src: url('../fonts/mgenplus-p-medium.eot');
-    src: url('../fonts/mgenplus-p-medium.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-p-medium.woff2') format('woff2'),url('../fonts/mgenplus-p-medium.woff') format('woff'),url('../fonts/mgenplus-p-medium.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'mgenplus-p-w';
-    src: url('../fonts/mgenplus-p-bold.eot');
-    src: url('../fonts/mgenplus-p-bold.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-p-bold.woff2') format('woff2'),url('../fonts/mgenplus-p-bold.woff') format('woff'),url('../fonts/mgenplus-p-bold.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-bold.ttf') format('truetype');
     font-weight: 700;
 }
 @font-face {
     font-family: 'mgenplus-p-w';
-    src: url('../fonts/mgenplus-p-heavy.eot');
-    src: url('../fonts/mgenplus-p-heavy.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-p-heavy.woff2') format('woff2'),url('../fonts/mgenplus-p-heavy.woff') format('woff'),url('../fonts/mgenplus-p-heavy.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-heavy.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-heavy.ttf') format('truetype');
     font-weight: 800;
 }
 @font-face {
     font-family: 'mgenplus-p-w';
-    src: url('../fonts/mgenplus-p-black.eot');
-    src: url('../fonts/mgenplus-p-black.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-p-black.woff2') format('woff2'),url('../fonts/mgenplus-p-black.woff') format('woff'),url('../fonts/mgenplus-p-black.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-black.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-black.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-black.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-black.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-p-black.ttf') format('truetype');
     font-weight: 900;
 }
 
 
 @font-face {
     font-family: 'mgenplus-c-w';
-    src: url('../fonts/mgenplus-c-thin.eot');
-    src: url('../fonts/mgenplus-c-thin.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-c-thin.woff2') format('woff2'),url('../fonts/mgenplus-c-thin.woff') format('woff'),url('../fonts/mgenplus-c-thin.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-thin.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-thin.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-thin.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-thin.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-thin.ttf') format('truetype');
     font-weight: 100;
 }
 @font-face {
     font-family: 'mgenplus-c-w';
-    src: url('../fonts/mgenplus-c-light.eot');
-    src: url('../fonts/mgenplus-c-light.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-c-light.woff2') format('woff2'),url('../fonts/mgenplus-c-light.woff') format('woff'),url('../fonts/mgenplus-c-light.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-light.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-light.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-light.ttf') format('truetype');
     font-weight: 200;
 }
 @font-face {
     font-family: 'mgenplus-c-w';
-    src: url('../fonts/mgenplus-c-regular.eot');
-    src: url('../fonts/mgenplus-c-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-c-regular.woff2') format('woff2'),url('../fonts/mgenplus-c-regular.woff') format('woff'),url('../fonts/mgenplus-c-regular.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-regular.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'mgenplus-c-w';
-    src: url('../fonts/mgenplus-c-medium.eot');
-    src: url('../fonts/mgenplus-c-medium.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-c-medium.woff2') format('woff2'),url('../fonts/mgenplus-c-medium.woff') format('woff'),url('../fonts/mgenplus-c-medium.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'mgenplus-c-w';
-    src: url('../fonts/mgenplus-c-bold.eot');
-    src: url('../fonts/mgenplus-c-bold.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-c-bold.woff2') format('woff2'),url('../fonts/mgenplus-c-bold.woff') format('woff'),url('../fonts/mgenplus-c-bold.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-bold.ttf') format('truetype');
     font-weight: 700;
 }
 @font-face {
     font-family: 'mgenplus-c-w';
-    src: url('../fonts/mgenplus-c-heavy.eot');
-    src: url('../fonts/mgenplus-c-heavy.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-c-heavy.woff2') format('woff2'),url('../fonts/mgenplus-c-heavy.woff') format('woff'),url('../fonts/mgenplus-c-heavy.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-heavy.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-heavy.ttf') format('truetype');
     font-weight: 800;
 }
 @font-face {
     font-family: 'mgenplus-c-w';
-    src: url('../fonts/mgenplus-c-black.eot');
-    src: url('../fonts/mgenplus-c-black.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-c-black.woff2') format('woff2'),url('../fonts/mgenplus-c-black.woff') format('woff'),url('../fonts/mgenplus-c-black.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-black.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-black.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-black.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-black.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-c-black.ttf') format('truetype');
     font-weight: 900;
 }
 
 
 @font-face {
     font-family: 'mgenplus-m-w';
-    src: url('../fonts/mgenplus-m-thin.eot');
-    src: url('../fonts/mgenplus-m-thin.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-m-thin.woff2') format('woff2'),url('../fonts/mgenplus-m-thin.woff') format('woff'),url('../fonts/mgenplus-m-thin.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-thin.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-thin.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-thin.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-thin.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-thin.ttf') format('truetype');
     font-weight: 100;
 }
 @font-face {
     font-family: 'mgenplus-m-w';
-    src: url('../fonts/mgenplus-m-light.eot');
-    src: url('../fonts/mgenplus-m-light.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-m-light.woff2') format('woff2'),url('../fonts/mgenplus-m-light.woff') format('woff'),url('../fonts/mgenplus-m-light.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-light.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-light.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-light.ttf') format('truetype');
     font-weight: 200;
 }
 @font-face {
     font-family: 'mgenplus-m-w';
-    src: url('../fonts/mgenplus-m-regular.eot');
-    src: url('../fonts/mgenplus-m-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-m-regular.woff2') format('woff2'),url('../fonts/mgenplus-m-regular.woff') format('woff'),url('../fonts/mgenplus-m-regular.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-regular.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'mgenplus-m-w';
-    src: url('../fonts/mgenplus-m-medium.eot');
-    src: url('../fonts/mgenplus-m-medium.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-m-medium.woff2') format('woff2'),url('../fonts/mgenplus-m-medium.woff') format('woff'),url('../fonts/mgenplus-m-medium.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'mgenplus-m-w';
-    src: url('../fonts/mgenplus-m-bold.eot');
-    src: url('../fonts/mgenplus-m-bold.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-m-bold.woff2') format('woff2'),url('../fonts/mgenplus-m-bold.woff') format('woff'),url('../fonts/mgenplus-m-bold.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-bold.ttf') format('truetype');
     font-weight: 700;
 }
 @font-face {
     font-family: 'mgenplus-m-w';
-    src: url('../fonts/mgenplus-m-heavy.eot');
-    src: url('../fonts/mgenplus-m-heavy.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-m-heavy.woff2') format('woff2'),url('../fonts/mgenplus-m-heavy.woff') format('woff'),url('../fonts/mgenplus-m-heavy.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-heavy.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-heavy.ttf') format('truetype');
     font-weight: 800;
 }
 @font-face {
     font-family: 'mgenplus-m-w';
-    src: url('../fonts/mgenplus-m-black.eot');
-    src: url('../fonts/mgenplus-m-black.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-m-black.woff2') format('woff2'),url('../fonts/mgenplus-m-black.woff') format('woff'),url('../fonts/mgenplus-m-black.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-black.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-black.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-black.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-black.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-m-black.ttf') format('truetype');
     font-weight: 900;
 }
 
 
 @font-face {
     font-family: 'mgenplus-mn-w';
-    src: url('../fonts/mgenplus-mn-thin.eot');
-    src: url('../fonts/mgenplus-mn-thin.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-thin.woff2') format('woff2'),url('../fonts/mgenplus-mn-thin.woff') format('woff'),url('../fonts/mgenplus-mn-thin.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-thin.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-thin.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-thin.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-thin.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-thin.ttf') format('truetype');
     font-weight: 100;
 }
 @font-face {
     font-family: 'mgenplus-mn-w';
-    src: url('../fonts/mgenplus-mn-light.eot');
-    src: url('../fonts/mgenplus-mn-light.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-light.woff2') format('woff2'),url('../fonts/mgenplus-mn-light.woff') format('woff'),url('../fonts/mgenplus-mn-light.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-light.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-light.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-light.ttf') format('truetype');
     font-weight: 200;
 }
 @font-face {
     font-family: 'mgenplus-mn-w';
-    src: url('../fonts/mgenplus-mn-regular.eot');
-    src: url('../fonts/mgenplus-mn-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-regular.woff2') format('woff2'),url('../fonts/mgenplus-mn-regular.woff') format('woff'),url('../fonts/mgenplus-mn-regular.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-regular.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'mgenplus-mn-w';
-    src: url('../fonts/mgenplus-mn-medium.eot');
-    src: url('../fonts/mgenplus-mn-medium.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-medium.woff2') format('woff2'),url('../fonts/mgenplus-mn-medium.woff') format('woff'),url('../fonts/mgenplus-mn-medium.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'mgenplus-mn-w';
-    src: url('../fonts/mgenplus-mn-bold.eot');
-    src: url('../fonts/mgenplus-mn-bold.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-bold.woff2') format('woff2'),url('../fonts/mgenplus-mn-bold.woff') format('woff'),url('../fonts/mgenplus-mn-bold.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-bold.ttf') format('truetype');
     font-weight: 700;
 }
 @font-face {
     font-family: 'mgenplus-mn-w';
-    src: url('../fonts/mgenplus-mn-heavy.eot');
-    src: url('../fonts/mgenplus-mn-heavy.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-heavy.woff2') format('woff2'),url('../fonts/mgenplus-mn-heavy.woff') format('woff'),url('../fonts/mgenplus-mn-heavy.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-heavy.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-heavy.ttf') format('truetype');
     font-weight: 800;
 }
 @font-face {
     font-family: 'mgenplus-mn-w';
-    src: url('../fonts/mgenplus-mn-black.eot');
-    src: url('../fonts/mgenplus-mn-black.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-mn-black.woff2') format('woff2'),url('../fonts/mgenplus-mn-black.woff') format('woff'),url('../fonts/mgenplus-mn-black.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-black.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-black.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-black.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-black.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-mn-black.ttf') format('truetype');
     font-weight: 900;
 }
 
 @font-face {
     font-family: 'mgenplus-1-w';
-    src: url('../fonts/mgenplus-1-thin.eot');
-    src: url('../fonts/mgenplus-1-thin.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-1-thin.woff2') format('woff2'),url('../fonts/mgenplus-1-thin.woff') format('woff'),url('../fonts/mgenplus-1-thin.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-thin.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-thin.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-thin.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-thin.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-thin.ttf') format('truetype');
     font-weight: 100;
 }
 @font-face {
     font-family: 'mgenplus-1-w';
-    src: url('../fonts/mgenplus-1-light.eot');
-    src: url('../fonts/mgenplus-1-light.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-1-light.woff2') format('woff2'),url('../fonts/mgenplus-1-light.woff') format('woff'),url('../fonts/mgenplus-1-light.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-light.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-light.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-light.ttf') format('truetype');
     font-weight: 200;
 }
 @font-face {
     font-family: 'mgenplus-1-w';
-    src: url('../fonts/mgenplus-1-regular.eot');
-    src: url('../fonts/mgenplus-1-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-1-regular.woff2') format('woff2'),url('../fonts/mgenplus-1-regular.woff') format('woff'),url('../fonts/mgenplus-1-regular.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-regular.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'mgenplus-1-w';
-    src: url('../fonts/mgenplus-1-medium.eot');
-    src: url('../fonts/mgenplus-1-medium.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-1-medium.woff2') format('woff2'),url('../fonts/mgenplus-1-medium.woff') format('woff'),url('../fonts/mgenplus-1-medium.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'mgenplus-1-w';
-    src: url('../fonts/mgenplus-1-bold.eot');
-    src: url('../fonts/mgenplus-1-bold.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-1-bold.woff2') format('woff2'),url('../fonts/mgenplus-1-bold.woff') format('woff'),url('../fonts/mgenplus-1-bold.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-bold.ttf') format('truetype');
     font-weight: 700;
 }
 @font-face {
     font-family: 'mgenplus-1-w';
-    src: url('../fonts/mgenplus-1-heavy.eot');
-    src: url('../fonts/mgenplus-1-heavy.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-1-heavy.woff2') format('woff2'),url('../fonts/mgenplus-1-heavy.woff') format('woff'),url('../fonts/mgenplus-1-heavy.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-heavy.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-heavy.ttf') format('truetype');
     font-weight: 800;
 }
 @font-face {
     font-family: 'mgenplus-1-w';
-    src: url('../fonts/mgenplus-1-black.eot');
-    src: url('../fonts/mgenplus-1-black.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-1-black.woff2') format('woff2'),url('../fonts/mgenplus-1-black.woff') format('woff'),url('../fonts/mgenplus-1-black.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-black.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-black.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-black.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-black.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-1-black.ttf') format('truetype');
     font-weight: 900;
 }
 
 @font-face {
     font-family: 'mgenplus-2-w';
-    src: url('../fonts/mgenplus-2-thin.eot');
-    src: url('../fonts/mgenplus-2-thin.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-2-thin.woff2') format('woff2'),url('../fonts/mgenplus-2-thin.woff') format('woff'),url('../fonts/mgenplus-2-thin.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-thin.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-thin.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-thin.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-thin.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-thin.ttf') format('truetype');
     font-weight: 100;
 }
 @font-face {
     font-family: 'mgenplus-2-w';
-    src: url('../fonts/mgenplus-2-light.eot');
-    src: url('../fonts/mgenplus-2-light.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-2-light.woff2') format('woff2'),url('../fonts/mgenplus-2-light.woff') format('woff'),url('../fonts/mgenplus-2-light.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-light.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-light.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-light.ttf') format('truetype');
     font-weight: 200;
 }
 @font-face {
     font-family: 'mgenplus-2-w';
-    src: url('../fonts/mgenplus-2-regular.eot');
-    src: url('../fonts/mgenplus-2-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-2-regular.woff2') format('woff2'),url('../fonts/mgenplus-2-regular.woff') format('woff'),url('../fonts/mgenplus-2-regular.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-regular.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'mgenplus-2-w';
-    src: url('../fonts/mgenplus-2-medium.eot');
-    src: url('../fonts/mgenplus-2-medium.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-2-medium.woff2') format('woff2'),url('../fonts/mgenplus-2-medium.woff') format('woff'),url('../fonts/mgenplus-2-medium.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'mgenplus-2-w';
-    src: url('../fonts/mgenplus-2-bold.eot');
-    src: url('../fonts/mgenplus-2-bold.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-2-bold.woff2') format('woff2'),url('../fonts/mgenplus-2-bold.woff') format('woff'),url('../fonts/mgenplus-2-bold.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-bold.ttf') format('truetype');
     font-weight: 700;
 }
 @font-face {
     font-family: 'mgenplus-2-w';
-    src: url('../fonts/mgenplus-2-heavy.eot');
-    src: url('../fonts/mgenplus-2-heavy.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-2-heavy.woff2') format('woff2'),url('../fonts/mgenplus-2-heavy.woff') format('woff'),url('../fonts/mgenplus-2-heavy.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-heavy.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-heavy.ttf') format('truetype');
     font-weight: 800;
 }
 @font-face {
     font-family: 'mgenplus-2-w';
-    src: url('../fonts/mgenplus-2-black.eot');
-    src: url('../fonts/mgenplus-2-black.eot?#iefix') format('embedded-opentype'),url('../fonts/mgenplus-2-black.woff2') format('woff2'),url('../fonts/mgenplus-2-black.woff') format('woff'),url('../fonts/mgenplus-2-black.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-black.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-black.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-black.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-black.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/master/fonts/mgenplus-2-black.ttf') format('truetype');
     font-weight: 900;
 }

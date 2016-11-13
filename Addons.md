@@ -8,8 +8,9 @@ Add-ons
 
 ## 使い方
 
+- 上記のデモページでプレビューして確認できます。
+  - デモページでは、推奨されるCSSを出力しています。ご利用ください。
 - font-familyの値指定については、日本語フォントの前に書き加えてください。
-- In the property font-family, add the value before Japanese fonts like as "GenShinGothic-w".
 
 ## ウェイト
 
@@ -27,7 +28,20 @@ Weights
 |800   |Heavy      |**Heavy**|     |
 |900   |-          |**Black**|     |
 
-## かな(英数)フォント
+## 欧文フォント
+
+Google Fontsに載ってない可哀想なフォント。
+
+### Linux Biolinum
+
+源暎フォントの欧文部分で使われているフォントです。
+
+- http://www.linuxlibertine.org/index.php?id=91&L=1
+- `font-family:"LinBiolinum-w";`
+- Weights : 400,700
+
+
+## かな(+欧文)フォント
 
 かなや英数が収録されています。Noto Sans ・ 源ノ角ゴシック、M+ 両方でお使いいただけます。
 
@@ -61,7 +75,7 @@ Weights
 
 **源暎ラテゴ**は、まあ、見てもらえればわかります。font-weightが500しかありません。
 
-Linux Bioliumをカスタムした英数字も用意されています。
+Linux Biolinumをカスタムした英数字も用意されています。
 
 - http://okoneya.jp/font/
 - `font-family:`
@@ -74,19 +88,27 @@ Linux Bioliumをカスタムした英数字も用意されています。
 - http://www.fontna.com/category/gallery/
 - `font-family:"YasashisaGothic-w"`
 - Weights: 400,700
-  - やさしさゴシックボールドを同一フォントとして扱います。
+  - やさしさゴシックボールドをウェイト700の同一フォントとして扱います。
 
 ### ロゴたいぷゴシック
 
 - http://www.fontna.com/category/gallery/
 - `font-family:"LogoTypeGothic-w"`
-- Weight: 400 or 500
+- Weight: 400 or 500 (normal)
 
 ### ラノベPOP
 
 - http://www.fontna.com/category/gallery/
 - `font-family:"LiNovePOP-w"`
 - Weight: 800
+
+### JapanSans
+
+- http://webfontfan.com/japansans/?p=20
+- `font-family:"JapanSans□"`
+  - □には{70,80,90,100}のどれかが入ります。
+  - 数字は横幅(%)を意味します。
+- Weight: 400 (normal)
 
 ## 源真ゴシック拡張
 
