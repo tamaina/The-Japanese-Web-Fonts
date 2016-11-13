@@ -5,86 +5,86 @@
 
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-ExtraLight.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-ExtraLight?#iefix.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-ExtraLight.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-ExtraLight.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-ExtraLight.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-ExtraLight.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-ExtraLight?#iefix.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-ExtraLight.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-ExtraLight.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-ExtraLight.ttf') format('truetype');
     font-weight: 100;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Light.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Light?#iefix.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Light.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Light.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Light?#iefix.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Light.ttf') format('truetype');
     font-weight: 200;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Normal.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Normal?#iefix.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Normal.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Normal.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Normal.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Normal.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Normal?#iefix.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Normal.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Normal.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Normal.ttf') format('truetype');
     font-weight: 300;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Regular.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Regular.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Regular.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Medium.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Medium.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Bold.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Bold.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Bold.ttf') format('truetype');
     font-weight: 700;
 }
 @font-face {
     font-family: 'GenShinGothic-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Heavy.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-Heavy.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Heavy.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-Heavy.ttf') format('truetype');
     font-weight: 800;
 }
 
 @font-face {
     font-family: 'GenShinGothic-A-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-ExtraLight.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-ExtraLight.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-ExtraLight.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-ExtraLight.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-ExtraLight.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-ExtraLight.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-ExtraLight.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-ExtraLight.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-ExtraLight.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-ExtraLight.ttf') format('truetype');
     font-weight: 100;
 }
 @font-face {
     font-family: 'GenShinGothic-A-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Light.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Light.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Light.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Light.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Light.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Light.ttf') format('truetype');
     font-weight: 200;
 }
 @font-face {
     font-family: 'GenShinGothic-A-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Normal.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Normal.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Normal.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Normal.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Normal.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Normal.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Normal.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Normal.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Normal.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Normal.ttf') format('truetype');
     font-weight: 300;
 }
 @font-face {
     font-family: 'GenShinGothic-A-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Regular.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Regular.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Regular.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Regular.ttf') format('truetype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'GenShinGothic-A-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Medium.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Medium.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Medium.ttf') format('truetype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'GenShinGothic-A-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Bold.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Bold.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Bold.ttf') format('truetype');
     font-weight: 700;
 }
 @font-face {
     font-family: 'GenShinGothic-A-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Heavy.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.1/fonts/GenShinGothic-A-Heavy.ttf') format('truetype');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Heavy.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/fonts/GenShinGothic-A-Heavy.ttf') format('truetype');
     font-weight: 800;
 }
