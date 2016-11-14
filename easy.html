@@ -24,7 +24,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.4/jquery.minicolors.min.js"></script>
 <script type="text/javascript">
-debug = true;
+debug = false;
 $italic = false;
 function EasyDisplay(target){
 if( debug == true ){
@@ -51,7 +51,6 @@ if( orderform[2].value == "mgenplus-1-w" || orderform[2].value == "mgenplus-2-w"
     JandSVal = '"' + orderform[2].value + '", "GenShinGothic-S-w"';
 }
 FontFamilyVal += '"NUDE-w", ';
-console.log(orderform[8]);
 if( AddonTF == true && EngTF == true ){
     FontFamilyVal += '"' + orderform[0].value + '", "' + orderform[1].value + '", ' + JandSVal ;
 } else if( AddonTF == false && EngTF == true ){
@@ -286,6 +285,9 @@ italic
    <li>
      <a href="#disp-2" class="nav-link thetab" data-toggle="tab">童祭</a>
    </li>
+   <li>
+     <a href="#disp-3" class="nav-link thetab" data-toggle="tab">橳島</a>
+   </li>
 </ul>
 
 <div class="tab-content">
@@ -311,11 +313,18 @@ italic
 <br>
 夢<ruby>違<rt>たが</rt></ruby>え、幻の<ruby>紅<rt>くれない</rt></ruby>の屋敷の異彩を<br>
 <ruby>現<rt>うつ</rt></ruby>し世は、血の気ない石の上に<br>
-<ruby>空夢<rt>そらゆめ</rt></ruby>の、古の美しき都のお<ruby>伽<rt>とぎ</rt></ruby>を<br>
+<ruby>空夢<rt>そらゆめ</rt></ruby>の、<ruby>古<rt>いにしえ</rt></ruby>の美しき都のお<ruby>伽<rt>とぎ</rt></ruby>を<br>
 <ruby>白日<rt>はくじつ</rt></ruby>は、<ruby>穢<rt>けが</rt></ruby>れゆく街に<br>
 　―<ruby>童祭<rt>わらべまつり</rt></ruby> ～ Innocent Treasures　歌詞
 </p>
- </div></div>
+ </div>
+ <div id="disp-3" class="tab-pane fade">
+<p class="disp">
+〒371-0817 群馬県前橋市橳島町<br>
+Nudejima-machi, Maebashi City, Gunma Pref.
+</p>
+</div>
+ </div>
 </div>
 </main>
 </body>
