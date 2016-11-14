@@ -80,8 +80,9 @@ Linux Biolinumをカスタムした英数字も用意されています。
 - http://okoneya.jp/font/
 - `font-family:`
   - 源暎アンチック `"GenEiAntiqueN-w"`
+    - Weights: 500,700
   - 源暎ラテゴ `"GenEiLateGo"`
-- Weights: 500,700
+    - Weight : 500
 
 ### やさしさゴシック
 
@@ -106,9 +107,9 @@ Linux Biolinumをカスタムした英数字も用意されています。
 
 - http://webfontfan.com/japansans/?p=20
 - `font-family:"JapanSans□"`
-  - □には{70,80,90,100}のどれかが入ります。
+  - □には{70,80,90}のどれかが入ります。
   - 数字は横幅(%)を意味します。
-- Weight: 400 (normal)
+- Weight: 400
 
 ## 源真ゴシック拡張
 

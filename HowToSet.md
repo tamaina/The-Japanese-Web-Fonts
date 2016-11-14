@@ -24,9 +24,9 @@ githubのダウンロードが爆速になったため、その心配はなく�
 Add these tags into `<head> ~ </head>`.
 
    ~~~
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/css/JPWF-Addons.css"/> <!-- JpWF Addons -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/css/GenJpFont-X.css"/> <!-- JpWF GenShin -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.1.2/css/MgenP-X.css"/> <!-- JpWF Mgen+ -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/css/JPWF-Addons.css"/> <!-- JpWF Addons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/css/GenJpFont-X.css"/> <!-- JpWF GenShin -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/css/MgenP-X.css"/> <!-- JpWF Mgen+ -->
    ~~~
 ### cssを設定します
 
