@@ -188,3 +188,49 @@
     src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/LinBiolinum_RBah.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/LinBiolinum_RBah.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/LinBiolinum_RBah.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/LinBiolinum_RBah.ttf') format('truetype');
     font-weight: 700;
 }
+
+/*
+ * "GenShinGothic(the SIL Open Font License 1.1)" 橳
+ */
+@font-face {
+    font-family: 'NUDE-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-ExtraLight.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-ExtraLight?#iefix.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-ExtraLight.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-ExtraLight.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-ExtraLight.ttf') format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'NUDE-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Light.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Light?#iefix.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Light.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Light.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Light.ttf') format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'NUDE-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Normal.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Normal?#iefix.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Normal.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Normal.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Normal.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'NUDE-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Regular.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Regular.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Regular.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Regular.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'NUDE-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'NUDE-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'NUDE-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Heavy.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Heavy.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Heavy.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Heavy.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2/fonts/NUDE-Heavy.ttf') format('truetype');
+    font-weight: 800;
+}

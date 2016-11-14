@@ -120,3 +120,10 @@ Linux Biolinumをカスタムした英数字も用意されています。
 - http://itouhiro.hatenablog.com/entry/20140917/font
 - `font-family:"Nasu-w";`
 - font-weight: 400,700
+
+## 橳
+
+### 橳
+
+- `font-family:"NUDE-w";`
+- font-weight: 100,200,300,400,500,700,800

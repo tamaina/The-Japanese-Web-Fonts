@@ -50,17 +50,18 @@ if( orderform[2].value == "mgenplus-1-w" || orderform[2].value == "mgenplus-2-w"
 } else {
     JandSVal = '"' + orderform[2].value + '", "GenShinGothic-S-w"';
 }
+FontFamilyVal += '"NUDE-w", ';
 console.log(orderform[8]);
 if( AddonTF == true && EngTF == true ){
-    FontFamilyVal = '"' + orderform[0].value + '", "' + orderform[1].value + '", ' + JandSVal ;
+    FontFamilyVal += '"' + orderform[0].value + '", "' + orderform[1].value + '", ' + JandSVal ;
 } else if( AddonTF == false && EngTF == true ){
-    FontFamilyVal = '"' + orderform[0].value + '", ' + JandSVal ;
+    FontFamilyVal += '"' + orderform[0].value + '", ' + JandSVal ;
 } else if( AddonTF == true && EngTF == false ){
-    FontFamilyVal = '"' + orderform[1].value + '", ' + JandSVal ;
+    FontFamilyVal += '"' + orderform[1].value + '", ' + JandSVal ;
 } else {
-    FontFamilyVal = JandSVal ;
+    FontFamilyVal += JandSVal ;
 }
-FontFamilyVal +=', sans-serif'
+FontFamilyVal +=', sans-serif';
 
 if( $(target).attr('id') == "font-style-italic" ){
     $italic = !$italic;
