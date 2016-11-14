@@ -30,6 +30,7 @@ function EasyDisplay(target){
 if( debug == true ){
 console.table($('#orderform').serializeArray());
 console.dir(target);
+console.log($(target).attr('class'));
 }
 
 var BodyCSS = "", SelectorCSS = "", DisplayCSS = "", AddonTF = false, EngTF = false, JandSVal = "", FontFamilyVal = "", theOthers = "" ;
@@ -80,12 +81,27 @@ SelectorCSS = 'font-size:' + orderform[3].value + orderform[4].value + '; font-w
 DisplayCSS = 'font-family:' + FontFamilyVal + ';\nbackground-color:' + orderform[6].value + ';\ncolor:' + orderform[7].value + ';\nfont-size:' + orderform[3].value + orderform[4].value + ';\nfont-weight:' + orderform[5].value + ';' + theOthers;
 
 $('body').attr('style',BodyCSS);
+$('.panel-body').attr('style',BodyCSS);
+$('a').css('color',orderform[7].value);
 $('legend').css('color',orderform[7].value)
 $('.disp').attr('style',SelectorCSS);
 $('#code').val(DisplayCSS);
 $('#weightdisp').html(orderform[5].value);
+targetClass = $(target).attr('class');
+targetHref  = $(target).attr('href');
+if( targetClass && targetClass.search( /thetab/ ) != -1 ){
+$(target).attr('style','');
+
+if( targetHref && targetHref.search( /form/ ) != -1 ){
+$("#disp-tabs > li.active > a").attr('style','');
+} else if( targetHref && targetHref.search( /disp/ ) != -1 ){
+$("#form-tabs > li.active > a").attr('style','');
 }
 
+} else {
+  $("li.active > a").attr('style','');
+}
+}
 $(function(){
  $("[as = 'style']").attr('rel','stylesheet');
  setTimeout( '$(".loading").fadeOut("slow");' , 10000);
@@ -102,6 +118,10 @@ theme: 'bootstrap'
  $("button").on('click',function(e){
   EasyDisplay($(e.target));
  });
+ $(".thetab").on('click',function(e){
+  EasyDisplay($(e.target));
+ })
+  $("li.active > a").attr('style','');
 });
 </script>
 <style>
@@ -124,7 +144,13 @@ theme: 'bootstrap'
 <div id="main" class="container">
 <h1>The Japanese Web Fonts デモページ</h1>
 
-<ul class="nav nav-tabs">
+<form id="orderform">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Settings</h3>
+  </div>
+  <div class="panel-body">
+<ul class="nav nav-tabs" id="form-tabs">
    <li class="active">
      <a href="#form-1" class="nav-link thetab" data-toggle="tab">Font Family</a>
    </li>
@@ -138,8 +164,6 @@ theme: 'bootstrap'
      <a href="#form-4" class="nav-link thetab" data-toggle="tab">the Others</a>
    </li>
 </ul>
-
-<form id="orderform">
 
 <div class="tab-content">
  <div id="form-1" class="tab-pane fade in active">
@@ -237,7 +261,7 @@ theme: 'bootstrap'
 <fieldset class="form-group form-inline">
 <legend>Color</legend>
 <p>
-<label>Background<input type="text" name="color-b" value="#1a237e" class="form-control colorpick" /></label>
+<label>Background<input type="text" name="color-b" value="#118f76" class="form-control colorpick" /></label>
 </p>
 <p>
 <label>Letters<input type="text" name="color-f" value="#ffffff" class="form-control colorpick" /></label>
@@ -273,12 +297,26 @@ italic
 </p>
 </fieldset>
  </div></div>
+ </div></div>
+<div class="panel-group" id="ac-code">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <a data-toggle="collapse" data-parent="#ac-code" href="#collapse-code"><h3 class="panel-title">Code</h3></a>
+  </div>
+<div class="panel-collapse collapse" id="collapse-code">
+  <div class="panel-body">
 <fieldset class="form-group form-horizontal">
-<legend>Code</legend>
 <textarea readonly class="form-control" id="code" name="code" rows="7"></textarea>
 </fieldset>
+</div></div></div></div>
 </form>
-<ul class="nav nav-tabs">
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Preview</h3>
+  </div>
+  <div class="panel-body">
+<ul class="nav nav-tabs" id="disp-tabs">
    <li class="active">
      <a href="#disp-1" class="nav-link thetab" data-toggle="tab">只の説明</a>
    </li>
@@ -289,7 +327,6 @@ italic
      <a href="#disp-3" class="nav-link thetab" data-toggle="tab">橳島</a>
    </li>
 </ul>
-
 <div class="tab-content">
  <div id="disp-1" class="tab-pane fade in active">
 <p class="disp">日本語Webフォントのデモページです。<br>
@@ -325,6 +362,8 @@ Nudejima-machi, Maebashi City, Gunma Pref.
 </p>
 </div>
  </div>
+</div>
+</div>
 </div>
 </main>
 </body>
