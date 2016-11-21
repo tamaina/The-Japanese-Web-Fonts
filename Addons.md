@@ -103,14 +103,6 @@ Linux Biolinumをカスタムした英数字も用意されています。
 - `font-family:"LiNovePOP-w"`
 - Weight: 800
 
-### JapanSans
-
-- http://webfontfan.com/japansans/?p=20
-- `font-family:"JapanSans□"`
-  - □には{70,80,90}のどれかが入ります。
-  - 数字は横幅(%)を意味します。
-- Weight: 400
-
 ## 源真ゴシック拡張
 
 源真ゴシック専用です。
