@@ -25,7 +25,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.4/jquery.minicolors.min.js"></script>
 <script type="text/javascript">
 debug = false;
-$italic = false;
 function EasyDisplay(target){
 if( debug == true ){
 console.table($('#orderform').serializeArray());
@@ -63,20 +62,17 @@ if( AddonTF == true && EngTF == true ){
 }
 FontFamilyVal +=', sans-serif';
 
-if( $(target).attr('id') == "font-style-italic" ){
-    $italic = !$italic;
+if( orderform[8].value != "normal" ){
+    theOthers += "\nfont-style: " + orderform[8].value + ";";
 }
-if($italic){
-    theOthers += "\nfont-style: italic;"
-}
-if( orderform[9].value != "normal" ){
-theOthers += '\nline-height:' + orderform[8].value + orderform[9].value + ';';
+if( orderform[10].value != "normal" ){
+theOthers += '\nline-height:' + orderform[9].value + orderform[10].value + ';';
     $('[name="line-height-n"]').css("display","inline-block");
 } else {
     $('[name="line-height-n"]').css("display","none");
 }
-if( orderform[11].value != "normal" ){
-theOthers += '\nletter-spacing:' + orderform[10].value + orderform[11].value + ';';
+if( orderform[12].value != "normal" ){
+theOthers += '\nletter-spacing:' + orderform[11].value + orderform[12].value + ';';
     $('[name="letter-spacing-n"]').css("display","inline-block");
 } else {
     $('[name="letter-spacing-n"]').css("display","none");
@@ -187,7 +183,7 @@ h6{
   <div class="panel-heading">
     <h3 class="panel-title"><a data-toggle="collapse" data-parent="#ac-settings" href="#collapse-settings"><h3 class="panel-title">Settings</h3></a></h3>
   </div>
-  <div class="panel-collapse collapse" id="collapse-settings">
+  <div class="panel-collapse collapse in" id="collapse-settings">
   <div class="panel-body">
 <ul class="nav nav-tabs" id="form-tabs">
    <li class="active">
@@ -300,7 +296,7 @@ h6{
 <fieldset class="form-group form-inline">
 <legend>Color</legend>
 <p>
-<label>Background<input type="text" name="color-b" value="#118f76" class="form-control colorpick" /></label>
+<label>Background<input type="text" name="color-b" value="#00bdbds" class="form-control colorpick" /></label>
 </p>
 <p>
 <label>Letters<input type="text" name="color-f" value="#ffffff" class="form-control colorpick" /></label>
@@ -310,9 +306,17 @@ h6{
  <div id="form-4" class="tab-pane">
 <fieldset class="form-group form-horizontal">
 <legend>Font Style</legend>
-<button type="button" class="btn btn-primary" name="font-style-italic" id="font-style-italic" data-toggle="button" aria-pressed="false" autocomplete="off">
-italic
-</button>
+<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-default active">
+		<input type="radio" name="font-style" value="normal" autocomplete="off" checked>normal
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="font-style" value="italic" autocomplete="off">italic
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="font-style" value="oblique" autocomplete="off">oblique
+	</label>
+</div>
 </fieldset>
 
 <fieldset class="form-group form-inline">
@@ -363,7 +367,7 @@ italic
   <div class="panel-heading">
     <a data-toggle="collapse" data-parent="#ac-code" href="#collapse-code"><h3 class="panel-title">Code</h3></a>
   </div>
-<div class="panel-collapse collapse" id="collapse-code">
+<div class="panel-collapse collapse in" id="collapse-code">
   <div class="panel-body">
 <fieldset class="form-group form-horizontal">
 <textarea readonly class="form-control" id="code" name="code" rows="7"></textarea>
