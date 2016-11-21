@@ -75,6 +75,12 @@ theOthers += '\nline-height:' + orderform[8].value + orderform[9].value + ';';
 } else {
     $('[name="line-height-n"]').css("display","none");
 }
+if( orderform[11].value != "normal" ){
+theOthers += '\nletter-spacing:' + orderform[10].value + orderform[11].value + ';';
+    $('[name="letter-spacing-n"]').css("display","inline-block");
+} else {
+    $('[name="letter-spacing-n"]').css("display","none");
+}
 
 BodyCSS = 'font-family:' + FontFamilyVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + '; ' ;
 SelectorCSS = 'font-size:' + orderform[3].value + orderform[4].value + '; font-weight:' + orderform[5].value + ';' + theOthers;
@@ -125,6 +131,35 @@ theme: 'bootstrap'
 });
 </script>
 <style>
+.label{
+    padding: .2em .35em .3em;
+}
+.label .label-letter-narrower{
+    display: inline-block;
+    transform: scaleX(0.8);
+}
+.panel-title,.panel-footer{
+    color: #333;
+}
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 2.3em;
+}
+h3{
+    font-size: 1.8em;
+}
+h4{
+    font-size: 1.3em;
+}
+h5{
+    font-size: 1.25em;
+}
+h6{
+    font-size: 1.1em;
+}
+
 .loading{
     background-color: #DDDDDD;
     display:block;
@@ -145,10 +180,12 @@ theme: 'bootstrap'
 <h1>The Japanese Web Fonts デモページ</h1>
 
 <form id="orderform">
+<div class="panel-group" id="ac-settings">
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Settings</h3>
+    <h3 class="panel-title"><a data-toggle="collapse" data-parent="#ac-settings" href="#collapse-settings"><h3 class="panel-title">Settings</h3></a></h3>
   </div>
+  <div class="panel-collapse collapse" id="collapse-settings">
   <div class="panel-body">
 <ul class="nav nav-tabs" id="form-tabs">
    <li class="active">
@@ -174,7 +211,7 @@ theme: 'bootstrap'
 <select name="family-e" class="form-control">
     <optgroup label="セット内">
     <option value="GenShinGothic-A-w">Noto Sans CJK / 源ノ角ゴシック</option>
-    <option value="mgenplus-c-w">M+ c</option>
+    <option selected value="mgenplus-c-w">M+ c</option>
     <option value="mgenplus-p-w">M+ p</option>
     <option value="mgenplus-m-w">M+ m</option>
     <option value="mgenplus-mn-w">M+ mn</option>
@@ -231,19 +268,19 @@ theme: 'bootstrap'
 <fieldset class="form-group form-inline">
 <legend>Font Size</legend>
 <p>
-<input type="number" name="number" value="30" class="form-control" />
+<input type="number" step="0.2" name="number" value="1.3" class="form-control" />
 <select name="size-c" class="form-control">
-    <option selected value="px">px</option>
-    <option value="pt">pt</option>
-    <option value="pc">pc</option>
-    <option value="em">em</option>
-    <option value="rem">rem</option>
-    <option value="vh">vh</option>
-    <option value="vw">vw</option>
-    <option value="vmin">vmin</option>
-    <option value="vmax">vmax</option>
-    <option value="mm">mm</option>
-    <option value="cm">cm</option>
+    <option>px</option>
+    <option>pt</option>
+    <option>pc</option>
+    <option selected>em</option>
+    <option>rem</option>
+    <option>vh</option>
+    <option>vw</option>
+    <option>vmin</option>
+    <option>vmax</option>
+    <option>mm</option>
+    <option>cm</option>
 </select>
 </p>
 </fieldset>
@@ -279,7 +316,7 @@ italic
 <fieldset class="form-group form-inline">
 <legend>Line Height</legend>
 <p>
-<input type="number" name="line-height-n" value="1" class="form-control" />
+<input type="number" step="0.2" name="line-height-n" value="1" class="form-control" />
 <select name="line-height-c" class="form-control">
     <option selected>normal</option>
     <option>px</option>
@@ -296,6 +333,27 @@ italic
 </select>
 </p>
 </fieldset>
+<fieldset class="form-group form-inline">
+<legend>Letter Spacing</legend>
+<p>
+<input type="number" step="0.2" name="letter-spacing-n" value="1" class="form-control" />
+<select name="letter-spacing-c" class="form-control">
+    <option selected>normal</option>
+    <option>px</option>
+    <option>pt</option>
+    <option>pc</option>
+    <option>em</option>
+    <option>rem</option>
+    <option>vh</option>
+    <option>vw</option>
+    <option>vmin</option>
+    <option>vmax</option>
+    <option>mm</option>
+    <option>cm</option>
+</select>
+</p>
+</fieldset>
+ </div></div>
  </div></div>
  </div></div>
 <div class="panel-group" id="ac-code">
@@ -325,6 +383,9 @@ italic
    </li>
    <li>
      <a href="#disp-3" class="nav-link thetab" data-toggle="tab">橳島</a>
+   </li>
+   <li>
+     <a href="#disp-4" class="nav-link thetab" data-toggle="tab">リスト的な</a>
    </li>
 </ul>
 <div class="tab-content">
@@ -360,6 +421,73 @@ italic
 〒371-0817 群馬県前橋市橳島町<br>
 Nudejima-machi, Maebashi City, Gunma Pref.
 </p>
+ </div>
+ <div id="disp-4" class="tab-pane fade">
+<div class="disp">
+<h2>LIST</h2>
+<p>本当に適当に物が置いてあります。ラベルに<code>transform: scaleX(0.8);</code>が掛けられています。</p>
+
+<div class="panel panel-default">
+<div class="panel-body">
+<p><span class="label label-default"><span class="label-letter-narrower">東方Project</span></span> <span class="label label-success"><span class="label-letter-narrower">上海アリス幻樂団</span></span> <span class="label label-primary"><span class="label-letter-narrower">音楽CD</span></span></p>
+<h3>夢違科学世紀</h3>
+<p>月の兎、月面探査車 －夢か現実か、吉夢か、それとも悪夢なのか。 上海アリス幻樂団が奏でる、幻想的で激しい音楽集第三弾。</p>
+</div>
+<div class="panel-footer">
+Share
+</div>
+</div>
+
+
+<div class="panel panel-default">
+<div class="panel-body">
+<p><span class="label label-default"><span class="label-letter-narrower">東方Project</span></span> <span class="label label-success"><span class="label-letter-narrower">2次創作</span></span> <span class="label label-primary"><span class="label-letter-narrower">東方風アレンジ</span></span></p>
+<h3><a href="nico.ms/sm30051567" target="_blank">【東方風アレンジ】楽天のCMを東方風にアレンジしてみた</a></h3>
+<p>CMを見て思いついたので作りました。 わかりやすいようにある程度映像を合わせてます。 <a href="nico.ms/sm30051567" target="_blank">nico.ms/sm30051567</a></p>
+</div>
+<div class="panel-footer">
+Share
+</div>
+</div>
+
+
+<div class="panel panel-default">
+<div class="panel-body">
+<p><span class="label label-default"><span class="label-letter-narrower">VOCALOID</span></span>  <span class="label label-success"><span class="label-letter-narrower">VOCALOIDオリジナル楽曲</span></span></p>
+<h3><a href="youtu.be/KYQ2fu8eixM">ボーカロイドたちがただ2コードくりかえすだけ</a></h3>
+<p>- GYARISUTA<br><a href="gyari.com/content/abgm/" target="_blank">物販情報 gyari.com/content/abgm/</a></p>
+</div>
+<div class="panel-footer">
+Share
+</div>
+</div>
+
+
+<div class="panel panel-default">
+<div class="panel-body">
+<p><span class="label label-default"><span class="label-letter-narrower">Showcase</span></span></p>
+<h3><a href="suiranfes.com" target="_blank">第65回翠巒祭</a></h3>
+<p>実際にThe Japanese Web Fontsを活用して作ったサイトです。
+<br><a href="suiranfes.com" target="_blank">suiranfes.com</a>
+<br>2016/11/22 情報追加。ティザーサイトを公開しています。</p>
+</div>
+<div class="panel-footer">
+Share
+</div>
+</div>
+
+
+<div class="panel panel-default">
+<div class="panel-body">
+<p><span class="label label-default"><span class="label-letter-narrower">お勧めWebフォントサービス</span></span></p>
+<h3>ウェブフォントファン</h3>
+<p>我らがグンマー帝国のデザイナーが生んだ、フロップデザイン製かなフォントは、ライセンスの購入によって使用できます。漢字の補完は The Japanese Web Fonts にお任せください。<br><a href="webfontfan.com" target="_blank">webfontfan.com</a></p>
+</div>
+<div class="panel-footer">
+Share
+</div>
+</div>
+
 </div>
  </div>
 </div>
