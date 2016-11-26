@@ -1,0 +1,16 @@
+/*
+ * "Linux Biolinum" is licensed under the SIL Open Font License 1.1.
+ * http://www.linuxlibertine.org/index.php?id=91&L=1（MODI工場）
+ */
+@font-face {
+    font-family: 'LinBiolinum-w';
+    src: url('../fonts/LinBiolinum_Rah.eot');
+    src: url('../fonts/LinBiolinum_Rah.eot?#iefix') format('embedded-opentype'),url('../fonts/LinBiolinum_Rah.woff2') format('woff2'),url('../fonts/LinBiolinum_Rah.woff') format('woff'),url('../fonts/LinBiolinum_Rah.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'LinBiolinum-w';
+    src: url('../fonts/LinBiolinum_RBah.eot');
+    src: url('../fonts/LinBiolinum_RBah.eot?#iefix') format('embedded-opentype'),url('../fonts/LinBiolinum_RBah.woff2') format('woff2'),url('../fonts/LinBiolinum_RBah.woff') format('woff'),url('../fonts/LinBiolinum_RBah.ttf') format('truetype');
+    font-weight: 700;
+}

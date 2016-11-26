@@ -4,3 +4,4 @@
 [Noto Sans 源ノ角ゴシック](Gen.md)
 [M+](Mplus.md)
 [アドオン](Addons.md)
+[収録外お勧め](More.md)

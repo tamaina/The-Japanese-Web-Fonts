@@ -1,0 +1,17 @@
+/*
+ * "Nasu" is licensed under the Apache License, Version 2.0
+ * http://itouhiro.hatenablog.com/entry/20140917/font
+ */
+
+@font-face {
+    font-family: 'Nasu-w';
+    src: url('../fonts/Nasu-Regular-20141215.eot');
+    src: url('../fonts/Nasu-Regular-20141215.eot?#iefix') format('embedded-opentype'),url('../fonts/Nasu-Regular-20141215.woff2') format('woff2'),url('../fonts/Nasu-Regular-20141215.woff') format('woff'),url('../fonts/Nasu-Regular-20141215.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Nasu-w';
+    src: url('../fonts/Nasu-Bold-20141215.eot');
+    src: url('../fonts/Nasu-Bold-20141215.eot?#iefix') format('embedded-opentype'),url('../fonts/Nasu-Bold-20141215.woff2') format('woff2'),url('../fonts/Nasu-Bold-20141215.woff') format('woff'),url('../fonts/Nasu-Bold-20141215.ttf') format('truetype');
+    font-weight: 700;
+}

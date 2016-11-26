@@ -1,0 +1,23 @@
+/*
+ * "GenEi" Fonts is licensed under the SIL Open Font License 1.1 and more Licenses.
+ * http://okoneya.jp/font/（おこねや）
+ */
+
+@font-face {
+    font-family: 'GenEiAntiqueN-w';
+    src: url('../fonts/GenEiAntiqueN-Medium.eot');
+    src: url('../fonts/GenEiAntiqueN-Medium.eot?#iefix') format('embedded-opentype'),url('../fonts/GenEiAntiqueN-Medium.woff2') format('woff2'),url('../fonts/GenEiAntiqueN-Medium.woff') format('woff'),url('../fonts/GenEiAntiqueN-Medium.ttf') format('truetype'),url('../fonts/GenEiAntiqueN-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'GenEiAntiqueN-w';
+    src: url('../fonts/GenEiAntiqueN-Bold.eot');
+    src: url('../fonts/GenEiAntiqueN-Bold.eot?#iefix') format('embedded-opentype'),url('../fonts/GenEiAntiqueN-Bold.woff2') format('woff2'),url('../fonts/GenEiAntiqueN-Bold.woff') format('woff'),url('../fonts/GenEiAntiqueN-Bold.otf') format('truetype'),url('../fonts/GenEiAntiqueN-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'GenEiLateGo-w';
+    src: url('../fonts/GenEiLateGo.eot');
+    src: url('../fonts/GenEiLateGo.eot?#iefix') format('embedded-opentype'),url('../fonts/GenEiLateGo.woff2') format('woff2'),url('../fonts/GenEiLateGo.woff') format('woff'),url('../fonts/GenEiLateGo.ttf') format('truetype'),url('../fonts/GenEiLateGo.otf') format('opentype');
+    font-weight: 500;
+}

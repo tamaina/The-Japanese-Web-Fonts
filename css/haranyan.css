@@ -1,0 +1,17 @@
+/*
+ * "はらませにゃんこ(haranyan)"
+ * http://inatsuka.com/extra/haranyan/ (森の中の猫の小屋)
+ */
+
+@font-face {
+    font-family: 'haranyan_0-w';
+    src: url('../fonts/haranyan_0.eot');
+    src: url('../fonts/haranyan_0.eot?#iefix') format('embedded-opentype'),url('../fonts/haranyan_0.woff2') format('woff2'),url('../fonts/haranyan_0.woff') format('woff'),url('../fonts/haranyan_0.ttf') format('truetype');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'haranyan_S-w';
+    src: url('../fonts/haranyan_S.eot');
+    src: url('../fonts/haranyan_S.eot?#iefix') format('embedded-opentype'),url('../fonts/haranyan_S.woff2') format('woff2'),url('../fonts/haranyan_S.woff') format('woff'),url('../fonts/haranyan_S.ttf') format('truetype');
+    font-weight: 900;
+}

@@ -5,14 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="dns-prefetch" href="https://rawgit.com">
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.4/jquery.minicolors.min.css" />
-<link rel="preload" as="style" href="https://rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/css/JPWF-Addons.css" />
-<link rel="preload" as="style" href="https://rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/css/GenJpFont-X.css" />
-<link rel="preload" as="style" href="https://rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/css/MgenP-X.css" />
+<link rel="preload" as="style" href="./css/JPWF-Addons.css" />
+<link rel="preload" as="style" href="./css/GenJpFont-X.css" />
+<link rel="preload" as="style" href="./css/MgenP-X.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" /> 
@@ -50,7 +49,6 @@ if( orderform[2].value == "mgenplus-1-w" || orderform[2].value == "mgenplus-2-w"
 } else {
     JandSVal = '"' + orderform[2].value + '", "GenShinGothic-S-w"';
 }
-FontFamilyVal += '"NUDE-w", ';
 if( AddonTF == true && EngTF == true ){
     FontFamilyVal += '"' + orderform[0].value + '", "' + orderform[1].value + '", ' + JandSVal ;
 } else if( AddonTF == false && EngTF == true ){
@@ -127,6 +125,22 @@ theme: 'bootstrap'
 });
 </script>
 <style>
+@font-face {
+  font-family: "Yu Gothic";
+  font-weight: 200;
+  src: local("Yu Gothic Light");
+}
+@font-face {
+  font-family: "Yu Gothic";
+  font-weight: 500;
+  src: local("Yu Gothic Medium");
+}
+@font-face {
+  font-family: "Yu Gothic";
+  font-weight: 700;
+  src: local("Yu Gothic Bold");
+}
+
 .label{
     padding: .2em .35em .3em;
     font-weight: inherit;
@@ -240,19 +254,37 @@ h6{
     <option value="irohakakuC-w">いろは角クラシック</option>
     <option value="KokuGothic-w">刻ゴシック</option>
     <option value="YasashisaGothic-w">やさしさゴシック</option>
+    <option value="bokutachi2-w">ぼくたちのゴシック２</option>
     <option value="GenEiAntiqueN-w">源暎アンチック</option>
     <option value="GenEiLateGo-w">源暎ラテゴ</option>
     <option value="LogoTypeGothic-w">ロゴたいぷゴシック</option>
     <option value="CorporateLogo-w">コーポレート・ロゴ</option>
     <option value="LiNovePOP-w">ラノベPOP</option>
+    <option value="KeiFont-w">けいふぉんと</option>
+    <option value="toroman-w">アンニャントロマン</option>
+    <option value="haranyan_0-w">はらませにゃんこ</option>
     </optgroup>
 </select></label>
 
 <label>日本語・記号
 <select name="family-j" class="form-control">
+    <optgroup label="セット内">
     <option value="GenShinGothic-w">Noto Sans CJK / 源ノ角ゴシック</option>
     <option value="mgenplus-1-w">M+ 1</option>
     <option value="mgenplus-2-w">M+ 2</option>
+    </optgroup>
+    <optgroup label="各OS標準">
+    <option value="MS Gothic">ＭＳ ゴシック</option>
+    <option value="MS PGothic">ＭＳ Ｐゴシック</option>
+    <option value="Meiryo">メイリオ</option>
+    <option value="Yu Gothic">游ゴシック</option>
+    <option value="VL Gothic">VL Gothic</option>
+    <option value="VL PGothic">VL PGothic</option>
+    <option value="TakaoGothic">Takaoゴシック</option>
+    <option value="TakaoPGothic">TakaoPゴシック</option>
+    <option value="TakaoEXGothic">TakaoEXゴシック</option>
+    <option value="Hiragino Sans">ヒラギノ角ゴシック</option>
+    </optgroup>
 </select>
 </label>
 </p>

@@ -103,6 +103,32 @@ Linux Biolinumをカスタムした英数字も用意されています。
 - `font-family:"LiNovePOP-w"`
 - Weight: 800
 
+### けいふぉんと
+
+- http://font.sumomo.ne.jp/font_1.html
+- `font-family:"KeiFont-w"`
+- Weight: 800
+- **「商用利用については特に制限しておりませんが、ヒント元となった作品の名誉を傷つける場面での使用はご遠慮頂ますようお願いいたします。」**
+
+### はらませにゃんこ
+
+- http://inatsuka.com/extra/haranyan/
+- `font-family:"haranyan_0-w"`
+  - 記号代用`font-family:"haranyan_S-w"`
+- Weight: 900(仮)
+
+### アンニャントロマン
+
+- http://inatsuka.com/extra/toroman/
+- `font-family:"toroman-w"`
+- Weight: 900(仮)
+
+### ぼくたちのゴシック２
+
+- http://fontopo.com/?cat=7
+- `font-family:"bokutachi2-w"`
+- Weight: 400,500
+
 ## 源真ゴシック拡張
 
 源真ゴシック専用です。
@@ -112,10 +138,3 @@ Linux Biolinumをカスタムした英数字も用意されています。
 - http://itouhiro.hatenablog.com/entry/20140917/font
 - `font-family:"Nasu-w";`
 - font-weight: 400,700
-
-## 橳
-
-### 橳
-
-- `font-family:"NUDE-w";`
-- font-weight: 100,200,300,400,500,700,800

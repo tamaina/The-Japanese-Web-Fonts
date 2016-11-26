@@ -1,0 +1,11 @@
+/*
+ * "けいふぉんと(KeiFont)" is licensed under the Apache License, Version 2.0
+ * http://font.sumomo.ne.jp/font_1.html (すもももじ)
+ */
+
+@font-face {
+    font-family: 'KeiFont-w';
+    src: url('../fonts/KeiFont.eot');
+    src: url('../fonts/KeiFont.eot?#iefix') format('embedded-opentype'),url('../fonts/KeiFont.woff2') format('woff2'),url('../fonts/KeiFont.woff') format('woff'),url('../fonts/KeiFont.ttf') format('truetype');
+    font-weight: 800;
+}

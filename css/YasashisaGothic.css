@@ -1,0 +1,17 @@
+/*
+ * "やさしさゴシック(YasashisaGothic)" ( M+ Font License )
+ * http://www.fontna.com/category/gallery/ (フリーフォントの樹)
+ */
+
+@font-face {
+    font-family: 'YasashisaGothic-w';
+    src: url('../fonts/YasashisaGothic.eot');
+    src: url('../fonts/YasashisaGothic.eot?#iefix') format('embedded-opentype'),url('../fonts/YasashisaGothic.woff2') format('woff2'),url('../fonts/YasashisaGothic.woff') format('woff'),url('../fonts/YasashisaGothic.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'YasashisaGothic-w';
+    src: url('../fonts/YasashisaGothicBold.eot');
+    src: url('../fonts/YasashisaGothicBold.eot?#iefix') format('embedded-opentype'),url('../fonts/YasashisaGothicBold.woff2') format('woff2'),url('../fonts/YasashisaGothicBold.woff') format('woff'),url('../fonts/YasashisaGothicBold.ttf') format('truetype');
+    font-weight: 700;
+}

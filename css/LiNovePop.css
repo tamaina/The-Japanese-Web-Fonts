@@ -1,0 +1,11 @@
+/*
+ * "ラノベPOP(LiNovePOP,Light Novel POP)" ( M+ Font License )
+ * http://www.fontna.com/category/gallery/ (フリーフォントの樹)
+ */
+
+@font-face {
+    font-family: 'LiNovePOP-w';
+    src: url('../fonts/LiNovePOP.eot');
+    src: url('../fonts/LiNovePOP.eot?#iefix') format('embedded-opentype'),url('../fonts/LiNovePOP.woff2') format('woff2'),url('../fonts/LiNovePOP.woff') format('woff'),url('../fonts/LiNovePOP.ttf') format('truetype');
+    font-weight: 800;
+}
