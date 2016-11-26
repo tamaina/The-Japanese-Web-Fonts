@@ -17,30 +17,33 @@ githubのダウンロードが爆速になったため、その心配はなく�
 - アップロードするのは、cssフォルダとfontフォルダだけでいいです。
 - 不必要なフォントとcssは除いていただいて結構です。
 
-## フォントの設定方法
+## フォントの設定方法(超ズボラな人向け)
 
 ### head内の上の方に加えてください
 
 Add these tags into `<head> ~ </head>`.
 
    ~~~
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/css/JPWF-Addons.css"/> <!-- JpWF Addons -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/css/GenJpFont-X.css"/> <!-- JpWF GenShin -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/css/MgenP-X.css"/> <!-- JpWF Mgen+ -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v6.0.0/css/JPWF-Addons.css"/> <!-- JpWF Addons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v6.0.0/css/GenJpFont-X.css"/> <!-- JpWF GenShin -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v6.0.0/css/MgenP-X.css"/> <!-- JpWF Mgen+ -->
    ~~~
+
 ### cssを設定します
 
 - **ある程度把握しておきたいcssの知識として**
   - 必要のないフォントはダウンロードされません
     - サイトを早くする
     - 後ろに書かれたフォントは必要なければ表示されませんし、読み込まれません。
-  - Webフォントは、@font-faceで同じフォント名にウェイトが複数書かれていても、必要なウェイトだけダウンロードしてくれます。
+  - Webフォントは、必要なウェイトだけダウンロードしてくれます。
+  - 悪く言えば、ブラウザは**場当たりでダウンロード**しています。
 - 以下のコードは、設定の例です。
-  - デモなので、欧文部分をM+ c、日本語などその他の部分をNoto Sansにしています。
+  - デモなので、欧文部分をM+ p、日本語などその他の部分をNoto Sansにしています。
+- デモページでは、クリックのみで確認しながらcssを生成することが出来ます。
 
    ~~~
      TAG,.class,#id {
-     font-family: 'mgenplus-c-w', 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
+     font-family: 'mgenplus-p-w', 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
      font-weight: 400; /*ウェイトについては以下の表を参照。*/
      }
    ~~~
@@ -93,8 +96,8 @@ Add these tags into `<head> ~ </head>`.
 ## 興味がある人だけ聞いて(ry
 
 - 【基本フォント】の「英語部分」は、【Roboto】が収録しているグリフを踏襲してサブセット化しています。
-  - RobotoよりM+ cが好き。
+  - RobotoよりM+が好き。
 - woff2もあります。
   - 武蔵システムさんありがとう。
 - どこまで互換性があるかは知りませんが、IE4互換はしたつもりです。
-  - 私はIE9sから。
+  - 私はIE9から。
