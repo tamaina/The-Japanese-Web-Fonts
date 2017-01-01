@@ -7,7 +7,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="preload" as="style" href="https://cdn.honokak.osaka/honoka/3.3.7-a/css/bootstrap.min.css" />
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.4/jquery.minicolors.min.css" />
 <link rel="preload" as="style" href="./css/JPWF-Addons.css" />
 <link rel="preload" as="style" href="./css/GenJpFont-X.css" />
@@ -31,7 +32,7 @@ console.dir(target);
 console.log($(target).attr('class'));
 }
 
-var BodyCSS = "", SelectorCSS = "", DisplayCSS = "", AddonTF = false, EngTF = false, JandSVal = "", FontFamilyVal = "", theOthers = "" ;
+var BodyCSS = "", FontCSS = "", SelectorCSS = "", DisplayCSS = "", AddonTF = false, EngTF = false, JandSVal = "", FontFamilyVal = "", theOthers = "" ;
 var orderform = $('#orderform').serializeArray()
 
 if( orderform[1].value == "none" ){
@@ -63,24 +64,29 @@ FontFamilyVal +=', sans-serif';
 if( orderform[8].value != "normal" ){
     theOthers += "\nfont-style: " + orderform[8].value + ";";
 }
-if( orderform[10].value != "normal" ){
-theOthers += '\nline-height:' + orderform[9].value + orderform[10].value + ';';
+if( orderform[9].value != "normal" ){
+    theOthers += "\nfont-feature-settings: \"" + orderform[9].value + "\" 1;";
+}
+if( orderform[11].value != "normal" ){
+theOthers += '\nline-height:' + orderform[10].value + orderform[11].value + ';';
     $('[name="line-height-n"]').css("display","inline-block");
 } else {
     $('[name="line-height-n"]').css("display","none");
 }
-if( orderform[12].value != "normal" ){
-theOthers += '\nletter-spacing:' + orderform[11].value + orderform[12].value + ';';
+if( orderform[13].value != "normal" ){
+theOthers += '\nletter-spacing:' + orderform[12].value + orderform[13].value + ';';
     $('[name="letter-spacing-n"]').css("display","inline-block");
 } else {
     $('[name="letter-spacing-n"]').css("display","none");
 }
 
-BodyCSS = 'font-family:' + FontFamilyVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + '; ' ;
+BodyCSS = 'font-family:' + FontFamilyVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + '; ';
+FontCSS = 'font-family:' + FontFamilyVal + ';';
 SelectorCSS = 'font-size:' + orderform[3].value + orderform[4].value + '; font-weight:' + orderform[5].value + ';' + theOthers;
 DisplayCSS = 'font-family:' + FontFamilyVal + ';\nbackground-color:' + orderform[6].value + ';\ncolor:' + orderform[7].value + ';\nfont-size:' + orderform[3].value + orderform[4].value + ';\nfont-weight:' + orderform[5].value + ';' + theOthers;
 
 $('body').attr('style',BodyCSS);
+$('.alert, .badge, .breadcrumb, .btn, .form-control, .input-gruop, .label, .lead, .list-group, .nav-pills, .nav-tabs, .navbar, .no-thank-yu, .pager, .pagination, .panel-heading, .panel-title, .popover, .tooltip, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6').attr('style',FontCSS);
 $('.panel-body').attr('style',BodyCSS);
 $('a').css('color',orderform[7].value);
 $('legend').css('color',orderform[7].value)
@@ -346,6 +352,17 @@ h6{
 	</label>
 	<label class="btn btn-default">
 		<input type="radio" name="font-style" value="oblique" autocomplete="off">oblique
+	</label>
+</div>
+</fieldset>
+<fieldset class="form-group form-horizontal">
+<legend>Font Feature</legend>
+<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-default active">
+		<input type="radio" name="font-feature" value="normal" autocomplete="off" checked>normal
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="font-feature" value="palt" autocomplete="off">palt
 	</label>
 </div>
 </fieldset>
