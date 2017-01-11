@@ -62,37 +62,37 @@ if( AddonTF == true && EngTF == true ){
 FontFamilyVal +=', sans-serif';
 
 if( orderform[8].value != "normal" ){
-    theOthers += "\nfont-style: " + orderform[8].value + ";\n";
+    theOthers += "\nfont-style: " + orderform[8].value + ";";
 }
 if( orderform[9].value != "normal" ){
-    theOthers += "\nfont-feature-settings: \"" + orderform[9].value + "\" 1;\n";
+    theOthers += "\nfont-feature-settings: \"" + orderform[9].value + "\" 1;";
 }
 if( orderform[11].value != "normal" ){
-theOthers += '\nline-height:' + orderform[10].value + orderform[11].value + ';\n';
+theOthers += '\nline-height:' + orderform[10].value + orderform[11].value + ';';
     $('[name="line-height-n"]').css("display","inline-block");
 } else {
     $('[name="line-height-n"]').css("display","none");
 }
 if( orderform[13].value != "normal" ){
-theOthers += '\nletter-spacing:' + orderform[12].value + orderform[13].value + ';\n';
+theOthers += '\nletter-spacing:' + orderform[12].value + orderform[13].value + ';';
     $('[name="letter-spacing-n"]').css("display","inline-block");
 } else {
     $('[name="letter-spacing-n"]').css("display","none");
 }
 if( orderform[14].value != "auto" ){
-theOthers += 'text-rendering:' + orderform[14].value + ';\n';
+theOthers += '\ntext-rendering:' + orderform[14].value + ';';
 }
 if( orderform[15].value != "auto" ){
-theOthers += '-webkit-font-smoothing:' + orderform[15].value + ';\n';
+theOthers += '\n-webkit-font-smoothing:' + orderform[15].value + ';';
 }
 if( orderform[16].value != "auto" ){
-theOthers += '-moz-osx-font-smoothing:' + orderform[16].value + ';\n';
+theOthers += '\n-moz-osx-font-smoothing:' + orderform[16].value + ';';
 }
 
 BodyCSS = 'font-family:' + FontFamilyVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + ';';
 FontCSS = 'font-family:' + FontFamilyVal + ';';
-SelectorCSS = 'font-size:' + orderform[3].value + orderform[4].value + '; font-weight:' + orderform[5].value + ';\n' + theOthers;
-DisplayCSS = 'font-family:' + FontFamilyVal + ';\nbackground-color:' + orderform[6].value + ';\ncolor:' + orderform[7].value + ';\nfont-size:' + orderform[3].value + orderform[4].value + ';\nfont-weight:' + orderform[5].value + ';\n' + theOthers;
+SelectorCSS = 'font-size:' + orderform[3].value + orderform[4].value + '; font-weight:' + orderform[5].value + ';' + theOthers;
+DisplayCSS = 'font-family:' + FontFamilyVal + ';\nbackground-color:' + orderform[6].value + ';\ncolor:' + orderform[7].value + ';\nfont-size:' + orderform[3].value + orderform[4].value + ';\nfont-weight:' + orderform[5].value + ';' + theOthers;
 
 $('body').attr('style',BodyCSS);
 $('.alert, .badge, .breadcrumb, .btn, .form-control, .input-gruop, .label, .lead, .list-group, .nav-pills, .nav-tabs, .navbar, .no-thank-yu, .pager, .pagination, .panel-heading, .panel-title, .popover, .tooltip, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6').attr('style',FontCSS);
@@ -316,7 +316,7 @@ h6{
 <fieldset class="form-group form-inline">
 <legend>Font Size</legend>
 <p>
-<input type="number" step="0.2" name="number" value="1.3" class="form-control" />
+<input type="number" step="0.2" name="number" value="1.0" class="form-control" />
 <select name="size-c" class="form-control">
     <option>px</option>
     <option>pt</option>
