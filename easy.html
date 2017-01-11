@@ -89,8 +89,8 @@ if( orderform[16].value != "auto" ){
 theOthers += '\n-moz-osx-font-smoothing:' + orderform[16].value + ';';
 }
 
-BodyCSS = 'font-family:' + FontFamilyVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + ';';
-FontCSS = 'font-family:' + FontFamilyVal + ';';
+BodyCSS = 'font-family:' + FontFamilyVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + ';' + theOthers;
+FontCSS = 'font-family:' + FontFamilyVal + ';' + theOthers;
 SelectorCSS = 'font-size:' + orderform[3].value + orderform[4].value + '; font-weight:' + orderform[5].value + ';' + theOthers;
 DisplayCSS = 'font-family:' + FontFamilyVal + ';\nbackground-color:' + orderform[6].value + ';\ncolor:' + orderform[7].value + ';\nfont-size:' + orderform[3].value + orderform[4].value + ';\nfont-weight:' + orderform[5].value + ';' + theOthers;
 
