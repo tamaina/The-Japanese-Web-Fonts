@@ -48,7 +48,7 @@ if( orderform[0].value == "none" ){
 if( orderform[2].value == "mgenplus-1-w" || orderform[2].value == "mgenplus-2-w" ){
     JandSVal = '"' + orderform[2].value + '", "mgenplus-S-w"';
 } else {
-    JandSVal = '"' + orderform[2].value + '", "GenShinGothic-S-w"';
+    JandSVal = '"' + orderform[2].value + '"';
 }
 if( AddonTF == true && EngTF == true ){
     FontFamilyVal += '"' + orderform[0].value + '", "' + orderform[1].value + '", ' + JandSVal ;
@@ -62,22 +62,28 @@ if( AddonTF == true && EngTF == true ){
 FontFamilyVal +=', sans-serif';
 
 if( orderform[8].value != "normal" ){
-    theOthers += "\nfont-style: " + orderform[8].value + ";";
+    theOthers += "\nfont-style: " + orderform[8].value + ";\n";
 }
 if( orderform[9].value != "normal" ){
-    theOthers += "\nfont-feature-settings: \"" + orderform[9].value + "\" 1;";
+    theOthers += "\nfont-feature-settings: \"" + orderform[9].value + "\" 1;\n";
 }
 if( orderform[11].value != "normal" ){
-theOthers += '\nline-height:' + orderform[10].value + orderform[11].value + ';';
+theOthers += '\nline-height:' + orderform[10].value + orderform[11].value + ';\n';
     $('[name="line-height-n"]').css("display","inline-block");
 } else {
     $('[name="line-height-n"]').css("display","none");
 }
 if( orderform[13].value != "normal" ){
-theOthers += '\nletter-spacing:' + orderform[12].value + orderform[13].value + ';';
+theOthers += '\nletter-spacing:' + orderform[12].value + orderform[13].value + ';\n';
     $('[name="letter-spacing-n"]').css("display","inline-block");
 } else {
     $('[name="letter-spacing-n"]').css("display","none");
+}
+if( orderform[14].value != "auto" ){
+theOthers += '-webkit-font-smoothing:' + orderform[14].value + ';\n';
+}
+if( orderform[15].value != "auto" ){
+theOthers += '-moz-osx-font-smoothing:' + orderform[15].value + ';\n';
 }
 
 BodyCSS = 'font-family:' + FontFamilyVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + '; ';
@@ -216,7 +222,13 @@ h6{
      <a href="#form-3" class="nav-link thetab" data-toggle="tab">Page Color</a>
    </li>
    <li>
-     <a href="#form-4" class="nav-link thetab" data-toggle="tab">the Others</a>
+     <a href="#form-4" class="nav-link thetab" data-toggle="tab">Some</a>
+   </li>
+   <li>
+     <a href="#form-5" class="nav-link thetab" data-toggle="tab">any Others</a>
+   </li>
+   <li>
+     <a href="#form-6" class="nav-link thetab" data-toggle="tab">Text Rendering</a>
    </li>
 </ul>
 
@@ -366,7 +378,9 @@ h6{
 	</label>
 </div>
 </fieldset>
+ </div>
 
+ <div id="form-5" class="tab-pane">
 <fieldset class="form-group form-inline">
 <legend>Line Height</legend>
 <p>
@@ -411,7 +425,59 @@ h6{
 </select>
 </p>
 </fieldset>
- </div></div>
+ </div>
+ 
+ <div id="form-6" class="tab-pane">
+<fieldset class="form-group form-inline">
+<legend>Text Rendering</legend>
+<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-default active">
+		<input type="radio" name="text-render" value="auto" autocomplete="off" checked>auto
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="text-render" value="optimizeSpeed" autocomplete="off">optimizeSpeed
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="text-render" value="optimizeLegibility" autocomplete="off">optimizeLegibility
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="text-render" value="geometricPrecision" autocomplete="off">geometricPrecision
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="text-render" value="unset" autocomplete="off">unset
+	</label>
+</div>
+</fieldset>
+<fieldset class="form-group form-inline">
+<legend>Font Smoothing</legend>
+webkit:
+<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-default active">
+		<input type="radio" name="webkit-fontsmoo" value="auto" autocomplete="off" checked>auto
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="webkit-fontsmoo" value="antialiased" autocomplete="off">antialiased
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="webkit-fontsmoo" value="subpixel-antialiased" autocomplete="off">subpixel-antialiased
+	</label>
+</div>
+<br>
+moz:
+<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-default active">
+		<input type="radio" name="moz-fontsmoo" value="auto" autocomplete="off" checked>auto
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="moz-fontsmoo" value="grayscale" autocomplete="off">grayscale
+	</label>
+	<label class="btn btn-default">
+		<input type="radio" name="moz-fontsmoo" value="unset" autocomplete="off">unset
+	</label>
+</div>
+</fieldset>
+ </div>
+ </div>
  </div></div>
  </div></div>
 <div class="panel-group" id="ac-code">
