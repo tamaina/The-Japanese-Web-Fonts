@@ -80,10 +80,13 @@ theOthers += '\nletter-spacing:' + orderform[12].value + orderform[13].value + '
     $('[name="letter-spacing-n"]').css("display","none");
 }
 if( orderform[14].value != "auto" ){
-theOthers += '-webkit-font-smoothing:' + orderform[14].value + ';\n';
+theOthers += 'text-rendering:' + orderform[14].value + ';\n';
 }
 if( orderform[15].value != "auto" ){
-theOthers += '-moz-osx-font-smoothing:' + orderform[15].value + ';\n';
+theOthers += '-webkit-font-smoothing:' + orderform[15].value + ';\n';
+}
+if( orderform[16].value != "auto" ){
+theOthers += '-moz-osx-font-smoothing:' + orderform[16].value + ';\n';
 }
 
 BodyCSS = 'font-family:' + FontFamilyVal + '; background-color:' + orderform[6].value + '; color:' + orderform[7].value + '; ';
