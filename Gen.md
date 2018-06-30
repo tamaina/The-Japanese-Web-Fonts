@@ -9,10 +9,9 @@
     - "GenShinGothic-A-w"
   - 欧文以外(日本語+記号)
     - "GenShinGothic-w"
-  - 欧文部分と欧文以外を併せて使ってはじめてフォントが完成します。
     - 欧文部分はMgen+に挿げ替えが可能です。
 - 形式 Extensions
-  - ttf,otf,woff2,woff
+  - ttf,eot,woff2,woff
 
 ## ウェイト
 

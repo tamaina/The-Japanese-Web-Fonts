@@ -2,51 +2,63 @@
 
 ## 導入
 
-~~**cdnとかはない**ので、自分でダウンロードして自分のサーバーにアップしてください。~~
-
-~~zipで100MBあるのでcdnを使いましょう。~~
-
-githubのダウンロードが爆速になったため、その心配はなくなりました。お持ちのサーバーの回線速度に自信のある方はサーバーにアップロードして使用してください。
-
-- 暫定的にrawgitを使用しています。
-
-ダウンロードは : https://github.com/tamaina/The-Japanese-Web-Fonts/releases
+ダウンロードする : https://github.com/tamaina/The-Japanese-Web-Fonts/releases
 
 **Source code (zip)**がリンクです。
 
-- アップロードするのは、cssフォルダとfontフォルダだけでいいです。
-- 不必要なフォントとcssは除いていただいて結構です。
+cssフォルダとfontフォルダのなかから、選択して必要なフォントファイルをコピーしてください。
 
-## フォントの設定方法(超ズボラな人向け)
+## cssを設定する
 
-### head内の上の方に加えてください
+### 1. @font-faceを書く
 
-Add these tags into `<head> ~ </head>`.
+複数のファイルを、1つのフォントとしてまとめて指定します。こうすることで早くフォントを表示することができます。
 
-   ~~~
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v6.0.0/css/JPWF-Addons.css"/> <!-- JpWF Addons -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v6.0.0/css/GenJpFont-X.css"/> <!-- JpWF GenShin -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v6.0.0/css/MgenP-X.css"/> <!-- JpWF Mgen+ -->
-   ~~~
+以下は、YakuHanJPを利用しながら「wf-c」というフォントファミリーを作成するsassの例です。
 
-### cssを設定します
+1. font-familyでフォント名を指定します
+2. srcでフォントの参照先を指定します
+3. font-weightでフォントの太さを指定します。  
+   フォントの太さを複数指定する場合は、そのぶんだけfont-weightの値とsrcのurlを変えながら@font-faceを書きます。
+4. font-displayでは、フォントが読み込まれないときにどのようにするかを指定します。
+5. unicode-langeは、その@font-faceでUnicodeのどの範囲の文字を表示するかを定めます。
+   https://github.com/tamaina/The-Japanese-Web-Fonts/tree/master/text 内のサブセット文字一覧を参考に指定してください。
 
-- **ある程度把握しておきたいcssの知識として**
-  - 必要のないフォントはダウンロードされません
-    - サイトを早くする
-    - 後ろに書かれたフォントは必要なければ表示されませんし、読み込まれません。
-  - Webフォントは、必要なウェイトだけダウンロードしてくれます。
-  - 悪く言えば、ブラウザは**場当たりでダウンロード**しています。
-- 以下のコードは、設定の例です。
-  - デモなので、欧文部分をM+ p、日本語などその他の部分をNoto Sansにしています。
-- デモページでは、クリックのみで確認しながらcssを生成することが出来ます。
+```
+@font-face
+  font-family: wf-c
+  src: url('https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanJP/YakuHanJP-Light.woff2') format('woff2'), url('https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/fonts/YakuHanJP/YakuHanJP-Light.woff') format('woff')
+  font-weight: 200
+  font-display: fallback
+  /* YakuHanの範囲 */
+  unicode-range: U+3001, U+3002, U+3008-3011, U+3014, U+3015, U+30fb, U+ff01, U+ff1f, U+ff08, U+ff09, U+ff1a, U+ff1b, U+ff3b, U+ff3d, U+ff5b, U+ff5d
 
-   ~~~
-     TAG,.class,#id {
-     font-family: 'mgenplus-p-w', 'Noto Sans CJK JP', '源ノ角ゴシック', 'Source Han Sans', '源真ゴシック', 'GenShinGothic', 'M+ 2c', 'Mgen+ 2c', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'ヒラギノ角ゴ Pro W3' ,'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'GenShinGothic-w', sans-serif;
-     font-weight: 400; /*ウェイトについては以下の表を参照。*/
-     }
-   ~~~
+@font-face
+  font-family: wf-c
+  src: url('/files/fonts/mgenplus-c-light.woff2') format('woff2'), url('/files/fonts/mgenplus-c-light.woff') format('woff'), url('/files/fonts/mgenplus-c-light.ttf') format('truetype')
+  font-weight: 200
+  font-display: fallback
+  /* ラテン文字 */
+  unicode-range: U+000-5FF, U+FF02-FF07, U+FF0A-FF19, U+FF1C-FF1E, U+FF20-FF5A, U+FF5C
+
+@font-face
+  font-family: wf-c
+  font-style: normal
+  font-weight: 200
+  font-display: fallback 
+  src: url('/files/fonts/GenShinGothic-Light.woff2') format('woff2'), url('/files/fonts/GenShinGothic-Light.woff') format('woff'), url('/files/fonts/GenShinGothic-Light.ttf') format('truetype')
+  /* 第二水準漢字まで */
+  unicode-range: U+3000, U+3003-3007, U+3012, U+3013, U+3016-30fa, U+30fc-9FFF
+```
+
+### 2. font-familyで指定する
+以下は、さきほど指定した「wf-c」を最優先に描画するfont-familyの設定の例です。
+
+```
+font-family: wf-c, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", -apple-system, BlinkMacSystemFont, "Yu Gothic", "メイリオ", Meiryo, sans-serif
+```
+
+### 参考
 
 |Number|Noto Sans  |M+       |IROHA|
 |-----:|:----------|:--------|:---:|
@@ -59,45 +71,3 @@ Add these tags into `<head> ~ </head>`.
 |700   |Bold       |Bold     |○   |
 |800   |Heavy      |**Heavy**|     |
 |900   |-          |**Black**|     |
-
-### 【必読】高速化いろいろ
-
-- **Webフォント用cssの内容をhtmlに直打ちする。**
-  - cssから必要部分だけコピペしてきます。
-  - カスタマイズが容易なので、こっちのほうが本当の使い方だったりするかもしれない。 
-- **`link rel="preload"`を使う。**
-  - 詳しくは[gist](https://gist.github.com/tamaina/73ccf1f807bb4531c069da43112bd61c)を参考にしてください
-- **font-familyを指定する部分の前にWebフォント用cssを読み込む。**
-  - この逆を行うと、再描画が発生します。
-    - 「こんなやつら知らねぇよ。標準のフォントで描画じゃオラ」
-    - 「おっ、見つかったやん。めんどっちいけど、ダウンロードして描画しよ」
-- **ウェイトを減らす。**
-  - 1ウェイトごとに1MB増えます。
-    - 日本語部分フォントファイルは、1つ900kbあります。※woff2の場合。
-      - 第2水準漢字対応の代償です。
-    - 英語部分フォントファイルは50kbです。
-  - 個人的には3ウェイトが限度だと思います。
-    - LTE高速下ならまだしも、200kb制限下だと厳しいことになります。
-- **英字部分だけを使う、ひらがなを自分でサブセット化して使う。**
-  - 指定しなかった範囲の文字は、自動で補完されます。
-    - font-familyの最後にsans-serifを付けましょう。
-- **フォント以外の部分を軽量化する。**
-  - ***独自ドメイン限定 : CloudFlareを利用します。***
-    - SSL/TLS対応が本命なんじゃないかってくらいSSL/TLS化が楽。関係ないけど。
-  - 画面サイズごとに読み込む画像サイズを変えます。
-    - html5.1で<picture><source>要素が追加されました。詳細はググってください。
-  - とにかく読み込むファイルの数を少なくします。
-    - ファイル数が多いと、サーバーへリクエストするぶん無駄な時間が発生します。
-  - cdnのサービスを1つにまとめます。
-    - 名前解決の手間を省きます。
-    - [cdnjs](cdnjs.com)がおすすめです。
-
-
-## 興味がある人だけ聞いて(ry
-
-- 【基本フォント】の「英語部分」は、【Roboto】が収録しているグリフを踏襲してサブセット化しています。
-  - RobotoよりM+が好き。
-- woff2もあります。
-  - 武蔵システムさんありがとう。
-- どこまで互換性があるかは知りませんが、IE4互換はしたつもりです。
-  - 私はIE9から。

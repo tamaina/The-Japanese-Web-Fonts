@@ -6,8 +6,6 @@ Mgen+は、M+フォントベースのフォントです。
 - M+は種類が多いです。
   - しかし、後述のように部位を分けることで結果として種類を少なくしています。CSSならではの手法です。
 
-
-
 - http://jikasei.me/font/mgenplus/
 - href="MgenP-X.css"
 - font-family:
@@ -25,7 +23,7 @@ Mgen+は、M+フォントベースのフォントです。
     - 欧文・日本語部分の種類の違いは、上の方のURLで解説してくださってるのでそちらで御覧ください。
     - 欧文部分は源真ゴシックに挿げ替えが可能です。
 - 形式 Extensions
-  - ttf,otf,woff2,woff
+  - ttf,eot,woff2,woff
 
 ## ウェイト
 
