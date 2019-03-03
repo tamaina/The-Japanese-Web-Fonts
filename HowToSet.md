@@ -1,10 +1,15 @@
 # The Japanese Web Fonts 使い方
 
 ## 導入
+### CDN
+**jsdelivr**を利用することで、CDNから利用できます。
 
+`https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v6.0.0/fonts/`
+
+### ダウンロード
 ダウンロードする : https://github.com/tamaina/The-Japanese-Web-Fonts/releases
 
-**Source code (zip)**がリンクです。
+**Source code (zip)** がリンクです。
 
 cssフォルダとfontフォルダのなかから、選択して必要なフォントファイルをコピーしてください。
 
@@ -35,7 +40,7 @@ cssフォルダとfontフォルダのなかから、選択して必要なフォ�
 
 @font-face
   font-family: wf-c
-  src: url('/files/fonts/mgenplus-c-light.woff2') format('woff2'), url('/files/fonts/mgenplus-c-light.woff') format('woff'), url('/files/fonts/mgenplus-c-light.ttf') format('truetype')
+  src: url('https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v6.0.0/fonts/mgenplus-c-light.woff2') format('woff2'), url('/files/fonts/mgenplus-c-light.woff') format('woff'), url('/files/fonts/mgenplus-c-light.ttf') format('truetype')
   font-weight: 200
   font-display: fallback
   /* ラテン文字 */
@@ -45,8 +50,8 @@ cssフォルダとfontフォルダのなかから、選択して必要なフォ�
   font-family: wf-c
   font-style: normal
   font-weight: 200
-  font-display: fallback 
-  src: url('/files/fonts/GenShinGothic-Light.woff2') format('woff2'), url('/files/fonts/GenShinGothic-Light.woff') format('woff'), url('/files/fonts/GenShinGothic-Light.ttf') format('truetype')
+  font-display: fallback
+  src: url('https://cdn.jsdelivr.net/gh/tamaina/The-Japanese-Web-Fonts@v6.0.0/fonts/GenShinGothic-Light.woff2') format('woff2'), url('/files/fonts/GenShinGothic-Light.woff') format('woff'), url('/files/fonts/GenShinGothic-Light.ttf') format('truetype')
   /* 第二水準漢字まで */
   unicode-range: U+3000, U+3003-3007, U+3012, U+3013, U+3016-30fa, U+30fc-9FFF
 ```
