@@ -1,0 +1,10 @@
+Open($1);
+SelectWorthOutputting()
+str=""
+code=0
+foreach
+code=GlyphInfo("Unicode")
+str+=""+code+","
+endloop
+Print(str)
+Quit(0);

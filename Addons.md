@@ -30,8 +30,6 @@ Weights
 
 ## 欧文フォント
 
-Google Fontsに載ってない可哀想なフォント。
-
 ### Linux Biolinum
 
 源暎フォントの欧文部分で使われているフォントです。
@@ -40,6 +38,16 @@ Google Fontsに載ってない可哀想なフォント。
 - `font-family:"LinBiolinum-w";`
 - Weights : 400,700
 
+### GenEi Univer Sans
+
+- https://okoneya.jp/font/download.html
+- `GenEiUniverSans-*.*`
+- L (200) - SL (300) - R (400) - SB (500) - B (700) - H (800) - Bk (900)
+
+### GenEi Nomble
+
+- https://okoneya.jp/font/download.html
+- `GenEiNombre.*`
 
 ## かな(+欧文)フォント
 
@@ -69,7 +77,7 @@ Google Fontsに載ってない可哀想なフォント。
 - `font-family:"KokuGothic-w";`
 - Weight : 200
 
-### 源暎フォント
+### 源暎アンチック・ラテゴ
 
 **源暎アンチック**は、漫画に使われる、かなが明朝体で漢字がゴシック体のフォント。
 
