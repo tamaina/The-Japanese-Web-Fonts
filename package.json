@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/tamaina/The-Japanese-Web-Fonts#readme",
   "dependencies": {
-    "font-ranger": "^3.0.5",
     "tmp": "^0.1.0"
   }
 }
