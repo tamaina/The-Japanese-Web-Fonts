@@ -1,0 +1,28 @@
+{
+  "name": "thejapanesewebfonts",
+  "version": "1.0.0",
+  "description": "japanese webfont set",
+  "main": "script/index.js",
+  "scripts": {
+    "start": "node script/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamaina/The-Japanese-Web-Fonts.git"
+  },
+  "keywords": [
+    "webfont",
+    "font",
+    "fonts"
+  ],
+  "author": "aqz/tamaina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamaina/The-Japanese-Web-Fonts/issues"
+  },
+  "homepage": "https://github.com/tamaina/The-Japanese-Web-Fonts#readme",
+  "dependencies": {
+    "font-ranger": "^3.0.5",
+    "tmp": "^0.1.0"
+  }
+}

@@ -1,0 +1,59 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add font-range
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Program Files\ImageMagick-7.0.8-Q16;c:\program files\graphicsmagick-1.3.31-q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\i\ffmpeg\bin;C:\i\gmic;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MongoDB\Server\4.0\bin;C:\Program Files (x86)\FontForgeBuilds;C:\Program Files\nodejs\;C:\Program Files\Inkscape;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\tamai\AppData\Local\Microsoft\WindowsApps;;C:\Users\tamai\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\tamai\AppData\Roaming\npm;C:\Users\tamai\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  12.7.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/font-range: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65939:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140464:22)
+      at Request.emit (events.js:203:13)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141436:10)
+      at Request.emit (events.js:203:13)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141358:12)
+      at Object.onceWrapper (events.js:291:20)
+      at IncomingMessage.emit (events.js:208:15)
+      at endReadableNT (_stream_readable.js:1161:12)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11)
+
+npm manifest: 
+  {
+    "name": "thejapanesewebfonts",
+    "version": "1.0.0",
+    "description": "japanese webfont set",
+    "main": "script/index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tamaina/The-Japanese-Web-Fonts.git"
+    },
+    "keywords": [
+      "webfont",
+      "font",
+      "fonts"
+    ],
+    "author": "aqz/tamaina",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/tamaina/The-Japanese-Web-Fonts/issues"
+    },
+    "homepage": "https://github.com/tamaina/The-Japanese-Web-Fonts#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
