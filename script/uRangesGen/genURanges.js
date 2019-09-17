@@ -25,7 +25,7 @@ module.exports = strings => {
   
   const resArr = rangedNumArr.map(e => {
     if (typeof e === 'number') return `u+${e.toString(16)}`
-    else return `u+${e[0].toString(16)}-${e[1].toString(16)}`
+    return `u+${e[0].toString(16)}-${e[1].toString(16)}`
   })
 
   return resArr

@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/tamaina/The-Japanese-Web-Fonts#readme",
   "dependencies": {
+    "jsdom": "^15.1.1",
+    "sass": "^1.22.12",
     "tmp": "^0.1.0"
   }
 }

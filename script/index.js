@@ -1,8 +1,11 @@
 const fs = require('fs')
 const childProcess = require('child_process')
 const tmp = require('tmp')
+const sass = require('sass')
+const { JSDOM } = require('jsdom');
 
-const getURanges = require('./uRangesGen/getURangesFromType')
+const getURangesFromType = require('./uRangesGen/getURangesFromType')
+const genURanges = require('./uRangesGen/genURanges')
 const genCharStringArrFromType = require('./uRangesGen/genCharStringArrFromType')
 
 const weights = {
@@ -33,7 +36,7 @@ const kanaEntries = ['katakana', 'hankakuKatakana', 'hiragana', 'katakanaSymbol'
 const kanjiEntries = ['shogakuseiKanji', 'joyoKanji', 'jinmeiyoKanji', 'hyogaiKanji', 'dai1suijunKanji', 'dai2suijunKanji', 'kanjiSymbol']
 const otherEntries = ['japaneseBase', 'jisx0213Hikanji', 'unicodeHikanji']
 
-const ranges = Object.fromEntries(baseEntries.map(e => [ e, { chars: genCharStringArrFromType(e), urange: getURanges(e) } ]))
+const ranges = Object.fromEntries(baseEntries.map(e => [ e, { chars: genCharStringArrFromType(e), urange: getURangesFromType(e) } ]))
 
 const voidPromise = async () => { return }
 
@@ -47,28 +50,86 @@ const pyftsubset = (s, [ext, flavor]) => {
 }
 
 const subset = async s => {
-  await pyftsubset(s, [s.fontFile.slice(s.fontFile.lastIndexOf('.')), null])
-  await pyftsubset(s, ['.woff', 'woff'])
+  // await pyftsubset(s, [s.fontFile.slice(s.fontFile.lastIndexOf('.')), null])
+  // await pyftsubset(s, ['.woff', 'woff'])
   await pyftsubset(s, ['.woff2', 'woff2'])
   return
 }
 
-tmp.dir(async (err, path, cb) => {
-  if (err) throw Error(err)
+const addScss = ({ family, style, display, weight, fileName, ranges }) => {
+  return `@font-face
+  font-family: ${family}
+  font-style: ${style}
+  font-weight: ${weight}
+  font-display: ${display}
+  src: url('./${fileName}.woff2') format('woff2')
+  unicode-range: ${ranges.join(',')}
+`
+}
+
+const composeFull = async ({ fontName, ranges, srcFontBase = `${fontName}/${fontName}`, srcFontExt, tmpPath }) => {
+  const parser = new (new JSDOM()).window.DOMParser();
+
+  const fontChars = await (new Promise((res, rej) => {
+    childProcess.exec(`ttx -t cmap -o - "${process.cwd()}/src/base/${srcFontBase}-${weights[fontName][0][0]}${srcFontExt}"`, { maxBuffer: 1024 * 1024 * 16 }, (err, stdout, stderr) => {
+      if (err) return rej(err)
+      res(stdout)
+    })
+  })).then(xmlText => {
+    const doc = parser.parseFromString(xmlText, "text/xml")
+    return Array.from(doc.querySelectorAll('cmap_format_12 > map')).map(e => String.fromCodePoint(e.getAttribute('code')))
+  })
+
+  const cranges = {}
 
   for (const [r, { chars }] of Object.entries(ranges)) {
-    fs.writeFileSync(`${path}/${r}`, chars.join(''))
+    const validChars = chars.filter(c => fontChars.indexOf(c) >= 0)
+    if (validChars.length > 0){
+      cranges[r] = { chars: validChars, urange: genURanges(validChars)  }
+      fs.writeFileSync(`${tmpPath}/${fontName}-${r}`, validChars.join(''))
+    }
   }
 
-  for (const w of weights.SourceHanSans) {
-    for (const r in ranges) {
+  let scss = ''
+
+  for (const w of weights[fontName]) {
+    for (const r in cranges) {
+      const fileName = `${fontName}-${w[0]}.${r}`
       await subset({
-        fontFile: `${process.cwd()}/src/base/SourceHanSans/SourceHanSans-${w[0]}.otf`,
-        unicodesFile: `${path}/${r}`,
-        outputFileName: `${process.cwd()}/dist/SourceHanSans-${w[0]}.${r}`
+        fontFile: `${process.cwd()}/src/base/${srcFontBase}-${w[0]}${srcFontExt}`,
+        unicodesFile: `${tmpPath}/${fontName}-${r}`,
+        outputFileName: `${process.cwd()}/dist/${fileName}`
+      })
+      scss += addScss({
+        family: `${fontName}-w`,
+        style: w[0],
+        weight: w[1],
+        display: latainEntries.indexOf(r) >= 0 ? 'swap' : 'fallback',
+        fileName,
+        ranges: cranges[r].urange
       })
     }
   }
 
-  cb()
+  const sassResult = sass.renderSync({
+    data: scss,
+    indentedSyntax: true
+  })
+  fs.writeFileSync(`${process.cwd()}/dist/${fontName}.css`, sassResult.css.toString())
+}
+
+new Promise ((resolve, reject) => {
+  tmp.dir(async (err, tmpPath, cb) => {
+    if (err) return reject(err)
+
+    await composeFull({
+      fontName: 'SourceHanSans',
+      ranges,
+      srcFontExt: '.otf',
+      tmpPath
+    })
+
+    cb()
+    resolve()
+  })
 })
