@@ -31,10 +31,11 @@ const weights = {
 
 const baseEntries = fs.readdirSync(`${process.cwd()}/text/chars`).map(n => n.slice(0, -4))
 
-const latainEntries = ['latain', 'latainExtended', 'zenkakuLatain', 'latainSymbol']
-const kanaEntries = ['katakana', 'hankakuKatakana', 'hiragana', 'katakanaSymbol', 'hiraganaSymbol']
-const kanjiEntries = ['shogakuseiKanji', 'joyoKanji', 'jinmeiyoKanji', 'hyogaiKanji', 'dai1suijunKanji', 'dai2suijunKanji', 'kanjiSymbol']
-const otherEntries = ['japaneseBase', 'jisx0213Hikanji', 'unicodeHikanji']
+const latainEntries = ['latain', 'latainExtended', 'zenkakuLatain', 'latainSymbol', 'mathmeticalAlphanum']
+const kanaEntries = ['katakana', 'hankakuKatakana', 'hiragana', 'katakanaSymbol', 'hiraganaSymbol', 'japaneseBase']
+const kanjiEntries = ['shogakuseiKanji', 'joyoKanji', 'jinmeiyoKanji', 'hyogaiKanji', 'dai1suijunKanji', 'dai2suijunKanji', 'supportKanji', 'kanjiSymbol']
+const japaneseEntries = [...kanaEntries, ...kanjiEntries]
+const otherEntries = ['jisx0213Hikanji', 'unicodeHikanji']
 
 const ranges = Object.fromEntries(baseEntries.map(e => [ e, { chars: genCharStringArrFromType(e), urange: getURangesFromType(e) } ]))
 
@@ -67,11 +68,13 @@ const addScss = ({ family, style, display, weight, fileName, ranges }) => {
 `
 }
 
-const composeFull = async ({ fontName, ranges, srcFontBase = `${fontName}/${fontName}`, srcFontExt, tmpPath }) => {
+const composeFull = async ({ fontName, ranges, srcFontBase = `${fontName}/${fontName}`, srcFontExt, tmpPath, weightSet = weights[fontName] }) => {
+  console.log(`Compose: ${fontName}`)
+
   const parser = new (new JSDOM()).window.DOMParser();
 
   const fontChars = await (new Promise((res, rej) => {
-    childProcess.exec(`ttx -t cmap -o - "${process.cwd()}/src/base/${srcFontBase}-${weights[fontName][0][0]}${srcFontExt}"`, { maxBuffer: 1024 * 1024 * 16 }, (err, stdout, stderr) => {
+    childProcess.exec(`ttx -t cmap -o - "${process.cwd()}/src/base/${srcFontBase}-${weightSet[0][0]}${srcFontExt}"`, { maxBuffer: 1024 * 1024 * 16 }, (err, stdout, stderr) => {
       if (err) return rej(err)
       res(stdout)
     })
@@ -92,7 +95,7 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `${fontName}/${font
 
   let scss = ''
 
-  for (const w of weights[fontName]) {
+  for (const w of weightSet) {
     for (const r in cranges) {
       const fileName = `${fontName}-${w[0]}.${r}`
       await subset({
@@ -100,6 +103,7 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `${fontName}/${font
         unicodesFile: `${tmpPath}/${fontName}-${r}`,
         outputFileName: `${process.cwd()}/dist/${fileName}`
       })
+      console.log('☑', fontName, `${process.cwd()}/dist/${fileName}`)
       scss += addScss({
         family: `${fontName}-w`,
         style: w[0],
@@ -116,6 +120,8 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `${fontName}/${font
     indentedSyntax: true
   })
   fs.writeFileSync(`${process.cwd()}/dist/${fontName}.css`, sassResult.css.toString())
+  console.log('☑ CSS', `${process.cwd()}/dist/${fontName}.css`)
+  console.log('Compose succeed')
 }
 
 new Promise ((resolve, reject) => {
@@ -127,6 +133,63 @@ new Promise ((resolve, reject) => {
       ranges,
       srcFontExt: '.otf',
       tmpPath
+    })
+
+    await composeFull({
+      fontName: 'mplus-c',
+      srcFontBase: 'mplus/mplus-1c',
+      ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
+      srcFontExt: '.ttf',
+      tmpPath,
+      weightSet: weights['mplus']
+    })
+    await composeFull({
+      fontName: 'mplus-p',
+      srcFontBase: 'mplus/mplus-1p',
+      ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
+      srcFontExt: '.ttf',
+      tmpPath,
+      weightSet: weights['mplus']
+    })
+    await composeFull({
+      fontName: 'mplus-m',
+      srcFontBase: 'mplus/mplus-1m',
+      ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
+      srcFontExt: '.ttf',
+      tmpPath,
+      weightSet: weights['mplusm']
+    })
+    await composeFull({
+      fontName: 'mplus-mn',
+      srcFontBase: 'mplus/mplus-1mn',
+      ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
+      srcFontExt: '.ttf',
+      tmpPath,
+      weightSet: weights['mplusm']
+    })
+    await composeFull({
+      fontName: 'mplus-1',
+      srcFontBase: 'mplus/mplus-1c',
+      ranges: Object.fromEntries(Object.entries(ranges).filter(e => japaneseEntries.indexOf(e[0]) >= 0)),
+      srcFontExt: '.ttf',
+      tmpPath,
+      weightSet: weights['mplus']
+    })
+    await composeFull({
+      fontName: 'mplus-2',
+      srcFontBase: 'mplus/mplus-2c',
+      ranges: Object.fromEntries(Object.entries(ranges).filter(e => japaneseEntries.indexOf(e[0]) >= 0)),
+      srcFontExt: '.ttf',
+      tmpPath,
+      weightSet: weights['mplus']
+    })
+    await composeFull({
+      fontName: 'mplus-S',
+      srcFontBase: 'mplus/mplus-1c',
+      ranges: Object.fromEntries(Object.entries(ranges).filter(e => otherEntries.indexOf(e[0]) >= 0)),
+      srcFontExt: '.ttf',
+      tmpPath,
+      weightSet: weights['mplus']
     })
 
     cb()
