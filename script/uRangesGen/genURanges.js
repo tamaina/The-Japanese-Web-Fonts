@@ -3,6 +3,7 @@ module.exports = strings => {
     console.log("No character is passed!")
     return
   }
+  if (typeof strings === 'string') strings = Array.from(strings)
 
   const numArr = strings
     .map(c => c.codePointAt(0))

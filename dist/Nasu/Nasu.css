@@ -1,0 +1,9 @@
+/*!
+ * "Nasu" is lisenced under the SIL Open Font License 1.1
+ * by http://itouhiro.hatenablog.com/entry/20140917/font
+ */
+
+@font-face{font-family:Nasu-w;font-style:Regular;font-weight:400;font-display:fallback;src:url("./Nasu-Regular.dakutenKana.woff2") format("woff2");unicode-range:u+3041-306e,u+3070-3071,u+3073-3074,u+3076-3077,u+3079-307a,u+307c-308d,u+308f-3094,u+3099-309a,u+30a1-30ce,u+30d0-30d1,u+30d3-30d4,u+30d6-30d7,u+30d9-30da,u+30dc-30ed,u+30ef-30f4,u+30f7-30fa}
+@font-face{font-family:Nasu-w;font-style:Regular;font-weight:400;font-display:fallback;src:url("./Nasu-Regular.nasuAddon.woff2") format("woff2");unicode-range:u+30-31,u+49,u+4f,u+6c,u+7b,u+7d-7e,u+2015,u+2160-216b,u+301c,u+3078,u+30a8,u+30ab,u+30bf,u+30c8,u+30cb,u+30d8,u+30ed,u+30fc,u+4e00,u+4e8c,u+529b,u+535c,u+53e3,u+5915,u+5de5,u+ff10-ff11,u+ff29,u+ff2f,u+ff4c,u+ff5e}
+@font-face{font-family:Nasu-w;font-style:Bold;font-weight:700;font-display:fallback;src:url("./Nasu-Bold.dakutenKana.woff2") format("woff2");unicode-range:u+3041-306e,u+3070-3071,u+3073-3074,u+3076-3077,u+3079-307a,u+307c-308d,u+308f-3094,u+3099-309a,u+30a1-30ce,u+30d0-30d1,u+30d3-30d4,u+30d6-30d7,u+30d9-30da,u+30dc-30ed,u+30ef-30f4,u+30f7-30fa}
+@font-face{font-family:Nasu-w;font-style:Bold;font-weight:700;font-display:fallback;src:url("./Nasu-Bold.nasuAddon.woff2") format("woff2");unicode-range:u+30-31,u+49,u+4f,u+6c,u+7b,u+7d-7e,u+2015,u+2160-216b,u+301c,u+3078,u+30a8,u+30ab,u+30bf,u+30c8,u+30cb,u+30d8,u+30ed,u+30fc,u+4e00,u+4e8c,u+529b,u+535c,u+53e3,u+5915,u+5de5,u+ff10-ff11,u+ff29,u+ff2f,u+ff4c,u+ff5e}

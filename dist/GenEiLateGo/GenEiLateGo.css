@@ -1,0 +1,9 @@
+/*!
+ * "源瑛ラテゴ" is lisenced under the SIL Open Font License 1.1
+ * by http://okoneya.jp/font/genei-antique.html
+ */
+
+@font-face{font-family:GenEiLateGo-w;font-style:Medium;font-weight:500;font-display:swap;src:url("./GenEiLateGo-Medium.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiLateGo-w;font-style:Medium;font-weight:500;font-display:swap;src:url("./GenEiLateGo-Medium.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-103,u+110-113,u+11a-11b,u+128-12b,u+143-144,u+147-148,u+14c-14f,u+152-153,u+168-16d,u+192,u+1a0-1a1,u+1af-1b0,u+1cd-1dc,u+1f8-1f9,u+251,u+261,u+3a9,u+1e3e-1e3f,u+1ea0-1ef9,u+2121-2122,u+2127,u+212b,u+212e,u+2135,u+2139,u+213b,u+2160-216b,u+2170-217b,u+fb00-fb04}
+@font-face{font-family:GenEiLateGo-w;font-style:Medium;font-weight:500;font-display:swap;src:url("./GenEiLateGo-Medium.latainSymbol.woff2") format("woff2");unicode-range:u+2460-2473,u+24b6-24ff,u+2776-277f,u+3248-325f,u+32b1-32bf,u+32cc-32cf,u+3372-337a,u+3380-33df,u+33ff,u+1f130-1f169,u+1f170-1f18f,u+1f191-1f19a}
+@font-face{font-family:GenEiLateGo-w;font-style:Medium;font-weight:500;font-display:swap;src:url("./GenEiLateGo-Medium.zenkakuLatain.woff2") format("woff2");unicode-range:u+3000,u+ff01-ff5e}

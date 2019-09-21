@@ -2,7 +2,8 @@ const fs = require('fs')
 const childProcess = require('child_process')
 const tmp = require('tmp')
 const sass = require('sass')
-const { JSDOM } = require('jsdom');
+const { JSDOM } = require('jsdom')
+const async = require('async')
 
 const getURangesFromType = require('./uRangesGen/getURangesFromType')
 const genURanges = require('./uRangesGen/genURanges')
@@ -37,44 +38,53 @@ const kanjiEntries = ['shogakuseiKanji', 'joyoKanji', 'jinmeiyoKanji', 'hyogaiKa
 const japaneseEntries = [...kanaEntries, ...kanjiEntries]
 const otherEntries = ['jisx0213Hikanji', 'unicodeHikanji']
 
-const ranges = Object.fromEntries(baseEntries.map(e => [ e, { chars: genCharStringArrFromType(e), urange: getURangesFromType(e) } ]))
+const ranges = Object.fromEntries(baseEntries.map(e => [ e, { chars: genCharStringArrFromType(e), uranges: getURangesFromType(e) } ]))
 
 const voidPromise = async () => { return }
 
-const pyftsubset = (s, [ext, flavor]) => {
-  return new Promise((res, rej) => {
-    childProcess.exec(`pyftsubset "${s.fontFile}" --text-file="${s.unicodesFile}" --no-hinting --layout-features='' --recommended-glyphs${flavor ? ` --flavor=${flavor}` : ''} --output-file="${s.outputFileName}${ext}"`, (err, stdout, stderr) => {
-      if (err) return rej(err)
-      res()
-    })
+const pyftsubsetq = async.queue(({s, type}, cb) => {
+  const [ext, flavor] = type
+  childProcess.exec(`pyftsubset "${s.fontFile}" --text-file="${s.unicodesFile}" --no-hinting --layout-features='' --recommended-glyphs${flavor ? ` --flavor=${flavor}` : ''} --output-file="${s.outputFileName}${ext}"`, (err, stdout, stderr) => {
+    if (err) {
+      console.log('✖', `${s.outputFileName}${ext}`)
+      cb(err)
+      return;
+    }
+    console.log('☑', `${s.outputFileName}${ext}`)
+    cb(null)
   })
-}
+}, 8)
 
-const subset = async s => {
+const subset = s => {
   // await pyftsubset(s, [s.fontFile.slice(s.fontFile.lastIndexOf('.')), null])
   // await pyftsubset(s, ['.woff', 'woff'])
-  await pyftsubset(s, ['.woff2', 'woff2'])
-  return
+  pyftsubsetq.push({s, type: ['.woff2', 'woff2']})
+  console.log('ⓘ', `Worker pushed: ${s.outputFileName}`)
 }
 
-const addScss = ({ family, style, display, weight, fileName, ranges }) => {
+const ffScss = ({ family, style, display, weight, fileName, uranges }) => {
   return `@font-face
   font-family: ${family}
   font-style: ${style}
   font-weight: ${weight}
   font-display: ${display}
   src: url('./${fileName}.woff2') format('woff2')
-  unicode-range: ${ranges.join(',')}
+  unicode-range: ${uranges.join(',')}
 `
 }
 
-const composeFull = async ({ fontName, ranges, srcFontBase = `${fontName}/${fontName}`, srcFontExt, tmpPath, weightSet = weights[fontName] }) => {
+const composeFull = async ({ fontName, ranges, srcFontBase = `base/${fontName}/${fontName}`, srcFontExt, tmpPath, weightSet = weights[fontName], cssHeader }) => {
   console.log(`Compose: ${fontName}`)
+  try {
+    fs.mkdirSync(`${process.cwd()}/dist/${fontName}`)
+  } catch(e) {
+    // nanimosinai
+  }
 
   const parser = new (new JSDOM()).window.DOMParser();
 
   const fontChars = await (new Promise((res, rej) => {
-    childProcess.exec(`ttx -t cmap -o - "${process.cwd()}/src/base/${srcFontBase}-${weightSet[0][0]}${srcFontExt}"`, { maxBuffer: 1024 * 1024 * 16 }, (err, stdout, stderr) => {
+    childProcess.exec(`ttx -t cmap -o - "${process.cwd()}/src/${srcFontBase}-${weightSet[0][0]}${srcFontExt}"`, { maxBuffer: 1024 * 1024 * 16 }, (err, stdout, stderr) => {
       if (err) return rej(err)
       res(stdout)
     })
@@ -85,114 +95,491 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `${fontName}/${font
 
   const cranges = {}
 
-  for (const [r, { chars }] of Object.entries(ranges)) {
+  for (const [r, { chars, uranges }] of Object.entries(ranges)) {
     const validChars = chars.filter(c => fontChars.indexOf(c) >= 0)
     if (validChars.length > 0){
-      cranges[r] = { chars: validChars, urange: genURanges(validChars)  }
+      cranges[r] = { chars: validChars, uranges: validChars.length === chars.length ? uranges : genURanges(validChars)  }
       fs.writeFileSync(`${tmpPath}/${fontName}-${r}`, validChars.join(''))
     }
   }
 
-  let scss = ''
+  const csses = { header: cssHeader }
+  let bcss = `${cssHeader || ''}\n`
 
   for (const w of weightSet) {
+    csses[w[1]] = {}
     for (const r in cranges) {
       const fileName = `${fontName}-${w[0]}.${r}`
-      await subset({
-        fontFile: `${process.cwd()}/src/base/${srcFontBase}-${w[0]}${srcFontExt}`,
+      subset({
+        fontFile: `${process.cwd()}/src/${srcFontBase}-${w[0]}${srcFontExt}`,
         unicodesFile: `${tmpPath}/${fontName}-${r}`,
-        outputFileName: `${process.cwd()}/dist/${fileName}`
+        outputFileName: `${process.cwd()}/dist/${fontName}/${fileName}`
       })
-      console.log('☑', fontName, `${process.cwd()}/dist/${fileName}`)
-      scss += addScss({
+      const scss = ffScss({
         family: `${fontName}-w`,
         style: w[0],
         weight: w[1],
         display: latainEntries.indexOf(r) >= 0 ? 'swap' : 'fallback',
         fileName,
-        ranges: cranges[r].urange
+        uranges: cranges[r].uranges
       })
+      csses[w[1]][r] = sass.renderSync({
+        data: scss,
+        indentedSyntax: true,
+        outputStyle: "compressed"
+      }).css.toString()
+      bcss += `${csses[w[1]][r]}\n`
     }
   }
 
-  const sassResult = sass.renderSync({
-    data: scss,
-    indentedSyntax: true
-  })
-  fs.writeFileSync(`${process.cwd()}/dist/${fontName}.css`, sassResult.css.toString())
-  console.log('☑ CSS', `${process.cwd()}/dist/${fontName}.css`)
-  console.log('Compose succeed')
+  fs.writeFileSync(`${process.cwd()}/dist/${fontName}/${fontName}.css`, bcss)
+  console.log('☑ CSS', `${process.cwd()}/dist/${fontName}/${fontName}.css`)
+
+  return csses
 }
 
 new Promise ((resolve, reject) => {
+  const csses = {}
+
   tmp.dir(async (err, tmpPath, cb) => {
     if (err) return reject(err)
 
-    await composeFull({
+    //#region BASE SourceHan
+    csses.SourceHanSans = await composeFull({
       fontName: 'SourceHanSans',
       ranges,
       srcFontExt: '.otf',
-      tmpPath
+      tmpPath,
+      cssHeader: `/*!
+ * "Source Han Sans" is lisenced under the SIL Open Font License 1.1
+ * by https://github.com/adobe-fonts/source-han-sans/
+ */
+`
     })
 
-    await composeFull({
+    csses.SourceHanSerif = await composeFull({
+      fontName: 'SourceHanSerif',
+      ranges,
+      srcFontExt: '.otf',
+      tmpPath,
+      cssHeader: `/*!
+ * "Source Han Serif" is lisenced under the SIL Open Font License 1.1
+ * by https://github.com/adobe-fonts/source-han-serif/
+ */
+`
+    })
+    //#endregion
+
+    //#region BASE M+
+    csses['mplus-c'] = await composeFull({
       fontName: 'mplus-c',
-      srcFontBase: 'mplus/mplus-1c',
+      srcFontBase: 'base/mplus/mplus-1c',
       ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
       srcFontExt: '.ttf',
       tmpPath,
-      weightSet: weights['mplus']
+      weightSet: weights['mplus'],
+      cssHeader: `/*!
+ * "M+ c" is lisenced under the M+ Fonts License
+ * by https://mplus-fonts.osdn.jp/
+ */
+`
     })
-    await composeFull({
+    csses['mplus-p'] = await composeFull({
       fontName: 'mplus-p',
-      srcFontBase: 'mplus/mplus-1p',
+      srcFontBase: 'base/mplus/mplus-1p',
       ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
       srcFontExt: '.ttf',
       tmpPath,
-      weightSet: weights['mplus']
+      weightSet: weights['mplus'],
+      cssHeader: `/*!
+ * "M+ p" is lisenced under the M+ Fonts License
+ * by https://mplus-fonts.osdn.jp/
+ */
+`
     })
-    await composeFull({
+    csses['mplus-m'] = await composeFull({
       fontName: 'mplus-m',
-      srcFontBase: 'mplus/mplus-1m',
+      srcFontBase: 'base/mplus/mplus-1m',
       ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
       srcFontExt: '.ttf',
       tmpPath,
-      weightSet: weights['mplusm']
+      weightSet: weights['mplusm'],
+      cssHeader: `/*!
+ * "M+ m" is lisenced under the M+ Fonts License
+ * by https://mplus-fonts.osdn.jp/
+ */
+`
     })
-    await composeFull({
+    csses['mplus-mn'] = await composeFull({
       fontName: 'mplus-mn',
-      srcFontBase: 'mplus/mplus-1mn',
+      srcFontBase: 'base/mplus/mplus-1mn',
       ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
       srcFontExt: '.ttf',
       tmpPath,
-      weightSet: weights['mplusm']
+      weightSet: weights['mplusm'],
+      cssHeader: `/*!
+ * "M+ mn" is lisenced under the M+ Fonts License
+ * by https://mplus-fonts.osdn.jp/
+ */
+`
     })
-    await composeFull({
+    csses['mplus-1'] = await composeFull({
       fontName: 'mplus-1',
-      srcFontBase: 'mplus/mplus-1c',
+      srcFontBase: 'base/mplus/mplus-1c',
       ranges: Object.fromEntries(Object.entries(ranges).filter(e => japaneseEntries.indexOf(e[0]) >= 0)),
       srcFontExt: '.ttf',
       tmpPath,
-      weightSet: weights['mplus']
+      weightSet: weights['mplus'],
+      cssHeader: `/*!
+ * "M+ 1" is lisenced under the M+ Fonts License
+ * by https://mplus-fonts.osdn.jp/
+ */
+`
     })
-    await composeFull({
+    csses['mplus-2'] = await composeFull({
       fontName: 'mplus-2',
-      srcFontBase: 'mplus/mplus-2c',
+      srcFontBase: 'base/mplus/mplus-2c',
       ranges: Object.fromEntries(Object.entries(ranges).filter(e => japaneseEntries.indexOf(e[0]) >= 0)),
       srcFontExt: '.ttf',
       tmpPath,
-      weightSet: weights['mplus']
+      weightSet: weights['mplus'],
+      cssHeader: `/*!
+ * "M+ 2" is lisenced under the M+ Fonts License
+ * by https://mplus-fonts.osdn.jp/
+ */
+`
     })
-    await composeFull({
+
+    csses['mplus-S'] = await composeFull({
       fontName: 'mplus-S',
-      srcFontBase: 'mplus/mplus-1c',
+      srcFontBase: 'base/mplus/mplus-1c',
       ranges: Object.fromEntries(Object.entries(ranges).filter(e => otherEntries.indexOf(e[0]) >= 0)),
       srcFontExt: '.ttf',
       tmpPath,
-      weightSet: weights['mplus']
+      weightSet: weights['mplus'],
+      cssHeader: `/*!
+ * "M+ Fonts" is lisenced under the M+ Fonts License
+ * by https://mplus-fonts.osdn.jp/
+ */
+`
+    })
+    //#endregion
+
+    //#region ADDON kana
+    csses.irohakakuC = await composeFull({
+      fontName: 'irohakakuC',
+      ranges: {
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana
+      },
+      srcFontBase: 'addon/irohakakuC/irohakakuC',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "いろは角クラシック" is lisenced under the SIL Open Font License 1.1
+ * by http://modi.jpn.org/font_irohakakuc.php
+ */
+`
     })
 
-    cb()
-    resolve()
+    csses.corporateLogo = await composeFull({
+      fontName: 'corporateLogo',
+      ranges: {
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana
+      },
+      weightSet: [['medium', 500], ['bold', 700]],
+      srcFontBase: 'addon/corporateLogo/logotypejp_mp',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "コーポレート・ロゴ" is lisenced under the SIL Open Font License 1.1
+ * by http://logotype.jp/corporate-logo-font-dl.html
+ */
+`
+    })
+
+    csses.LiNovePOP = await composeFull({
+      fontName: 'LiNovePOP',
+      ranges: {
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana
+      },
+      weightSet: [['Heavy', 800]],
+      srcFontBase: 'addon/LightNovelPOP/LiNovePOP',
+      srcFontExt: '.otf',
+      tmpPath,
+      cssHeader: `/*!
+ * "ラノベPOP" is lisenced under the M+ Fonts License
+ * by http://www.fontna.com/blog/1706/
+ */
+`
+    })
+
+    csses.KeiFont = await composeFull({
+      fontName: 'KeiFont',
+      ranges: {
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana
+      },
+      weightSet: [['heavy', 800]],
+      srcFontBase: 'addon/keifont/keifont-kana',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "けいふぉんと" is lisenced under Apache License 2.0
+ * by http://font.sumomo.ne.jp/font_1.html
+ */
+`
+    })
+
+    csses.Boku2Gothic = await composeFull({
+      fontName: 'Boku2Gothic',
+      ranges: {
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana
+      },
+      weightSet: [['Regular', 400], ['Bold', 700]],
+      srcFontBase: 'addon/boku/2/Boku2',
+      srcFontExt: '.otf',
+      tmpPath,
+      cssHeader: `/*!
+ * "ぼくたちのゴシック2" is lisenced under Apache License 2.0
+ * by https://fontopo.com/?p=94, https://fontopo.com/?p=98
+ */
+`
+    })
+
+    csses.BokuGothic = await composeFull({
+      fontName: 'BokuGothic',
+      ranges: {
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana
+      },
+      weightSet: [['Regular', 400]],
+      srcFontBase: 'addon/boku/bokutachi',
+      srcFontExt: '.otf',
+      tmpPath,
+      cssHeader: `/*!
+ * "ぼくたちのゴシック" is lisenced under IPAフォントライセンスv1.0
+ * by https://fontopo.com/?p=164
+ */
+`
+    })
+
+    //#endregion
+
+    //#region ADDON GenEi
+
+    //#region GenEiAntique
+    const antique = '†‡•‣․‥…‧‰′″‹›※‼‾⁂⁄⁇⁈⁉⁊⁋☀☁☂☃★☆☉☊☋☌☍☎☏☐☑☒☓☖☗☘☙☜☝☞☟☠☡☺☻☼☽☾☿♀♁♂♃♄♅♆♇♈♉♊♋♌♍♎♏♐♑♒♓♚♛♜♝♞♟♠♡♢♣♤♥♦♧♨♩♪♫♬♭♮♯⚀⚁⚂⚃⚄⚅⚲⚹⚽⚾✂✈✉❤❥❦❧⤴⤵🌝🌟🌠𪜈'
+
+    csses.GenEiAntique = await composeFull({
+      fontName: 'GenEiAntique',
+      ranges: {
+        ...Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
+        antiqueSymbols: { chars: Array.from(antique), uranges: genURanges(antique) }
+      },
+      weightSet: [['Medium', 500]],
+      srcFontBase: 'addon/GenEi/Antique/GenEiAntiquePv5',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "源瑛アンチック" is lisenced under the SIL Open Font License 1.1
+ * by http://okoneya.jp/font/genei-antique.html
+ */
+`
+    })
+
+    csses['GenEiAntique-N'] = await composeFull({
+      fontName: 'GenEiAntique-N',
+      ranges: {
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana
+      },
+      weightSet: [['Medium', 500]],
+      srcFontBase: 'addon/GenEi/Antique/GenEiAntiquePv5',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "源瑛アンチック N" is lisenced under the SIL Open Font License 1.1
+ * by http://okoneya.jp/font/genei-antique.html
+ */
+`
+    })
+
+    csses['GenEiAntique-P'] = await composeFull({
+      fontName: 'GenEiAntique-P',
+      ranges: {
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana
+      },
+      weightSet: [['Medium', 500]],
+      srcFontBase: 'addon/GenEi/Antique/GenEiAntiqueNv5',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "源瑛アンチック P" is lisenced under the SIL Open Font License 1.1
+ * by http://okoneya.jp/font/genei-antique.html
+ */
+`
+    })
+    //#endregion GenEiAntique
+
+    //#region GenEiLateGo
+
+    csses.GenEiLateGo = await composeFull({
+      fontName: 'GenEiLateGo',
+      ranges: {
+        ...Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0))
+      },
+      weightSet: [['Medium', 500]],
+      srcFontBase: 'addon/GenEi/Latin/GenEiLateGoN_v2',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "源瑛ラテゴ" is lisenced under the SIL Open Font License 1.1
+ * by http://okoneya.jp/font/genei-antique.html
+ */
+`
+    })
+
+    csses['GenEiLateGo-N'] = await composeFull({
+      fontName: 'GenEiLateGo-N',
+      ranges: {
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana
+      },
+      weightSet: [['Medium', 500]],
+      srcFontBase: 'addon/GenEi/Latin/GenEiLateGoN_v2',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "源瑛ラテゴ N" is lisenced under the SIL Open Font License 1.1
+ * by http://okoneya.jp/font/genei-latin.html
+ */
+`
+    })
+
+    csses['GenEiLateGo-P'] = await composeFull({
+      fontName: 'GenEiLateGo-P',
+      ranges: {
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana
+      },
+      weightSet: [['Medium', 500]],
+      srcFontBase: 'addon/GenEi/Latin/GenEiLateGoP_v2',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "源瑛ラテゴ P" is lisenced under the SIL Open Font License 1.1
+ * by http://okoneya.jp/font/genei-antique.html
+ */
+`
+    })
+    //#endregion GenEiLateGo
+
+    //#region GenEiNuGothic
+    const nuGothic = '†‡•‥…‧‰′″‵‹›※‼⁂⁄⁇⁈⁉☀☁☂☃★☆☉☎☏☜☝☞☟♀♁♂♠♡♢♣♤♥♦♧♨♩♪♫♬♭♮♯𛀀𛀁'
+
+    csses.GenEiNuGothic = await composeFull({
+      fontName: 'GenEiNuGothic',
+      ranges: {
+        ...Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
+        hiragana: ranges.hiragana,
+        katakana: ranges.katakana,
+        nuSymbols: { chars: Array.from(nuGothic), uranges: genURanges(nuGothic) }
+      },
+      weightSet: [['EB', 800]],
+      srcFontBase: 'addon/GenEi/NuGothic/GenEiNuGothic',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "源瑛Nuゴシック" is lisenced under the SIL Open Font License 1.1
+ * by https://okoneya.jp/font/genei-nu-gothic.html
+ */
+`
+    })
+    //#endregion GenEiNuGothic
+
+    //#region GenEi Latin
+    csses.GenEiUniverSans = await composeFull({
+      fontName: 'GenEiUniverSans',
+      srcFontBase: 'addon/GenEi/UniverSans/GenEiUniverSans',
+      ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
+      srcFontExt: '.otf',
+      tmpPath,
+      weightSet: [['L', 100], ['SL', 200], ['R', 400], ['SB', 600], ['B', 700], ['H', 800], ['Bk', 900]],
+      cssHeader: `/*!
+ * "GenEi Unvier Sans"is lisenced under the SIL Open Font License 1.1
+ * by https://okoneya.jp/font/download.html
+ */
+`
+    })
+    csses.GenEiRomanNotes = await composeFull({
+      fontName: 'GenEiRomanNotes',
+      srcFontBase: 'addon/GenEi/RomanNotes/GenEiRomanNotes',
+      ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
+      srcFontExt: '.otf',
+      tmpPath,
+      weightSet: [['W9', 900]],
+      cssHeader: `/*!
+ * "GenEi Roman Notes"is lisenced under the SIL Open Font License 1.1
+ * by https://okoneya.jp/font/genei-romanotes.html
+ */
+`
+    })
+    //#endregion GenEi Latin
+
+    //#endregion ADDON GenEi
+
+    //#region ADDON Nasu
+
+    const dakutenKana = 'あ゙い゙ゔえ゙お゙がぎぐげござじずぜぞだぢづでどな゙に゙ぬ゙ね゙の゙ばびぶべぼま゙み゙む゙め゙も゙や゙ゆ゙よ゙ら゙り゙る゙れ゙ろ゙わ゙ゐ゙ゑ゙を゙ん゙っ゙ゃ゙ゅ゙ょ゙ぁ゙ぃ゙ぅ゙ぇ゙ぉ゙ア゙イ゙ヴエ゙オ゙ガギグゲゴザジズゼゾダヂヅデドナ゙ニ゙ヌ゙ネ゙ノ゙バビブベボマ゙ミ゙ム゙メ゙モ゙ヤ゙ユ゙ヨ゙ラ゙リ゙ル゙レ゙ロ゙ヷヸヹヺン゙ッ゙ャ゙ュ゙ョ゙ァ゙ィ゙ゥ゙ェ゙ォ゙あ゚い゚う゚え゚お゚か゚き゚く゚け゚こ゚さ゚し゚す゚せ゚そ゚た゚ち゚つ゚て゚と゚な゚に゚ぬ゚ね゚の゚ぱぴぷぺぽま゚み゚む゚め゚も゚や゚ゆ゚よ゚ら゚り゚る゚れ゚ろ゚わ゚ゐ゚ゑ゚を゚ん゚っ゚ゃ゚ゅ゚ょ゚ぁ゚ぃ゚ぅ゚ぇ゚ぉ゚ア゚イ゚ウ゚エ゚オ゚カ゚キ゚ク゚ケ゚コ゚サ゚シ゚ス゚セ゚ソ゚タ゚チ゚ツ゚テ゚ト゚ナ゚ニ゚ヌ゚ネ゚ノ゚パピプペポマ゚ミ゚ム゚メ゚モ゚ヤ゚ユ゚ヨ゚ラ゚リ゚ル゚レ゚ロ゚ワ゚ヰ゚ヱ゚ヲ゚ン゚ッ゚ャ゚ュ゚ョ゚ァ゚ィ゚ゥ゚ェ゚ォ゚'
+    const nasuAddon = 'カ力エ工ロ口ー一ニ二タ夕ト卜へヘ1１lｌIＩ0０OＯ～〜―ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ{}~'
+    const nasuRanges = {
+      dakutenKana: { chars: Array.from(dakutenKana), uranges: genURanges(dakutenKana) },
+      nasuAddon: { chars: Array.from(nasuAddon), uranges: genURanges(nasuAddon) }
+    }
+
+    csses.Nasu = await composeFull({
+      fontName: 'Nasu',
+      ranges: nasuRanges,
+      weightSet: [['Regular', 400], ['Bold', 700]],
+      srcFontBase: 'addon/Nasu/Nasu',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "Nasu" is lisenced under the SIL Open Font License 1.1
+ * by http://itouhiro.hatenablog.com/entry/20140917/font
+ */
+`
+    })
+    csses.NasuM = await composeFull({
+      fontName: 'NasuM',
+      ranges: nasuRanges,
+      weightSet: [['Regular', 400], ['Bold', 700]],
+      srcFontBase: 'addon/Nasu/NasuM',
+      srcFontExt: '.ttf',
+      tmpPath,
+      cssHeader: `/*!
+ * "Nasu M" is lisenced under the SIL Open Font License 1.1
+ * by http://itouhiro.hatenablog.com/entry/20140917/font
+ */
+`
+    })
+
+    //#endregion ADDON Nasu
+
+    fs.writeFileSync(`${process.cwd()}/dist/csses.json`, JSON.stringify(csses))
+    console.log('☑ JSON', `${process.cwd()}/dist/csses.json`)
+
+    pyftsubsetq.drain()
+      .then(() => {
+        console.log('💮')
+
+        cb()
+        resolve()
+      })
   })
 })
