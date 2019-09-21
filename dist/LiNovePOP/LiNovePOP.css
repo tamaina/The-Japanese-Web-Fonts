@@ -3,3 +3,5 @@
  * by http://www.fontna.com/blog/1706/
  */
 
+@font-face{font-family:LiNovePOP-w;font-style:Heavy;font-weight:800;font-display:fallback;src:url("./LiNovePOP-Heavy.hiragana.woff2") format("woff2");unicode-range:u+3041-3094,u+309b-309e}
+@font-face{font-family:LiNovePOP-w;font-style:Heavy;font-weight:800;font-display:fallback;src:url("./LiNovePOP-Heavy.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}

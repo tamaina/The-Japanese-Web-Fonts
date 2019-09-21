@@ -90,7 +90,9 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `base/${fontName}/$
     })
   })).then(xmlText => {
     const doc = parser.parseFromString(xmlText, "text/xml")
-    return Array.from(doc.querySelectorAll('cmap_format_12 > map')).map(e => String.fromCodePoint(e.getAttribute('code')))
+    const maps = doc.querySelector('cmap_format_12 > map') ? doc.querySelectorAll('cmap_format_12 > map')
+               : doc.querySelector('cmap_format_6 > map')  ? doc.querySelectorAll('cmap_format_6 > map') : doc.querySelectorAll('cmap_format_4 > map')
+    return Array.from(maps).map(e => String.fromCodePoint(e.getAttribute('code')))
   })
 
   const cranges = {}
@@ -430,9 +432,7 @@ new Promise ((resolve, reject) => {
 
     csses.GenEiLateGo = await composeFull({
       fontName: 'GenEiLateGo',
-      ranges: {
-        ...Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0))
-      },
+      ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
       weightSet: [['Medium', 500]],
       srcFontBase: 'addon/GenEi/Latin/GenEiLateGoN_v2',
       srcFontExt: '.ttf',
@@ -535,10 +535,8 @@ new Promise ((resolve, reject) => {
 
     //#region ADDON Nasu
 
-    const dakutenKana = 'あ゙い゙ゔえ゙お゙がぎぐげござじずぜぞだぢづでどな゙に゙ぬ゙ね゙の゙ばびぶべぼま゙み゙む゙め゙も゙や゙ゆ゙よ゙ら゙り゙る゙れ゙ろ゙わ゙ゐ゙ゑ゙を゙ん゙っ゙ゃ゙ゅ゙ょ゙ぁ゙ぃ゙ぅ゙ぇ゙ぉ゙ア゙イ゙ヴエ゙オ゙ガギグゲゴザジズゼゾダヂヅデドナ゙ニ゙ヌ゙ネ゙ノ゙バビブベボマ゙ミ゙ム゙メ゙モ゙ヤ゙ユ゙ヨ゙ラ゙リ゙ル゙レ゙ロ゙ヷヸヹヺン゙ッ゙ャ゙ュ゙ョ゙ァ゙ィ゙ゥ゙ェ゙ォ゙あ゚い゚う゚え゚お゚か゚き゚く゚け゚こ゚さ゚し゚す゚せ゚そ゚た゚ち゚つ゚て゚と゚な゚に゚ぬ゚ね゚の゚ぱぴぷぺぽま゚み゚む゚め゚も゚や゚ゆ゚よ゚ら゚り゚る゚れ゚ろ゚わ゚ゐ゚ゑ゚を゚ん゚っ゚ゃ゚ゅ゚ょ゚ぁ゚ぃ゚ぅ゚ぇ゚ぉ゚ア゚イ゚ウ゚エ゚オ゚カ゚キ゚ク゚ケ゚コ゚サ゚シ゚ス゚セ゚ソ゚タ゚チ゚ツ゚テ゚ト゚ナ゚ニ゚ヌ゚ネ゚ノ゚パピプペポマ゚ミ゚ム゚メ゚モ゚ヤ゚ユ゚ヨ゚ラ゚リ゚ル゚レ゚ロ゚ワ゚ヰ゚ヱ゚ヲ゚ン゚ッ゚ャ゚ュ゚ョ゚ァ゚ィ゚ゥ゚ェ゚ォ゚'
     const nasuAddon = 'カ力エ工ロ口ー一ニ二タ夕ト卜へヘ1１lｌIＩ0０OＯ～〜―ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ{}~'
     const nasuRanges = {
-      dakutenKana: { chars: Array.from(dakutenKana), uranges: genURanges(dakutenKana) },
       nasuAddon: { chars: Array.from(nasuAddon), uranges: genURanges(nasuAddon) }
     }
 
