@@ -4,6 +4,7 @@ const tmp = require('tmp')
 const sass = require('sass')
 const { JSDOM } = require('jsdom')
 const async = require('async')
+const { toArray } = require('stringz')
 
 const getURangesFromType = require('./uRangesGen/getURangesFromType')
 const genURanges = require('./uRangesGen/genURanges')
@@ -83,17 +84,33 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `base/${fontName}/$
 
   const parser = new (new JSDOM()).window.DOMParser();
 
-  const fontChars = await (new Promise((res, rej) => {
-    childProcess.exec(`ttx -t cmap -o - "${process.cwd()}/src/${srcFontBase}-${weightSet[0][0]}${srcFontExt}"`, { maxBuffer: 1024 * 1024 * 16 }, (err, stdout, stderr) => {
-      if (err) return rej(err)
-      res(stdout)
+  const [fontChars] = await Promise.all([
+    (new Promise((res, rej) => {
+      childProcess.exec(`ttx -t cmap -o - "${process.cwd()}/src/${srcFontBase}-${weightSet[0][0]}${srcFontExt}"`, { maxBuffer: 1024 * 1024 * 16 }, (err, stdout, stderr) => {
+        if (err) return rej(err)
+        res(stdout)
+      })
+    })).then(xmlText => {
+      const doc = parser.parseFromString(xmlText, "text/xml")
+      const maps = doc.querySelector('cmap_format_12 > map') ? doc.querySelectorAll('cmap_format_12 > map')
+                : doc.querySelector('cmap_format_6 > map')  ? doc.querySelectorAll('cmap_format_6 > map') : doc.querySelectorAll('cmap_format_4 > map')
+      return Array.from(maps).map(e => String.fromCodePoint(e.getAttribute('code')))
+    }),
+    ...weightSet.map(w => {
+      return new Promise((res, rej) => {
+        try {
+          fs.statSync(`${process.cwd()}/src/${srcFontBase}-${w[0]}.otf`)
+        } catch(e) {
+          childProcess.exec(`fontforge -script "${process.cwd()}/text/ttf2otf.sh" "${process.cwd()}/src/${srcFontBase}-${w[0]}${srcFontExt}"`, (err, stdout, stderr) => {
+            if (err) return rej(err)
+            res(stdout)
+          })
+          return
+        }
+        res()
+      })
     })
-  })).then(xmlText => {
-    const doc = parser.parseFromString(xmlText, "text/xml")
-    const maps = doc.querySelector('cmap_format_12 > map') ? doc.querySelectorAll('cmap_format_12 > map')
-               : doc.querySelector('cmap_format_6 > map')  ? doc.querySelectorAll('cmap_format_6 > map') : doc.querySelectorAll('cmap_format_4 > map')
-    return Array.from(maps).map(e => String.fromCodePoint(e.getAttribute('code')))
-  })
+  ])
 
   const cranges = {}
 
@@ -113,7 +130,7 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `base/${fontName}/$
     for (const r in cranges) {
       const fileName = `${fontName}-${w[0]}.${r}`
       subset({
-        fontFile: `${process.cwd()}/src/${srcFontBase}-${w[0]}${srcFontExt}`,
+        fontFile: `${process.cwd()}/src/${srcFontBase}-${w[0]}.otf`,
         unicodesFile: `${tmpPath}/${fontName}-${r}`,
         outputFileName: `${process.cwd()}/dist/${fontName}/${fileName}`
       })
@@ -380,7 +397,7 @@ new Promise ((resolve, reject) => {
       fontName: 'GenEiAntique',
       ranges: {
         ...Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
-        antiqueSymbols: { chars: Array.from(antique), uranges: genURanges(antique) }
+        antiqueSymbols: { chars: toArray(antique), uranges: genURanges(antique) }
       },
       weightSet: [['Medium', 500]],
       srcFontBase: 'addon/GenEi/Antique/GenEiAntiquePv5',
@@ -488,7 +505,7 @@ new Promise ((resolve, reject) => {
         ...Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
         hiragana: ranges.hiragana,
         katakana: ranges.katakana,
-        nuSymbols: { chars: Array.from(nuGothic), uranges: genURanges(nuGothic) }
+        nuSymbols: { chars: toArray(nuGothic), uranges: genURanges(nuGothic) }
       },
       weightSet: [['EB', 800]],
       srcFontBase: 'addon/GenEi/NuGothic/GenEiNuGothic',
@@ -537,7 +554,7 @@ new Promise ((resolve, reject) => {
 
     const nasuAddon = 'カ力エ工ロ口ー一ニ二タ夕ト卜へヘ1１lｌIＩ0０OＯ～〜―ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ{}~'
     const nasuRanges = {
-      nasuAddon: { chars: Array.from(nasuAddon), uranges: genURanges(nasuAddon) }
+      nasuAddon: { chars: toArray(nasuAddon), uranges: genURanges(nasuAddon) }
     }
 
     csses.Nasu = await composeFull({

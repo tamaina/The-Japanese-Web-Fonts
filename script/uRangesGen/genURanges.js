@@ -1,9 +1,11 @@
+const { toArray } = require('stringz')
+
 module.exports = strings => {
   if (strings.length === 0) {
     console.log("No character is passed!")
     return
   }
-  if (typeof strings === 'string') strings = Array.from(strings)
+  if (typeof strings === 'string') strings = toArray(strings)
 
   const numArr = strings
     .map(c => c.codePointAt(0))

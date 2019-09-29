@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { toArray } = require('stringz')
 
 const getStringfromFile = (type) => fs.readFileSync(`${__dirname}/../../text/chars/${type}.txt`, { encoding: 'utf8' }).replace(/\r|\n/g, '')
 
@@ -42,9 +43,9 @@ module.exports = (type) => {
   }
 
   if (ignoreChars.length > 0) {
-    return Array.from(getStringfromFile(type))
+    return toArray(getStringfromFile(type))
       .filter(c => ignoreChars.indexOf(c) < 0)
   } else {
-    return Array.from(getStringfromFile(type))
+    return toArray(getStringfromFile(type))
   }
 }

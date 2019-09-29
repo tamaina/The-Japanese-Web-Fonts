@@ -702,6 +702,13 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
+stringz@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/stringz/-/stringz-2.0.0.tgz#0a092bc64ed9b42eff2936d0401d2398393d54e9"
+  integrity sha512-pRWc5RGpedKEDvQ/ukYs8kS8tKj+cKu5ayOoyOvsavbpiLBcm1dGX6p1o5IagaN11cbfN8tKGpgQ4fHdEq5LBA==
+  dependencies:
+    unicode-astral-regex "^1.0.1"
+
 symbol-tree@^3.2.2:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
@@ -771,6 +778,11 @@ type-check@~0.3.2:
   integrity sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
   dependencies:
     prelude-ls "~1.1.2"
+
+unicode-astral-regex@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/unicode-astral-regex/-/unicode-astral-regex-1.0.1.tgz#2cab8529480646f9614ddbc7b62158ad05123feb"
+  integrity sha512-UP6cmDeiWi8bMDmkyXLRsDuVPTvPjh8Wsz+pHu1VkGgTBl4pUceYAdHXY0cdc6Q3+Z2q7QMzi/0E7L/S/yOvFw==
 
 uri-js@^4.2.2:
   version "4.2.2"

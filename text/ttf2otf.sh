@@ -1,4 +1,4 @@
 Open($1);
 #CIDFlatten();
-Generate($1:r+"j.otf");
+Generate($1:r+".otf");
 Quit(0);
