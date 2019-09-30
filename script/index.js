@@ -45,7 +45,7 @@ const voidPromise = async () => { return }
 
 const pyftsubsetq = async.queue(({s, type}, cb) => {
   const [ext, flavor] = type
-  childProcess.exec(`pyftsubset "${s.fontFile}" --text-file="${s.unicodesFile}" --no-hinting --layout-features='' --recommended-glyphs${flavor ? ` --flavor=${flavor}` : ''} --output-file="${s.outputFileName}${ext}"`, (err, stdout, stderr) => {
+  childProcess.exec(`pyftsubset "${s.fontFile}" --text-file="${s.unicodesFile}" --no-hinting --layout-features=${s.layoutFeatures.join(',')} --recommended-glyphs${flavor ? ` --flavor=${flavor}` : ''} --output-file="${s.outputFileName}${ext}"`, (err, stdout, stderr) => {
     if (err) {
       console.log('✖', `${s.outputFileName}${ext}`)
       cb(err)
@@ -125,6 +125,10 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `base/${fontName}/$
   const csses = { header: cssHeader }
   let bcss = `${cssHeader || ''}\n`
 
+  const layoutFeatures = []
+
+  if (srcFontExt === '.otf') layoutFeatures.push('kern')
+
   for (const w of weightSet) {
     csses[w[1]] = {}
     for (const r in cranges) {
@@ -132,7 +136,8 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `base/${fontName}/$
       subset({
         fontFile: `${process.cwd()}/src/${srcFontBase}-${w[0]}.otf`,
         unicodesFile: `${tmpPath}/${fontName}-${r}`,
-        outputFileName: `${process.cwd()}/dist/${fontName}/${fileName}`
+        outputFileName: `${process.cwd()}/dist/${fontName}/${fileName}`,
+        layoutFeatures
       })
       const scss = ffScss({
         family: `${fontName}-w`,
@@ -171,6 +176,18 @@ new Promise ((resolve, reject) => {
       tmpPath,
       cssHeader: `/*!
  * "Source Han Sans" is lisenced under the SIL Open Font License 1.1
+ * by https://github.com/adobe-fonts/source-han-sans/
+ */
+`
+    })
+
+    csses.SourceHanSans = await composeFull({
+      fontName: 'SourceHanSansHW',
+      ranges,
+      srcFontExt: '.otf',
+      tmpPath,
+      cssHeader: `/*!
+ * "Source Han Sans HW" is lisenced under the SIL Open Font License 1.1
  * by https://github.com/adobe-fonts/source-han-sans/
  */
 `
@@ -552,14 +569,9 @@ new Promise ((resolve, reject) => {
 
     //#region ADDON Nasu
 
-    const nasuAddon = 'カ力エ工ロ口ー一ニ二タ夕ト卜へヘ1１lｌIＩ0０OＯ～〜―ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ{}~'
-    const nasuRanges = {
-      nasuAddon: { chars: toArray(nasuAddon), uranges: genURanges(nasuAddon) }
-    }
-
     csses.Nasu = await composeFull({
       fontName: 'Nasu',
-      ranges: nasuRanges,
+      ranges,
       weightSet: [['Regular', 400], ['Bold', 700]],
       srcFontBase: 'addon/Nasu/Nasu',
       srcFontExt: '.ttf',
@@ -572,7 +584,7 @@ new Promise ((resolve, reject) => {
     })
     csses.NasuM = await composeFull({
       fontName: 'NasuM',
-      ranges: nasuRanges,
+      ranges,
       weightSet: [['Regular', 400], ['Bold', 700]],
       srcFontBase: 'addon/Nasu/NasuM',
       srcFontExt: '.ttf',
