@@ -5,4 +5,5 @@
 
 @font-face{font-family:GenEiRomanNotes-w;font-style:W9;font-weight:900;font-display:swap;src:url("./GenEiRomanNotes-W9.latain.woff2") format("woff2");unicode-range:u+20-7e}
 @font-face{font-family:GenEiRomanNotes-w;font-style:W9;font-weight:900;font-display:swap;src:url("./GenEiRomanNotes-W9.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ff,u+152-153,u+160-161,u+178,u+17d-17e,u+192,u+2122,u+fb02}
+@font-face{font-family:GenEiRomanNotes-w;font-style:W9;font-weight:900;font-display:swap;src:url("./GenEiRomanNotes-W9.latainSymbol.woff2") format("woff2");unicode-range:u+20ac}
 @font-face{font-family:GenEiRomanNotes-w;font-style:W9;font-weight:900;font-display:swap;src:url("./GenEiRomanNotes-W9.zenkakuLatain.woff2") format("woff2");unicode-range:u+3000,u+ff01-ff5e}

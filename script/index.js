@@ -1,3 +1,5 @@
+const concurrency = 8
+
 const fs = require('fs')
 const childProcess = require('child_process')
 const tmp = require('tmp')
@@ -54,7 +56,7 @@ const pyftsubsetq = async.queue(({s, type}, cb) => {
     console.log('☑', `${s.outputFileName}${ext}`)
     cb(null)
   })
-}, 8)
+}, concurrency)
 
 const subset = s => {
   // await pyftsubset(s, [s.fontFile.slice(s.fontFile.lastIndexOf('.')), null])
@@ -319,6 +321,7 @@ new Promise ((resolve, reject) => {
     csses.corporateLogo = await composeFull({
       fontName: 'corporateLogo',
       ranges: {
+        japaneseBase: ranges.japaneseBase,
         hiragana: ranges.hiragana,
         katakana: ranges.katakana
       },
@@ -336,6 +339,7 @@ new Promise ((resolve, reject) => {
     csses.LiNovePOP = await composeFull({
       fontName: 'LiNovePOP',
       ranges: {
+        japaneseBase: ranges.japaneseBase,
         hiragana: ranges.hiragana,
         katakana: ranges.katakana
       },
@@ -353,6 +357,7 @@ new Promise ((resolve, reject) => {
     csses.KeiFont = await composeFull({
       fontName: 'KeiFont',
       ranges: {
+        japaneseBase: ranges.japaneseBase,
         hiragana: ranges.hiragana,
         katakana: ranges.katakana
       },
@@ -428,6 +433,7 @@ new Promise ((resolve, reject) => {
     csses['GenEiAntique-N'] = await composeFull({
       fontName: 'GenEiAntique-N',
       ranges: {
+        japaneseBase: ranges.japaneseBase,
         hiragana: ranges.hiragana,
         katakana: ranges.katakana
       },
@@ -445,6 +451,7 @@ new Promise ((resolve, reject) => {
     csses['GenEiAntique-P'] = await composeFull({
       fontName: 'GenEiAntique-P',
       ranges: {
+        japaneseBase: ranges.japaneseBase,
         hiragana: ranges.hiragana,
         katakana: ranges.katakana
       },
