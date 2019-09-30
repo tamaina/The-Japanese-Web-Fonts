@@ -74,7 +74,7 @@ const ffScss = ({ family, style, display, weight, fileName, uranges }) => {
 `
 }
 
-const composeFull = async ({ fontName, ranges, srcFontBase = `base/${fontName}/${fontName}`, srcFontExt, tmpPath, weightSet = weights[fontName], cssHeader }) => {
+const composeFull = async ({ fontName, ranges, srcFontBase = `base/${fontName}/${fontName}`, srcFontExt, tmpPath, weightSet = weights[fontName], cssHeader, layoutFeatures = [] }) => {
   console.log(`Compose: ${fontName}`)
   try {
     fs.mkdirSync(`${process.cwd()}/dist/${fontName}`)
@@ -125,10 +125,6 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `base/${fontName}/$
   const csses = { header: cssHeader }
   let bcss = `${cssHeader || ''}\n`
 
-  const layoutFeatures = []
-
-  if (srcFontExt === '.otf') layoutFeatures.push('kern')
-
   for (const w of weightSet) {
     csses[w[1]] = {}
     for (const r in cranges) {
@@ -174,6 +170,7 @@ new Promise ((resolve, reject) => {
       ranges,
       srcFontExt: '.otf',
       tmpPath,
+      layoutFeatures: ['palt'],
       cssHeader: `/*!
  * "Source Han Sans" is lisenced under the SIL Open Font License 1.1
  * by https://github.com/adobe-fonts/source-han-sans/
@@ -198,6 +195,7 @@ new Promise ((resolve, reject) => {
       ranges,
       srcFontExt: '.otf',
       tmpPath,
+      layoutFeatures: ['pwid'],
       cssHeader: `/*!
  * "Source Han Serif" is lisenced under the SIL Open Font License 1.1
  * by https://github.com/adobe-fonts/source-han-serif/
