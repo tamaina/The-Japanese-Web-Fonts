@@ -170,7 +170,7 @@ new Promise ((resolve, reject) => {
       ranges,
       srcFontExt: '.otf',
       tmpPath,
-      layoutFeatures: ['palt'],
+      layoutFeatures: ['pwid', 'palt'],
       cssHeader: `/*!
  * "Source Han Sans" is lisenced under the SIL Open Font License 1.1
  * by https://github.com/adobe-fonts/source-han-sans/
@@ -195,7 +195,7 @@ new Promise ((resolve, reject) => {
       ranges,
       srcFontExt: '.otf',
       tmpPath,
-      layoutFeatures: ['pwid'],
+      layoutFeatures: ['pwid', 'palt'],
       cssHeader: `/*!
  * "Source Han Serif" is lisenced under the SIL Open Font License 1.1
  * by https://github.com/adobe-fonts/source-han-serif/
