@@ -178,7 +178,7 @@ new Promise ((resolve, reject) => {
 `
     })
 
-    csses.SourceHanSans = await composeFull({
+    csses.SourceHanSansHW = await composeFull({
       fontName: 'SourceHanSansHW',
       ranges,
       srcFontExt: '.otf',
