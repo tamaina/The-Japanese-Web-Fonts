@@ -3,10 +3,10 @@
  * by https://okoneya.jp/font/genei-nu-gothic.html
  */
 
-@font-face{font-family:GenEiNuGothic-w;font-style:EB;font-weight:800;font-display:swap;src:url("./GenEiNuGothic-EB.latain.woff2") format("woff2");unicode-range:u+20-7e}
-@font-face{font-family:GenEiNuGothic-w;font-style:EB;font-weight:800;font-display:swap;src:url("./GenEiNuGothic-EB.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-17f,u+18f,u+192,u+1a0-1a1,u+1af-1b0,u+1cd-1dc,u+1f0,u+1f8-1ff,u+218-21b,u+237,u+251,u+259,u+261,u+2bc,u+3a9,u+1e3e-1e3f,u+1ef2-1ef3,u+2121-2122,u+2127,u+212a-212b,u+212e,u+2135,u+2160-216b,u+2170-217b,u+fb00-fb04}
-@font-face{font-family:GenEiNuGothic-w;font-style:EB;font-weight:800;font-display:swap;src:url("./GenEiNuGothic-EB.latainSymbol.woff2") format("woff2");unicode-range:u+20a8-20a9,u+20ab-20ac,u+2103,u+2105,u+2109-210a,u+210f,u+2113,u+2116,u+222e,u+2460-2473,u+24b6-24ea,u+2776-277f,u+3372-3376,u+3380-33dd}
-@font-face{font-family:GenEiNuGothic-w;font-style:EB;font-weight:800;font-display:swap;src:url("./GenEiNuGothic-EB.zenkakuLatain.woff2") format("woff2");unicode-range:u+3000,u+ff01-ff5e}
-@font-face{font-family:GenEiNuGothic-w;font-style:EB;font-weight:800;font-display:fallback;src:url("./GenEiNuGothic-EB.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
-@font-face{font-family:GenEiNuGothic-w;font-style:EB;font-weight:800;font-display:fallback;src:url("./GenEiNuGothic-EB.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
-@font-face{font-family:GenEiNuGothic-w;font-style:EB;font-weight:800;font-display:fallback;src:url("./GenEiNuGothic-EB.nuSymbols.woff2") format("woff2");unicode-range:u+2020-2022,u+2025-2027,u+2030,u+2032-2033,u+2035,u+2039-203c,u+2042,u+2044,u+2047-2049,u+2600-2603,u+2605-2606,u+2609,u+260e-260f,u+261c-261f,u+2640-2642,u+2660-266f,u+e000-e099,u+1b000-1b001}
+@font-face{font-family:GenEiNuGothic-w;font-weight:800;font-display:swap;src:url("./GenEiNuGothic-EB.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiNuGothic-w;font-weight:800;font-display:swap;src:url("./GenEiNuGothic-EB.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-17f,u+18f,u+192,u+1a0-1a1,u+1af-1b0,u+1cd-1dc,u+1f0,u+1f8-1ff,u+218-21b,u+237,u+251,u+259,u+261,u+2bc,u+3a9,u+1e3e-1e3f,u+1ef2-1ef3,u+2121-2122,u+2127,u+212a-212b,u+212e,u+2135,u+2160-216b,u+2170-217b,u+fb00-fb04}
+@font-face{font-family:GenEiNuGothic-w;font-weight:800;font-display:swap;src:url("./GenEiNuGothic-EB.latainSymbol.woff2") format("woff2");unicode-range:u+20a8-20a9,u+20ab-20ac,u+2103,u+2105,u+2109-210a,u+210f,u+2113,u+2116,u+222e,u+2460-2473,u+24b6-24ea,u+2776-277f,u+3372-3376,u+3380-33dd}
+@font-face{font-family:GenEiNuGothic-w;font-weight:800;font-display:swap;src:url("./GenEiNuGothic-EB.zenkakuLatain.woff2") format("woff2");unicode-range:u+3000,u+ff01-ff5e}
+@font-face{font-family:GenEiNuGothic-w;font-weight:800;font-display:fallback;src:url("./GenEiNuGothic-EB.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
+@font-face{font-family:GenEiNuGothic-w;font-weight:800;font-display:fallback;src:url("./GenEiNuGothic-EB.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
+@font-face{font-family:GenEiNuGothic-w;font-weight:800;font-display:fallback;src:url("./GenEiNuGothic-EB.nuSymbols.woff2") format("woff2");unicode-range:u+2020-2022,u+2025-2027,u+2030,u+2032-2033,u+2035,u+2039-203c,u+2042,u+2044,u+2047-2049,u+2600-2603,u+2605-2606,u+2609,u+260e-260f,u+261c-261f,u+2640-2642,u+2660-266f,u+e000-e099,u+1b000-1b001}

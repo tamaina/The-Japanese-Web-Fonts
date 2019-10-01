@@ -3,7 +3,7 @@
  * by https://fontopo.com/?p=94, https://fontopo.com/?p=98
  */
 
-@font-face{font-family:Boku2Gothic-w;font-style:Regular;font-weight:400;font-display:fallback;src:url("./Boku2Gothic-Regular.hiragana.woff2") format("woff2");unicode-range:u+3041-3094,u+309b-309e}
-@font-face{font-family:Boku2Gothic-w;font-style:Regular;font-weight:400;font-display:fallback;src:url("./Boku2Gothic-Regular.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
-@font-face{font-family:Boku2Gothic-w;font-style:Bold;font-weight:700;font-display:fallback;src:url("./Boku2Gothic-Bold.hiragana.woff2") format("woff2");unicode-range:u+3041-3094,u+309b-309e}
-@font-face{font-family:Boku2Gothic-w;font-style:Bold;font-weight:700;font-display:fallback;src:url("./Boku2Gothic-Bold.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
+@font-face{font-family:Boku2Gothic-w;font-weight:400;font-display:fallback;src:url("./Boku2Gothic-Regular.hiragana.woff2") format("woff2");unicode-range:u+3041-3094,u+309b-309e}
+@font-face{font-family:Boku2Gothic-w;font-weight:400;font-display:fallback;src:url("./Boku2Gothic-Regular.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
+@font-face{font-family:Boku2Gothic-w;font-weight:700;font-display:fallback;src:url("./Boku2Gothic-Bold.hiragana.woff2") format("woff2");unicode-range:u+3041-3094,u+309b-309e}
+@font-face{font-family:Boku2Gothic-w;font-weight:700;font-display:fallback;src:url("./Boku2Gothic-Bold.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}

@@ -68,7 +68,6 @@ const subset = s => {
 const ffScss = ({ family, style, display, weight, fileName, uranges }) => {
   return `@font-face
   font-family: ${family}
-  font-style: ${style}
   font-weight: ${weight}
   font-display: ${display}
   src: url('./${fileName}.woff2') format('woff2')

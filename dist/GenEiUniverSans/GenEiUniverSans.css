@@ -3,17 +3,17 @@
  * by https://okoneya.jp/font/download.html
  */
 
-@font-face{font-family:GenEiUniverSans-w;font-style:L;font-weight:100;font-display:swap;src:url("./GenEiUniverSans-L.latain.woff2") format("woff2");unicode-range:u+20-7e}
-@font-face{font-family:GenEiUniverSans-w;font-style:L;font-weight:100;font-display:swap;src:url("./GenEiUniverSans-L.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
-@font-face{font-family:GenEiUniverSans-w;font-style:SL;font-weight:200;font-display:swap;src:url("./GenEiUniverSans-SL.latain.woff2") format("woff2");unicode-range:u+20-7e}
-@font-face{font-family:GenEiUniverSans-w;font-style:SL;font-weight:200;font-display:swap;src:url("./GenEiUniverSans-SL.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
-@font-face{font-family:GenEiUniverSans-w;font-style:R;font-weight:400;font-display:swap;src:url("./GenEiUniverSans-R.latain.woff2") format("woff2");unicode-range:u+20-7e}
-@font-face{font-family:GenEiUniverSans-w;font-style:R;font-weight:400;font-display:swap;src:url("./GenEiUniverSans-R.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
-@font-face{font-family:GenEiUniverSans-w;font-style:SB;font-weight:600;font-display:swap;src:url("./GenEiUniverSans-SB.latain.woff2") format("woff2");unicode-range:u+20-7e}
-@font-face{font-family:GenEiUniverSans-w;font-style:SB;font-weight:600;font-display:swap;src:url("./GenEiUniverSans-SB.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
-@font-face{font-family:GenEiUniverSans-w;font-style:B;font-weight:700;font-display:swap;src:url("./GenEiUniverSans-B.latain.woff2") format("woff2");unicode-range:u+20-7e}
-@font-face{font-family:GenEiUniverSans-w;font-style:B;font-weight:700;font-display:swap;src:url("./GenEiUniverSans-B.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
-@font-face{font-family:GenEiUniverSans-w;font-style:H;font-weight:800;font-display:swap;src:url("./GenEiUniverSans-H.latain.woff2") format("woff2");unicode-range:u+20-7e}
-@font-face{font-family:GenEiUniverSans-w;font-style:H;font-weight:800;font-display:swap;src:url("./GenEiUniverSans-H.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
-@font-face{font-family:GenEiUniverSans-w;font-style:Bk;font-weight:900;font-display:swap;src:url("./GenEiUniverSans-Bk.latain.woff2") format("woff2");unicode-range:u+20-7e}
-@font-face{font-family:GenEiUniverSans-w;font-style:Bk;font-weight:900;font-display:swap;src:url("./GenEiUniverSans-Bk.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
+@font-face{font-family:GenEiUniverSans-w;font-weight:100;font-display:swap;src:url("./GenEiUniverSans-L.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiUniverSans-w;font-weight:100;font-display:swap;src:url("./GenEiUniverSans-L.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
+@font-face{font-family:GenEiUniverSans-w;font-weight:200;font-display:swap;src:url("./GenEiUniverSans-SL.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiUniverSans-w;font-weight:200;font-display:swap;src:url("./GenEiUniverSans-SL.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
+@font-face{font-family:GenEiUniverSans-w;font-weight:400;font-display:swap;src:url("./GenEiUniverSans-R.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiUniverSans-w;font-weight:400;font-display:swap;src:url("./GenEiUniverSans-R.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
+@font-face{font-family:GenEiUniverSans-w;font-weight:600;font-display:swap;src:url("./GenEiUniverSans-SB.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiUniverSans-w;font-weight:600;font-display:swap;src:url("./GenEiUniverSans-SB.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
+@font-face{font-family:GenEiUniverSans-w;font-weight:700;font-display:swap;src:url("./GenEiUniverSans-B.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiUniverSans-w;font-weight:700;font-display:swap;src:url("./GenEiUniverSans-B.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
+@font-face{font-family:GenEiUniverSans-w;font-weight:800;font-display:swap;src:url("./GenEiUniverSans-H.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiUniverSans-w;font-weight:800;font-display:swap;src:url("./GenEiUniverSans-H.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
+@font-face{font-family:GenEiUniverSans-w;font-weight:900;font-display:swap;src:url("./GenEiUniverSans-Bk.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiUniverSans-w;font-weight:900;font-display:swap;src:url("./GenEiUniverSans-Bk.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
