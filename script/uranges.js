@@ -9,7 +9,7 @@ const strs = baseEntries.map(e => {
   const charstr = genCharStr(e)
 
   console.log(e, uranges, charstr.length)
-  return `## ${e} （${charstr.length}文字）\n${uranges.join(', ')}  \n${charstr.join('')}\n\n`
+  return `### ${e} （${charstr.length}文字）\n${uranges.join(', ')}  \n${charstr.join('')}\n\n`
 })
 
 console.log(baseEntries.length)

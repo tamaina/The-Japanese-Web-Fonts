@@ -26,7 +26,7 @@ const weights = {
     ['Regular', 400], ['Bold', 700]
   ],
   SourceHanSerif: [
-    ['ExtraLight', 100], ['Light', 200], ['Regular', 400], ['Medium', 500], ['SemiBold', 600], ['Bold', 700], ['Black', 800]
+    ['ExtraLight', 100], ['Light', 200], ['Regular', 400], ['Medium', 500], ['SemiBold', 600], ['Bold', 700], ['Heavy', 800]
   ],
   irohakakuC: [
     ['ExtraLight', 100], ['Light', 200], ['Regular', 400], ['Medium', 500], ['Bold', 700]
