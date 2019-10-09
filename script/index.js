@@ -37,7 +37,7 @@ const baseEntries = fs.readdirSync(`${process.cwd()}/text/chars`).map(n => n.sli
 
 const latainEntries = ['latain', 'latainExtended', 'zenkakuLatain', 'latainSymbol', 'mathmeticalAlphanum']
 const kanaEntries = ['katakana', 'hankakuKatakana', 'hiragana', 'katakanaSymbol', 'hiraganaSymbol', 'japaneseBase']
-const kanjiEntries = ['shogakuseiKanji', 'joyoKanji', 'jinmeiyoKanji', 'hyogaiKanji', 'dai1suijunKanji', 'dai2suijunKanji', 'supportKanji', 'kanjiSymbol']
+const kanjiEntries = ['shogakuseiKanji', 'joyoKanji', 'jinmeiyoKanji', 'hyogaiKanji', 'dai1suijunKanji', 'dai2suijunKanji', 'ibmKakuchoKanji', 'supportKanji', 'kanjiSymbol']
 const japaneseEntries = [...kanaEntries, ...kanjiEntries]
 const otherEntries = ['jisx0213Hikanji', 'unicodeHikanji']
 
