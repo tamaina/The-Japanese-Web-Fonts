@@ -7,7 +7,10 @@ module.exports = (type) => {
   let ignoreChars = ''
   switch (type) {
 
-    // 漢字順位: shogakuseiKanji < joyoKanji < jinmeiyoKanji < hyogaiKanji < dai1suijunKanji = dai2suijunKanji
+    // 漢字順位: shogakuseiKanji < joyoKanji < jinmeiyoKanji < hyogaiKanji < dai1suijunKanji = dai2suijunKanji < ibmKakuchoKanji
+    case 'ibmKakuchoKanji':
+      ignoreChars += getStringfromFile('dai1suijunKanji')
+      ignoreChars += getStringfromFile('dai2suijunKanji')
     case 'dai1suijunKanji':
     case 'dai2suijunKanji':
       ignoreChars += getStringfromFile('hyogaiKanji')

@@ -547,7 +547,7 @@ new Promise ((resolve, reject) => {
       ranges: Object.fromEntries(Object.entries(ranges).filter(e => latainEntries.indexOf(e[0]) >= 0)),
       srcFontExt: '.otf',
       tmpPath,
-      weightSet: [['L', 100], ['SL', 200], ['R', 400], ['SB', 600], ['B', 700], ['H', 800], ['Bk', 900]],
+      weightSet: [['L', 200], ['SL', 300], ['R', 400], ['SB', 600], ['B', 700], ['H', 800], ['Bk', 900]],
       cssHeader: `/*!
  * "GenEi Unvier Sans"is lisenced under the SIL Open Font License 1.1
  * by https://okoneya.jp/font/download.html

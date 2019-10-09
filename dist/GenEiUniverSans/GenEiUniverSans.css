@@ -3,10 +3,10 @@
  * by https://okoneya.jp/font/download.html
  */
 
-@font-face{font-family:GenEiUniverSans-w;font-weight:100;font-display:swap;src:url("./GenEiUniverSans-L.latain.woff2") format("woff2");unicode-range:u+20-7e}
-@font-face{font-family:GenEiUniverSans-w;font-weight:100;font-display:swap;src:url("./GenEiUniverSans-L.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
-@font-face{font-family:GenEiUniverSans-w;font-weight:200;font-display:swap;src:url("./GenEiUniverSans-SL.latain.woff2") format("woff2");unicode-range:u+20-7e}
-@font-face{font-family:GenEiUniverSans-w;font-weight:200;font-display:swap;src:url("./GenEiUniverSans-SL.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
+@font-face{font-family:GenEiUniverSans-w;font-weight:200;font-display:swap;src:url("./GenEiUniverSans-L.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiUniverSans-w;font-weight:200;font-display:swap;src:url("./GenEiUniverSans-L.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
+@font-face{font-family:GenEiUniverSans-w;font-weight:300;font-display:swap;src:url("./GenEiUniverSans-SL.latain.woff2") format("woff2");unicode-range:u+20-7e}
+@font-face{font-family:GenEiUniverSans-w;font-weight:300;font-display:swap;src:url("./GenEiUniverSans-SL.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
 @font-face{font-family:GenEiUniverSans-w;font-weight:400;font-display:swap;src:url("./GenEiUniverSans-R.latain.woff2") format("woff2");unicode-range:u+20-7e}
 @font-face{font-family:GenEiUniverSans-w;font-weight:400;font-display:swap;src:url("./GenEiUniverSans-R.latainExtended.woff2") format("woff2");unicode-range:u+a1-ac,u+ae-ef,u+f1-ff}
 @font-face{font-family:GenEiUniverSans-w;font-weight:600;font-display:swap;src:url("./GenEiUniverSans-SB.latain.woff2") format("woff2");unicode-range:u+20-7e}
