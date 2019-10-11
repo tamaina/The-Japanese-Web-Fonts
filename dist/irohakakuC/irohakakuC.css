@@ -3,13 +3,13 @@
  * by http://modi.jpn.org/font_irohakakuc.php
  */
 
-@font-face{font-family:irohakakuC-w;font-weight:100;font-display:fallback;src:url("./irohakakuC-ExtraLight.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
-@font-face{font-family:irohakakuC-w;font-weight:100;font-display:fallback;src:url("./irohakakuC-ExtraLight.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
-@font-face{font-family:irohakakuC-w;font-weight:200;font-display:fallback;src:url("./irohakakuC-Light.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
-@font-face{font-family:irohakakuC-w;font-weight:200;font-display:fallback;src:url("./irohakakuC-Light.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
-@font-face{font-family:irohakakuC-w;font-weight:400;font-display:fallback;src:url("./irohakakuC-Regular.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
-@font-face{font-family:irohakakuC-w;font-weight:400;font-display:fallback;src:url("./irohakakuC-Regular.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
-@font-face{font-family:irohakakuC-w;font-weight:500;font-display:fallback;src:url("./irohakakuC-Medium.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
-@font-face{font-family:irohakakuC-w;font-weight:500;font-display:fallback;src:url("./irohakakuC-Medium.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
-@font-face{font-family:irohakakuC-w;font-weight:700;font-display:fallback;src:url("./irohakakuC-Bold.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
-@font-face{font-family:irohakakuC-w;font-weight:700;font-display:fallback;src:url("./irohakakuC-Bold.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
+@font-face{font-family:irohakakuC-w;font-weight:100;font-display:swap;src:url("./irohakakuC-ExtraLight.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
+@font-face{font-family:irohakakuC-w;font-weight:100;font-display:swap;src:url("./irohakakuC-ExtraLight.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
+@font-face{font-family:irohakakuC-w;font-weight:200;font-display:swap;src:url("./irohakakuC-Light.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
+@font-face{font-family:irohakakuC-w;font-weight:200;font-display:swap;src:url("./irohakakuC-Light.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
+@font-face{font-family:irohakakuC-w;font-weight:400;font-display:swap;src:url("./irohakakuC-Regular.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
+@font-face{font-family:irohakakuC-w;font-weight:400;font-display:swap;src:url("./irohakakuC-Regular.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
+@font-face{font-family:irohakakuC-w;font-weight:500;font-display:swap;src:url("./irohakakuC-Medium.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
+@font-face{font-family:irohakakuC-w;font-weight:500;font-display:swap;src:url("./irohakakuC-Medium.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
+@font-face{font-family:irohakakuC-w;font-weight:700;font-display:swap;src:url("./irohakakuC-Bold.hiragana.woff2") format("woff2");unicode-range:u+3041-3096,u+3099-309e}
+@font-face{font-family:irohakakuC-w;font-weight:700;font-display:swap;src:url("./irohakakuC-Bold.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}

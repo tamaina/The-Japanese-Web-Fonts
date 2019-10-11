@@ -3,6 +3,6 @@
  * by http://font.sumomo.ne.jp/font_1.html
  */
 
-@font-face{font-family:KeiFont-w;font-weight:800;font-display:fallback;src:url("./KeiFont-heavy.japaneseBase.woff2") format("woff2");unicode-range:u+2026,u+3001-3003,u+3005-3007,u+301c,u+3031-3035,u+30fb-30fc,u+4edd}
-@font-face{font-family:KeiFont-w;font-weight:800;font-display:fallback;src:url("./KeiFont-heavy.hiragana.woff2") format("woff2");unicode-range:u+3041-3094,u+309b-309e}
-@font-face{font-family:KeiFont-w;font-weight:800;font-display:fallback;src:url("./KeiFont-heavy.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}
+@font-face{font-family:KeiFont-w;font-weight:800;font-display:swap;src:url("./KeiFont-heavy.japaneseBase.woff2") format("woff2");unicode-range:u+2026,u+3001-3003,u+3005-3007,u+301c,u+3031-3035,u+30fb-30fc,u+4edd}
+@font-face{font-family:KeiFont-w;font-weight:800;font-display:swap;src:url("./KeiFont-heavy.hiragana.woff2") format("woff2");unicode-range:u+3041-3094,u+309b-309e}
+@font-face{font-family:KeiFont-w;font-weight:800;font-display:swap;src:url("./KeiFont-heavy.katakana.woff2") format("woff2");unicode-range:u+30a1-30fa,u+30fd-30fe}

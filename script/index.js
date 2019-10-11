@@ -130,17 +130,17 @@ const composeFull = async ({ fontName, ranges, srcFontBase = `base/${fontName}/$
     csses[w[1]] = {}
     for (const r in cranges) {
       const fileName = `${fontName}-${w[0]}.${r}`
-      subset({
+      /*subset({
         fontFile: `${process.cwd()}/src/${srcFontBase}-${w[0]}.otf`,
         unicodesFile: `${tmpPath}/${fontName}-${r}`,
         outputFileName: `${process.cwd()}/dist/${fontName}/${fileName}`,
         layoutFeatures
-      })
+      })*/
       const scss = ffScss({
         family: `${fontName}-w`,
         style: w[0],
         weight: w[1],
-        display: latainEntries.indexOf(r) >= 0 ? 'swap' : 'fallback',
+        display: [...latainEntries, ...kanaEntries].indexOf(r) >= 0 ? 'swap' : 'fallback',
         fileName,
         uranges: cranges[r].uranges
       })
