@@ -2,7 +2,7 @@
 the Japanese Web Fontsは、日本語フリーフォントを集めたWebフォントセットです。  
 日本語用にサブセットしています。
 
-使い方は https://a9z.dev/The-Japanese-Web-Fonts/ を参照してください。
+使い方は https://a9z.dev/products/the-japanese-web-fonts を参照してください。
 
 ## ビルド方法
 ### 依存ソフト
